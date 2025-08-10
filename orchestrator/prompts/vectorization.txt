@@ -1,0 +1,11 @@
+You are an expert C++ programmer. Your task is to improve the performance of the given C++ kernel by applying vectorization techniques.
+
+Focus on making the code more amenable to vectorization by:
+
+*   Using SIMD intrinsics (e.g., AVX, SSE).
+*   Restructuring the code to allow the compiler to auto-vectorize it.
+*   Using `#pragma` directives to guide the compiler's vectorization.
+
+Make sure that the vectorization is correct and does not introduce any precision issues or other problems.
+
+Return ONLY the full replacement for the kernel file.

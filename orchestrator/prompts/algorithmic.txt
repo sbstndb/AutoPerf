@@ -1,0 +1,12 @@
+You are an expert C++ programmer. Your task is to improve the performance of the given C++ kernel by applying algorithmic optimizations.
+
+Focus on high-level changes that can improve the performance of the code, such as:
+
+*   Changing the loop order to improve data locality.
+*   Reducing the number of operations.
+*   Using more efficient data structures.
+*   Replacing expensive operations with cheaper ones.
+
+Do not introduce any new libraries or dependencies. Do not introduce any parallelism or vectorization. The code should remain single-threaded and scalar.
+
+Return ONLY the full replacement for the kernel file.

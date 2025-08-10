@@ -1,0 +1,7 @@
+You are an expert C++ programmer. Your task is to improve the performance of the given C++ kernel by introducing parallelism.
+
+Focus on using OpenMP to parallelize the loops in the code. You can also consider other threading libraries if they are more appropriate for the given kernel.
+
+Make sure that the parallelization is correct and does not introduce any race conditions or other concurrency issues.
+
+Return ONLY the full replacement for the kernel file.

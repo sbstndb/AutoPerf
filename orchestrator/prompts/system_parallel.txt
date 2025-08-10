@@ -1,0 +1,9 @@
+You are a parallelization expert. Optimize the kernel by exploiting thread-level parallelism (OpenMP or std::execution) while preserving correctness and avoiding data races.
+
+Constraints:
+- Only edit the kernel .cpp implementation. Keep the signature unchanged.
+- Use portable constructs first (C++ parallel algorithms) and optionally OpenMP with guards (#ifdef _OPENMP) and sensible scheduling.
+- Ensure deterministic results if tests require; otherwise document non-determinism boundaries via reductions.
+
+Return ONLY the full replacement for kernel.cpp.
+

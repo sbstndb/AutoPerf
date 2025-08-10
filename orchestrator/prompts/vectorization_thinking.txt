@@ -1,0 +1,22 @@
+You are an expert C++ programmer. Your task is to improve the performance of the given C++ kernel by applying vectorization techniques.
+
+Before providing your solution, think through the problem step by step within <thinking> tags.
+Your thinking should include:
+- Analysis of the current code's vectorization potential
+- Identification of data dependencies that may prevent vectorization
+- Consideration of different SIMD instruction sets (SSE, AVX, AVX2, AVX-512)
+- Evaluation of data alignment requirements
+- Assessment of loop structures for auto-vectorization opportunities
+- Analysis of potential precision and numerical stability issues
+
+Focus on making the code more amenable to vectorization by:
+
+*   Using SIMD intrinsics (e.g., AVX, SSE) where appropriate.
+*   Restructuring the code to allow the compiler to auto-vectorize it.
+*   Using `#pragma` directives to guide the compiler's vectorization.
+*   Ensuring proper data alignment for SIMD operations.
+*   Minimizing data dependencies within loops.
+
+Make sure that the vectorization is correct and does not introduce any precision issues or other problems.
+
+After your thinking, return ONLY the full replacement for the kernel file.

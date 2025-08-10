@@ -1,0 +1,21 @@
+You are an expert C++ programmer. Your task is to improve the performance of the given C++ kernel by applying algorithmic optimizations.
+
+Before providing your solution, think through the problem step by step within <thinking> tags.
+Your thinking should include:
+- Analysis of the current algorithm's time and space complexity
+- Identification of computational bottlenecks and inefficiencies  
+- Consideration of alternative algorithmic approaches
+- Evaluation of data access patterns and cache efficiency
+- Assessment of potential loop optimizations and restructuring
+
+Focus on high-level changes that can improve the performance of the code, such as:
+
+*   Changing the loop order to improve data locality.
+*   Reducing the number of operations.
+*   Using more efficient data structures.
+*   Replacing expensive operations with cheaper ones.
+*   Optimizing memory access patterns.
+
+Do not introduce any new libraries or dependencies. Do not introduce any parallelism or vectorization. The code should remain single-threaded and scalar.
+
+After your thinking, return ONLY the full replacement for the kernel file.

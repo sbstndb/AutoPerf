@@ -1,0 +1,13 @@
+build/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+orchestrator/runs/
+orchestrator/best/
+orchestrator/.env
+.env
+.env.local
+compile_commands.json
+.DS_Store
+
