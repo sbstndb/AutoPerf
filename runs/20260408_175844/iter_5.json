@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 5411.13,
+  "status": "improved",
+  "strategy": "sm (ILP):** We process 8 elements per iteration. While the carry-over is serial between blocks, the internal vector operations are highly pipelined, significantly reducing the cycles per element compared to the scalar `vaddss` / `vmovss` loop.\n*   **Memory Alignment & Tail Handling:** We use `_mm256_loadu_ps` and `_mm256_storeu_ps` to handle cases where the input/output pointers are not 32-byte aligned, and a standard scalar loop to process the remaining elements when `n` is not a multiple of 8.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

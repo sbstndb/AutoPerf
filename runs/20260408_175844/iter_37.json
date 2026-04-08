@@ -1,0 +1,9 @@
+{
+  "id": 37,
+  "score": 3299.12,
+  "status": "regression",
+  "strategy": "arry Propagation Optimization:** Instead of fully calculating the carry for the second block after the first is finished, the \"intra-block\" scan for both is done in parallel, and the carry from the previous 16-element iteration is added to both blocks at once (with the first block's tail added to the second).\n*   **Memory Alignment & Prefetching:** The loop is structured to be more friendly to the Intel Ultra 7's out-of-order engine by reducing the total number of micro-ops per 16-element chunk.",
+  "parent_id": 22,
+  "depth": 5,
+  "retry_fix": false
+}

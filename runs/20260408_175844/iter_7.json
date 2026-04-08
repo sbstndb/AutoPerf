@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "ve lower latency and higher throughput on Intel architectures compared to `permutevar8x32`.\n*   **Loop Unrolling (2x):** Unrolled the loop to process 16 elements per iteration. This allows the CPU to ",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 48,
+  "score": 3386.05,
+  "status": "regression",
+  "strategy": "lanes.\n*   **Unrolling and ILP**: Maintained 2-way unrolling (16 elements per loop) to saturate the execution ports. The carry from the first 8-element block is calculated and applied to the second block while the second block's internal scan is still in flight, hiding the latency of the cross-lane dependency.\n*   **Memory Alignment**: Used `_mm256_loadu_ps` for safety, but the logic is structured to maximize the throughput of the L1 cache, which is critical for the Intel Ultra 7's architecture.",
+  "parent_id": 23,
+  "depth": 5,
+  "retry_fix": false
+}

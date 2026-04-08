@@ -1,0 +1,9 @@
+{
+  "id": 47,
+  "score": 3827.07,
+  "status": "regression",
+  "strategy": "on modern Intel architectures (like Ultra 7/Meteor Lake) for propagating the carry across lanes.\n*   **Load/Store Alignment**: Used `_mm256_loadu_ps` and `_mm256_storeu_ps` but structured the loop to maximize the throughput of the execution ports by interleaving independent `vaddps` instructions.\n*   **Reduced Port Pressure**: Minimized the use of the `vpslldq` (Shift) and `vperm` instructions which compete for specific execution ports (Port 0 and Port 5), allowing the CPU to sustain higher IPC.",
+  "parent_id": 23,
+  "depth": 5,
+  "retry_fix": false
+}

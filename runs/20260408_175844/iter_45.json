@@ -1,0 +1,9 @@
+{
+  "id": 45,
+  "score": 4511.85,
+  "status": "regression",
+  "strategy": "tead of using `vperm2f128` followed by `vpermilps` (which are high-latency and port-heavy), we use `vshufps` and `vinsertf128` to extract the carry.\n*   **Reduced Dependency Chain**: We apply the global `v_carry` (the sum of all previous elements) to the current 16-element block as early as possible.\n*   **Fused Accumulation**: By calculating the sum of the first 8-element block and adding it to the second block's local scan, we maintain a high degree of ILP while keeping the carry chain moving.",
+  "parent_id": 20,
+  "depth": 5,
+  "retry_fix": false
+}

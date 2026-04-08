@@ -1,0 +1,9 @@
+{
+  "id": 33,
+  "score": 4066.45,
+  "status": "regression",
+  "strategy": "tures as it maps better to execution ports.\n*   **Instruction Selection:** Replaced the `vperm2f128` (0x08) + `vpermilps` (0xFF) sequence with a single `_mm256_permute2f128_ps` where possible and utilized `_mm256_broadcast_ss` to propagate the scalar carry from the previous 8-float block.\n*   **Reduced Port Pressure:** By unrolling and interleaving the `vpslldq` and `vaddps` instructions, we better utilize the CPU's superscalar execution units, hiding the latency of the floating-point additions.",
+  "parent_id": 24,
+  "depth": 5,
+  "retry_fix": false
+}

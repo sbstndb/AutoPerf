@@ -1,0 +1,9 @@
+{
+  "id": 50,
+  "score": 3281.87,
+  "status": "regression",
+  "strategy": " once per block to move the high lane to the low lane.\n*   **Eliminated Redundant Carry Logic**: Instead of calculating a \"local\" carry for `x1` and then a \"global\" carry for the next loop, we propagate the carry linearly through the registers. This reduces the total instruction count in the hot loop.\n*   **Memory Alignment & Store Optimization**: Used `vmovups` for loads but ensured the logic is structured to allow the CPU's store-to-load forwarder to work efficiently for the carry propagation.",
+  "parent_id": 23,
+  "depth": 5,
+  "retry_fix": false
+}

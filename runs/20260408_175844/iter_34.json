@@ -1,0 +1,9 @@
+{
+  "id": 34,
+  "score": 3934.67,
+  "status": "regression",
+  "strategy": "isters, ensuring we don't reload data from memory unnecessarily.\n*   **Instruction Parallelism:** By unrolling the loop and processing 16 elements, we allow the CPU to calculate the \"local\" prefix sums of the second 8-element block while the \"global\" carry from the first block is still being finalized.\n*   **Memory Alignment & Access:** We use `vmovups` (unaligned loads/stores) as modern Intel CPUs handle these efficiently, but we ensure the logic minimizes the total number of memory operations.",
+  "parent_id": 24,
+  "depth": 5,
+  "retry_fix": false
+}

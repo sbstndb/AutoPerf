@@ -1,0 +1,9 @@
+{
+  "id": 6,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "ent Carry Propagation:** Instead of extracting the carry using `vshufps` and `vbroadcastss`, we use `_mm256_permute2f128_ps` and `_mm256_permute_ps` to keep the carry in the high lane of a register an",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": true
+}

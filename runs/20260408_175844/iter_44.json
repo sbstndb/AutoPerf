@@ -1,0 +1,9 @@
+{
+  "id": 44,
+  "score": 3285.05,
+  "status": "regression",
+  "strategy": "re efficient `vperm2f128` + `vshufps` combination. This reduces the number of shuffles on the critical path.\n*   **Minimized Port Pressure**: By using `vshufps` and `vblendps` strategically, I distributed the workload across different execution ports (Port 5 for shuffles) to avoid bottlenecks during the high-throughput loop.\n*   **Reduced Redundant Loads**: Ensured the compiler treats the input as a stream, minimizing cache misses and maximizing the use of the Intel Ultra 7's L1 cache bandwidth.",
+  "parent_id": 20,
+  "depth": 5,
+  "retry_fix": false
+}

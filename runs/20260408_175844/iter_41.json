@@ -1,0 +1,9 @@
+{
+  "id": 41,
+  "score": 3207.42,
+  "status": "improved",
+  "strategy": "imizing the critical path.\n*   **Reduced Shuffle Latency**: Replaced the `vperm2f128` + `vpermilps` sequence with a more efficient way to extract the last element (the carry) for the next iteration, ensuring the dependency chain between loop iterations is as short as possible.\n*   **Memory Alignment & Throughput**: Used `vmovups` for unaligned loads/stores but structured the loop to maximize the utilization of the CPU's load/store units (2 loads and 1 store per cycle on most modern Intel cores).",
+  "parent_id": 20,
+  "depth": 5,
+  "retry_fix": false
+}

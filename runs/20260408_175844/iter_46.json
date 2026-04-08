@@ -1,0 +1,9 @@
+{
+  "id": 46,
+  "score": 4455.18,
+  "status": "regression",
+  "strategy": " result of the first (`x0`), we calculate the intra-lane prefix sums for both in parallel and only apply the global carry and the `x0` tail at the very end.\n*   **Memory Alignment**: Used `_mm256_loadu_ps` but structured the loop to maximize throughput. The hardware prefetcher handles the linear access pattern well.\n*   **Minimized Shuffles**: Used `_mm256_shuffle_ps` and `_mm256_add_ps` in a pattern that minimizes the total number of cycles spent in the execution units for the prefix sum logic.",
+  "parent_id": 23,
+  "depth": 5,
+  "retry_fix": false
+}

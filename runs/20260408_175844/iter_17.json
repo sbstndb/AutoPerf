@@ -1,0 +1,9 @@
+{
+  "id": 17,
+  "score": null,
+  "status": "test_failed",
+  "strategy": " carry register.\n*   **Loop Unrolling & ILP:** Unrolled the loop to process 16 elements (2x YMM) per iteration. This allows the CPU to overlap the computation of the second block's internal prefix sum",
+  "parent_id": 12,
+  "depth": 4,
+  "retry_fix": false
+}

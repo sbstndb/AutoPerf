@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "rrent 8 elements.\n*   **Loop Unrolling:** We unroll the main loop to process 32 floats (4 AVX2 registers) per iteration. This hides instruction latency and improves throughput by allowing the CPU to p",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

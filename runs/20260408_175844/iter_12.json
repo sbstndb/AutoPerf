@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 3506.26,
+  "status": "improved",
+  "strategy": "ruction Parallelism:** Reorganized the cross-lane addition. Instead of masking, I use `vpermute2f128` to broadcast the high element of the low 128-bit lane to the entire high 128-bit lane, which is faster on Intel Ultra architectures.\n*   **Loop Unrolling:** Unrolled the main loop by 2 (16 elements per iteration). This allows the CPU to overlap the computation of the internal prefix sum of the second block while the carry from the first block is still being finalized, effectively hiding latency.",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

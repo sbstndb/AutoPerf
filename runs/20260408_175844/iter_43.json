@@ -1,0 +1,9 @@
+{
+  "id": 43,
+  "score": 3293.37,
+  "status": "regression",
+  "strategy": "nternal lane propagation with a more efficient `vperm2f128` + `vblendps` approach where possible.\n*   **Reduced Port Pressure**: By using `vbroadcastss` from the previous result's tail, we reduce the number of shuffle operations needed to prepare the carry for the next iteration.\n*   **Loop Unrolling & Tail Handling**: Maintained 16-element unrolling to saturate the FPU pipelines while ensuring the scalar tail is handled efficiently without unnecessary `vzeroupper` overhead in the critical path.",
+  "parent_id": 20,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 19,
+  "score": 3253.79,
+  "status": "improved",
+  "strategy": "fore adding the carry from the first block, we allow the CPU to execute the scan logic of both blocks in parallel.\n3.  **Eliminating Redundant Blends**: Used `_mm256_setzero_ps()` implicitly by using shifts that zero-extend, or by carefully structuring the additions to avoid needing a mask where the value is already zero.\n4.  **AVX2 Integer Shifts for Floats**: Utilized `_mm256_bslli_epi128` (byte shift) to move data across the 128-bit lanes faster than `permute2f128` for the intermediate steps.",
+  "parent_id": 12,
+  "depth": 4,
+  "retry_fix": false
+}

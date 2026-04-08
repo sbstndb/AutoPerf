@@ -1,0 +1,9 @@
+{
+  "id": 49,
+  "score": 3316.28,
+  "status": "regression",
+  "strategy": "ere possible. On Intel Ultra 7 (Meteor Lake/Redwood Cove), `vperm2f128` has a latency of 3 cycles; minimizing its use in the critical path is essential.\n*   **Loop Unrolling and Pipelining**: We maintain the 16-element unroll but structure the code so that the CPU can begin loading the next block of data while the current block's prefix sum is being finalized.\n*   **Alignment and Tail Handling**: The scalar tail is kept minimal, and the main loop handles the bulk of the work using YMM registers.",
+  "parent_id": 23,
+  "depth": 5,
+  "retry_fix": false
+}

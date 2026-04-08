@@ -1,0 +1,9 @@
+{
+  "id": 28,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "eed for `_mm256_setzero_ps()` inside the loop by using `vperm2f128` with the `0x20` selector, which naturally handles the zeroing of the low lane when used correctly in the prefix sum logic.\n*   **Loo",
+  "parent_id": 19,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 16,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "ration immediately.\n*   **Loop Unrolling & ILP:** Unrolled the loop by 2 (16 elements per iteration) to allow the CPU to overlap the independent intra-lane calculations of two different blocks, hiding",
+  "parent_id": 12,
+  "depth": 4,
+  "retry_fix": false
+}

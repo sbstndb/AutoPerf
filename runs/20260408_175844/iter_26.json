@@ -1,0 +1,9 @@
+{
+  "id": 26,
+  "score": 3250.19,
+  "status": "improved",
+  "strategy": "roughput:** Maintained 16-element unrolling to saturate the load/store units. The Intel Ultra 7 (Meteor Lake) architecture benefits from high ILP; by processing two YMM registers, we hide the latency of the `vaddps` instructions (typically 4 cycles).\n*   **Carry Propagation Optimization:** Instead of extracting the scalar carry and re-broadcasting, the carry is maintained entirely within the YMM registers as a broadcasted value, minimizing transitions between the vector and integer/scalar units.",
+  "parent_id": 19,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 39,
+  "score": 3969.04,
+  "status": "regression",
+  "strategy": "s redundant shuffling and allows the pipeline to start processing the second block's final addition sooner.\n*   **Reduced Dependency Chains:** By restructuring the `v_carry` update, we ensure that the \"global\" carry needed for the next iteration is ready as early as possible, minimizing the stall at the start of the next loop iteration.\n*   **Memory Alignment Awareness:** While `vmovu` is used for safety, the logic is structured to maximize throughput on the Intel Ultra 7's wide execution units.",
+  "parent_id": 22,
+  "depth": 5,
+  "retry_fix": false
+}

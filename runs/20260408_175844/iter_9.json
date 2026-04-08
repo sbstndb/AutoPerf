@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "CPU to start the next iteration's final addition sooner.\n*   **Loop Unrolling & ILP:** We unroll the loop to process 16 elements (2 blocks) per iteration. While the carry is still serial, unrolling al",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

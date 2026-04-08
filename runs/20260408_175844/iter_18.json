@@ -1,0 +1,9 @@
+{
+  "id": 18,
+  "score": null,
+  "status": "test_failed",
+  "strategy": " 16 elements (2x YMM) per iteration. This allows the CPU to overlap the computation of the second block while the first block is finishing its carry-dependent additions.\n*   **Instruction Selection:**",
+  "parent_id": 12,
+  "depth": 4,
+  "retry_fix": false
+}

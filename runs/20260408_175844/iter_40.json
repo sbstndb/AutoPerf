@@ -1,0 +1,9 @@
+{
+  "id": 40,
+  "score": 3284.92,
+  "status": "regression",
+  "strategy": "s the second block from waiting on the full completion of the first block's carry propagation.\n*   **Optimized Carry Propagation:** Instead of using `vperm2f128` twice per 8-element block, we extract the carry for the next iteration using a single `vperm2f128` and `vpermilps` sequence at the end of the 16-element cycle.\n*   **Memory Alignment Awareness:** While `vmovu` is used for safety, the loop unrolling and structure are designed to maximize throughput on the Intel Ultra 7's execution ports.",
+  "parent_id": 22,
+  "depth": 5,
+  "retry_fix": false
+}

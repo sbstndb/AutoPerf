@@ -1,0 +1,9 @@
+{
+  "id": 14,
+  "score": 4766.51,
+  "status": "regression",
+  "strategy": " we can perform shifts more efficiently than multiple `permute` and `blend` operations.\n*   **Instruction Level Parallelism (ILP):** We unroll the loop by 2x (processing 16 elements per iteration). This allows the CPU to overlap the prefix sum calculation of the second 8-element block with the carry propagation of the first.\n*   **Memory Alignment:** We use `_mm256_loadu_ps` and `_mm256_storeu_ps` for safety, but the unrolled loop structure helps the hardware prefetcher and maximizes throughput.",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": true
+}

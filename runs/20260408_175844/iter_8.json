@@ -1,0 +1,9 @@
+{
+  "id": 8,
+  "score": 4504.98,
+  "status": "improved",
+  "strategy": "n:** The carry propagation is the primary bottleneck. By calculating the internal prefix sum of the 8-element block first and adding the previous carry at the very end, we allow the CPU to overlap the prefix calculation of the current block with the final addition of the previous block's carry.\n*   **Optimized Carry Extraction:** Used `vbroadcastss` directly from the high lane of the previous result. This is faster than a shuffle-extract-broadcast sequence and keeps the carry in the SIMD domain.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

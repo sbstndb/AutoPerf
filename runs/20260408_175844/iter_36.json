@@ -1,0 +1,9 @@
+{
+  "id": 36,
+  "score": 4411.82,
+  "status": "regression",
+  "strategy": "le the first block is still being processed.\n*   **Reduced Memory Pressure**: We use `_mm256_loadu_ps` and `_mm256_storeu_ps`. By processing 16 elements per iteration, we reduce the overhead of the loop control logic and maximize the throughput of the load/store units.\n*   **Broadcast for Carry**: Using `_mm256_broadcast_ss` to apply the carry to all elements of a vector is more efficient than creating a vector via shuffles, as it maps directly to a single micro-op on modern Intel architectures.",
+  "parent_id": 22,
+  "depth": 5,
+  "retry_fix": false
+}

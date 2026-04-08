@@ -1,0 +1,9 @@
+{
+  "id": 15,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "keep the carry in the SIMD registers.\n*   **Loop Unrolling (2x):** Unrolled the main loop to process 16 elements per iteration. This hides the latency of the prefix sum dependency chain by allowing th",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": true
+}

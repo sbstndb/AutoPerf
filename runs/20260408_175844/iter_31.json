@@ -1,0 +1,9 @@
+{
+  "id": 31,
+  "score": 3321.35,
+  "status": "regression",
+  "strategy": "ing `_mm256_permute2f128_ps` with `0x11` only when necessary and relying on `_mm256_broadcast_ss` for scalar-to-vector carry propagation where applicable.\n*   **Minimized Shuffles**: Reduced the number of `vpermilps` calls by reusing the results of lane-shuffles.\n*   **Memory Alignment & Pre-fetching**: While the signature requires `loadu`, the unrolled loop structure (16 elements) aligns well with the L1 cache line size (64 bytes), maximizing throughput for the Intel Ultra 7's load/store units.",
+  "parent_id": 24,
+  "depth": 5,
+  "retry_fix": false
+}

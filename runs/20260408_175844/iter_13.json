@@ -1,0 +1,9 @@
+{
+  "id": 13,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "s` and `_mm256_shuffle_ps` to keep the carry in the SIMD registers.\n*   **Loop Unrolling (2x):** Unrolled the main loop to process 16 elements per iteration. This allows the CPU to overlap the prefix ",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": true
+}

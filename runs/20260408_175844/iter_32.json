@@ -1,0 +1,9 @@
+{
+  "id": 32,
+  "score": 4396.01,
+  "status": "regression",
+  "strategy": " I use `_mm256_extractf128_ps` and `_mm_shuffle_ps` to handle the carry between blocks and iterations. This reduces the pressure on the shuffle ports.\n*   **Minimized Redundant Loads:** Replaced `_mm256_loadu_ps` followed by `vpslldq` with a single load and register-to-register shifts to ensure the compiler doesn't generate redundant memory accesses.\n*   **Loop Tail Optimization:** Maintained a clean scalar fallback for $n < 16$ to ensure correctness while keeping the hot loop tight and aligned.",
+  "parent_id": 24,
+  "depth": 5,
+  "retry_fix": false
+}

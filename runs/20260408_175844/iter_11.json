@@ -1,0 +1,9 @@
+{
+  "id": 11,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "ng the CPU to overlap the prefix sum calculation of the second block with the carry propagation of the first.\n4.  **Eliminated Redundant Masks**: Simplified the cross-lane addition by using `_mm256_pe",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

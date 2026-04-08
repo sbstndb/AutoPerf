@@ -1,0 +1,9 @@
+{
+  "id": 42,
+  "score": 3300.42,
+  "status": "regression",
+  "strategy": "e shuffle port pressure.\n*   **Reduced Dependency Chain**: The global `v_carry` is added to the first block (`x1`) immediately. The carry for the second block (`x2`) is derived from the final element of `x1` using a single `vperm2f128` and `vshufps` sequence, ensuring `x2` starts its final addition as soon as `x1` is ready.\n*   **Memory Alignment & Store-to-Load Forwarding**: We use `vmovups` but ensure the loop structure encourages the hardware prefetcher to keep up with the 16-element strides.",
+  "parent_id": 20,
+  "depth": 5,
+  "retry_fix": false
+}

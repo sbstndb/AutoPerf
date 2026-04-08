@@ -1,0 +1,9 @@
+{
+  "id": 25,
+  "score": 3334.7,
+  "status": "regression",
+  "strategy": "nteger port) and `vaddps` (floating point port) interchangeably. We maintain this but optimize the \"carry\" update. Instead of extracting and broadcasting, we use `_mm256_permute2f128_ps` and `_mm256_permute_ps` to prepare the next carry entirely within the YMM registers where possible.\n*   **Memory Alignment & Pre-fetching:** By processing 16 elements (64 bytes), we align better with the cache line size (64 bytes), improving the efficiency of the L1d cache hits on the Intel Ultra 7 architecture.",
+  "parent_id": 14,
+  "depth": 4,
+  "retry_fix": false
+}

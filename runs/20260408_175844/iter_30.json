@@ -1,0 +1,9 @@
+{
+  "id": 30,
+  "score": 3295.98,
+  "status": "regression",
+  "strategy": "possible. Specifically, used `_mm256_permute2f128_ps` with the `0x28` immediate to broadcast the high lane's last element more efficiently.\n*   **Reduced Constant Pressure:** Eliminated the need for `_mm256_setzero_ps()` inside the loop by using `_mm256_permute2f128_ps` with zeroing idioms or by structuring shuffles to avoid needing a zero register.\n*   **Memory Alignment:** Maintained `vmovdqu` for safety but structured the loop to maximize the throughput of the Intel Ultra 7's dual load ports.",
+  "parent_id": 19,
+  "depth": 5,
+  "retry_fix": false
+}

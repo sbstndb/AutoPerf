@@ -1,0 +1,9 @@
+{
+  "id": 20,
+  "score": 3272.88,
+  "status": "regression",
+  "strategy": "d Carry Propagation Latency:** The carry from the previous 16-element iteration is now added to both 8-element blocks in the current iteration using a single broadcasted register, ensuring the dependency chain is as short as possible.\n*   **Branch and Tail Optimization:** Streamlined the loop logic to ensure the compiler generates a clean hot loop. The scalar tail now uses `vmovss` to extract the carry from the SIMD register only once, avoiding unnecessary cross-domain penalties inside the loop.",
+  "parent_id": 12,
+  "depth": 4,
+  "retry_fix": false
+}

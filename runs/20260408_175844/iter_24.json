@@ -1,0 +1,9 @@
+{
+  "id": 24,
+  "score": 3256.39,
+  "status": "regression",
+  "strategy": "s per iteration. This allows the CPU to overlap the memory loads and the initial \"intra-lane\" shifts of the second block while the first block is resolving its carry dependencies.\n*   **Dependency Breaking:** The carry from the previous iteration is added as the very last step of the prefix sum calculation for the current block. This allows the \"internal\" prefix sum of the 8-element block to be computed independently of the previous block's result, maximizing Instruction Level Parallelism (ILP).",
+  "parent_id": 14,
+  "depth": 4,
+  "retry_fix": false
+}

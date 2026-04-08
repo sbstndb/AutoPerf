@@ -1,0 +1,9 @@
+{
+  "id": 21,
+  "score": 3315.07,
+  "status": "regression",
+  "strategy": "oop Unrolling (2x):** Unrolled the loop to process 16 elements (2x YMM registers) per iteration. This increases Instruction Level Parallelism (ILP) by allowing the CPU to begin calculating the internal prefix sum of the second block while the carry from the first block is still being finalized.\n*   **Memory Alignment & Access:** Used `_mm256_loadu_ps` and `_mm256_storeu_ps` to handle potential misalignment, while the unrolled structure reduces the overhead of loop control and pointer arithmetic.",
+  "parent_id": 14,
+  "depth": 4,
+  "retry_fix": true
+}

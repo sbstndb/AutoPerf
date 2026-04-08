@@ -1,0 +1,9 @@
+{
+  "id": 22,
+  "score": 3261.91,
+  "status": "regression",
+  "strategy": "um dependency chain by allowing the CPU to execute the \"intra-register\" scan of the second block while the carry from the first block is still being computed.\n*   **Memory Alignment & Prefetching:** Used `_mm256_loadu_ps` for compatibility, but the unrolled structure allows the hardware prefetcher to better predict the linear access pattern.\n*   **Minimized Dependency Chain:** The carry for the next iteration is calculated as late as possible to allow maximum ILP between the two unrolled blocks.",
+  "parent_id": 14,
+  "depth": 4,
+  "retry_fix": false
+}

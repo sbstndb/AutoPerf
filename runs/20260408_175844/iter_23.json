@@ -1,0 +1,9 @@
+{
+  "id": 23,
+  "score": 3294.22,
+  "status": "regression",
+  "strategy": "elements.\n*   **Optimized Intra-Register Scan:** Replaced `vperm2f128` + `vpermilps` with `_mm256_permute2f128_ps` and `_mm256_shuffle_ps` to minimize port pressure.\n*   **Memory Alignment & Throughput:** Used `_mm256_loadu_ps` and `_mm256_storeu_ps` but structured the loop to maximize the utilization of the CPU's load/store units by processing 64 bytes per iteration.\n*   **Minimized VZEROUPPER overhead:** Ensured the transition between AVX and scalar code is handled efficiently by the compiler.",
+  "parent_id": 14,
+  "depth": 4,
+  "retry_fix": false
+}

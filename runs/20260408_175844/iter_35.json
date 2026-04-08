@@ -1,0 +1,9 @@
+{
+  "id": 35,
+  "score": 3836.53,
+  "status": "regression",
+  "strategy": "rry.\n*   **Instruction Reordering:** We calculate the intra-lane sums for both 8-element blocks in the 16-element loop before applying the cross-lane carry. This allows the CPU to overlap the execution of independent additions.\n*   **Efficient Carry Propagation:** We use `_mm256_broadcast_ss` to propagate the scalar carry from the previous iteration, which is often faster than complex permutations when the value is already in a register or can be pulled from the end of the previous output block.",
+  "parent_id": 24,
+  "depth": 5,
+  "retry_fix": false
+}

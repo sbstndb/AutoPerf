@@ -1,0 +1,9 @@
+{
+  "id": 27,
+  "score": 3276.47,
+  "status": "regression",
+  "strategy": "alves of a 16-element block) with a more efficient extraction.\n*   **Reduced Constant Loading:** Eliminated the repeated creation of zero-vectors and masks inside the loop.\n*   **AVX2 Integer-Float Domain Switching:** Leveraged the fact that `vpslldq` (integer shift) and `vaddps` (float add) can execute on different ports on the Intel Ultra 7 (Meteor Lake/Lunar Lake architecture), allowing the CPU to overlap the bit-shifting of the next vector with the floating-point addition of the current one.",
+  "parent_id": 19,
+  "depth": 5,
+  "retry_fix": false
+}

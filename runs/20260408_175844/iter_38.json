@@ -1,0 +1,9 @@
+{
+  "id": 38,
+  "score": 3305.64,
+  "status": "regression",
+  "strategy": " element of a vector) using a single `vperm2f128` and `vpermilps` sequence that stays within the execution units' fast paths.\n*   **Memory Alignment & Prefetching:** While `loadu` is used for safety, the loop unrolling to 16 elements helps the hardware prefetcher recognize the linear access pattern more effectively.\n*   **Minimized Shuffles:** We use `_mm256_castsi256_ps(_mm256_bslli_epi128(...))` for intra-lane shifts, which is the most efficient way to perform 4-byte and 8-byte shifts on AVX2.",
+  "parent_id": 22,
+  "depth": 5,
+  "retry_fix": false
+}
