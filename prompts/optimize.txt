@@ -1,0 +1,20 @@
+Optimize the following {language} kernel for maximum performance.
+
+=== HARDWARE ===
+{hardware_info}
+
+=== COMPILER ===
+{compiler} {flags}
+
+=== CURRENT PERFORMANCE ===
+{score} ns/op
+
+=== PREVIOUS ATTEMPTS ===
+{history}
+
+=== CODE TO OPTIMIZE ===
+```{language}
+{code}
+```
+
+Focus on algorithmic improvements, cache-friendly access patterns, vectorization opportunities, and instruction-level parallelism.

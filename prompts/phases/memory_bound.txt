@@ -1,0 +1,3 @@
+FOCUS: This kernel is memory-bound.
+Prioritize: loop interchange, tiling/blocking, data layout changes, prefetch hints, reducing memory footprint.
+Do NOT focus on SIMD until memory access patterns are fixed.

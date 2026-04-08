@@ -1,0 +1,3 @@
+FOCUS: This kernel is compute-bound.
+Prioritize: SIMD vectorization, instruction-level parallelism, strength reduction, FMA utilization.
+Consider using compiler intrinsics if auto-vectorization fails.
