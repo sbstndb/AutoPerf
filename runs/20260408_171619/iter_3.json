@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": 4.63,
+  "status": "regression",
+  "strategy": "nch misprediction penalties. The loop condition `exp > 1` handles the most common cases efficiently.\n*   **Instruction Level Parallelism (ILP):** By updating `base` (squaring) and `result` in the same iteration, we utilize the CPU's ability to execute multiple independent instructions.\n*   **Eliminating Redundant Work:** The loop terminates as soon as `exp` reaches 1, and the final multiplication is handled outside or via the loop logic to avoid unnecessary squaring of the base on the final bit.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

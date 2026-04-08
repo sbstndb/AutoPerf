@@ -79,6 +79,24 @@ def beam_search(config, language_handler, system_prompt, user_prompt_template, b
 
     compiler = "g++" if config.language == "cpp" else ("gcc" if config.language == "c" else "python")
 
+    # Extract dataset info from harness if --show-dataset
+    dataset_info = ""
+    if config.show_dataset:
+        harness_path = config.kernel_path.replace(".cpp", "_harness.cpp")
+        if os.path.isfile(harness_path):
+            with open(harness_path) as f:
+                harness_src = f.read()
+            # Extract arrays from harness source
+            import re
+            arrays = re.findall(r'(?:const\s+\w+\s+\w+\[\]\s*=\s*\{[^}]+\})', harness_src)
+            if arrays:
+                dataset_info = "=== BENCHMARK DATASET ===\nThe benchmark measures average ns/op over these inputs:\n"
+                for arr in arrays:
+                    dataset_info += f"  {arr}\n"
+                dataset_info += "Your optimization will be scored on the average across ALL these inputs.\n\n"
+        if not dataset_info:
+            ui.info("--show-dataset: could not extract dataset from harness")
+
     # Create run directory for saving per-iteration data
     run_dir = _create_run_dir()
     ui.info(f"Run data will be saved to: {run_dir}")
@@ -110,6 +128,7 @@ def beam_search(config, language_handler, system_prompt, user_prompt_template, b
                     history=history.format_for_llm(),
                     code=parent.code,
                     assembly_section=assembly_section,
+                    dataset_section=dataset_info,
                 )
 
                 # Call LLM

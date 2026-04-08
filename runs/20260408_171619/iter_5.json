@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 4.52,
+  "status": "regression",
+  "strategy": "ased on the bit, allowing the CPU to execute multiplications in parallel or with minimal stall.\n3.  **Special Case for Zero Exponent:** A fast-path check for `exp == 0` is kept to handle the identity case immediately, while the rest of the logic is flattened to avoid the overhead of the `while` loop control flow.\n4.  **Data Flow Optimization:** By structuring the code to calculate `base` squares independently of the `result` update where possible, we increase Instruction Level Parallelism (ILP).",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

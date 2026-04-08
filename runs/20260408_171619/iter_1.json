@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "score": 2.81,
+  "status": "regression",
+  "strategy": "ucing branch misprediction overhead for small inputs.\n3.  **Instruction Level Parallelism (ILP):** The binary exponentiation algorithm allows the CPU to calculate `base *= base` and `result *= base` with minimal data dependency stalls compared to a linear chain of multiplications.\n4.  **Inlining and Compiler Hints:** Given the small range of inputs in the benchmark (max exponent 20), the $O(\\log N)$ approach fits entirely within the CPU's execution ports with very few cycles.\n\n### OPTIMIZED CODE",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

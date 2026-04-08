@@ -15,3 +15,4 @@ class AutoPerfConfig:
     pin_core: int | None = 0
     timeout_sec: int = 30
     max_memory_mb: int = 1024
+    show_dataset: bool = False          # expose benchmark dataset to LLM

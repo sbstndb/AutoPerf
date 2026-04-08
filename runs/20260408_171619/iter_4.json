@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "score": 4.06,
+  "status": "regression",
+  "strategy": "p runs at most 5 times. Unrolling the loop manually allows the CPU to schedule `imul` instructions more effectively, utilizing the execution ports better.\n*   **Data Flow Optimization:** By calculating `base^2`, `base^4`, `base^8`, etc., in a linear sequence of independent-ish instructions, we maximize Instruction Level Parallelism (ILP).\n*   **Special Case for Zero:** A single check for `exp == 0` handles the identity case quickly, while the rest of the logic proceeds without further branching.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

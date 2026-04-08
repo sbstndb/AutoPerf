@@ -18,6 +18,7 @@ def main():
     parser.add_argument("--pin-core", type=int, default=0)
     parser.add_argument("--flags", default="-O3 -march=native")
     parser.add_argument("--timeout", type=int, default=30)
+    parser.add_argument("--show-dataset", action="store_true", default=False, help="Expose benchmark dataset to the LLM")
     args = parser.parse_args()
 
     config = AutoPerfConfig(
@@ -31,6 +32,7 @@ def main():
         pin_core=args.pin_core,
         compiler_flags=args.flags,
         timeout_sec=args.timeout,
+        show_dataset=args.show_dataset,
     )
 
     # Import language handler
