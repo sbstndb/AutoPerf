@@ -635,13 +635,19 @@ class CppHandler(LanguageHandler):
         with open(self._kernel_path, "w") as f:
             f.write(code)
 
-        # Locate header
-        header_path = self._find_header()
+        # Check for custom harness (e.g., kernels/pow_int_harness.cpp)
+        custom_harness = self.config.kernel_path.replace(".cpp", "_harness.cpp")
+        if os.path.isfile(custom_harness):
+            import shutil
+            shutil.copy(custom_harness, self._harness_path)
+        else:
+            # Locate header
+            header_path = self._find_header()
 
-        # Generate harness
-        harness_src = self._generate_harness(code, header_path)
-        with open(self._harness_path, "w") as f:
-            f.write(harness_src)
+            # Generate harness
+            harness_src = self._generate_harness(code, header_path)
+            with open(self._harness_path, "w") as f:
+                f.write(harness_src)
 
         # Compile
         flags = self.config.compiler_flags.split()
