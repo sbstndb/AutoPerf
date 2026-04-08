@@ -1,0 +1,12 @@
+AutoPerf v2 -- LLM-driven performance optimizer
+Baseline: 10.0 ns/op  (kernels/test.cpp)
+  [d1/b0] #1  IMPROVED  8.5 ns/op  (best: 10.0)
+  [d1/b1] #2  BUILD FAILED  N/A
+  [d1/b2] #3  TEST FAILED  N/A
+  [d1/b3] #4  NO_CODE  N/A
+  [d1/b4] #5  REGRESSION  12.3 ns/op  (best: 8.5)
+  [d2/b0] #6  TIMEOUT  N/A
+  [d2/b1] #7  BENCH FAILED  N/A
+  [d2/b2] #8  IMPROVED  6.1e+00 ns/op  (best: 8.5)
+  [d2/b3] #9  REGRESSION  1.5e+01 ns/op  (best: 6.1)
+  [d2/b4] #10  NO CODE  N/A

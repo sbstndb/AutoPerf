@@ -1,0 +1,23 @@
+AutoPerf v2 -- LLM-driven performance optimizer
+Baseline: 5.0 ns/op  (kernels/pow_int.cpp)
+  [d1/b0] #1  IMPROVED  3.8 ns/op  (best: 5.0)
+  [d1/b1] #2  IMPROVED  3.2 ns/op  (best: 3.8)
+  [d1/b2] #3  BUILD FAILED  N/A
+  [d1/b3] #4  REGRESSION  5.3 ns/op  (best: 3.2)
+  [d1/b4] #5  IMPROVED  2.9 ns/op  (best: 3.2)
+  [d2/b0] #6  IMPROVED  2.1 ns/op  (best: 2.9)
+  [d2/b1] #7  REGRESSION  4.1 ns/op  (best: 2.1)
+  [d2/b2] #8  REGRESSION  3.5 ns/op  (best: 2.1)
+  [d2/b3] #9  IMPROVED  2.08 ns/op  (best: 2.1)
+  [d2/b4] #10  TEST FAILED  N/A
+  [d3/b0] #11  REGRESSION  3.9 ns/op  (best: 2.08)
+  [d3/b1] #12  IMPROVED  1.95 ns/op  (best: 2.08)
+  [d3/b2] #13  REGRESSION  2.5 ns/op  (best: 1.95)
+  [d3/b3] #14  REGRESSION  4.8 ns/op  (best: 1.95)
+  [d3/b4] #15  REGRESSION  2.3 ns/op  (best: 1.95)
+  [d4/b0] #16  REGRESSION  2.2 ns/op  (best: 1.95)
+  [d4/b1] #17  IMPROVED  1.85 ns/op  (best: 1.95)
+  [d4/b2] #18  REGRESSION  3.1 ns/op  (best: 1.85)
+  [d4/b3] #19  IMPROVED  1.79 ns/op  (best: 1.85)
+  [d4/b4] #20  REGRESSION  2.6 ns/op  (best: 1.79)
+  [d5/b0] #21  REGRESSION  2.0 ns/op  (best: 1.79)
