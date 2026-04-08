@@ -626,6 +626,77 @@ class CppHandler(LanguageHandler):
     # Public interface
     # ------------------------------------------------------------------
 
+    def get_assembly(self, code: str) -> str | None:
+        """Generate assembly for the kernel and return the hot function's asm.
+
+        Returns the first ~50 lines of the function's assembly in Intel syntax,
+        or None if generation fails.
+        """
+        try:
+            asm_src = os.path.join(self._workdir, "kernel_asm.cpp")
+            asm_out = os.path.join(self._workdir, "kernel.s")
+
+            with open(asm_src, "w") as f:
+                f.write(code)
+
+            flags = self.config.compiler_flags.split()
+            cmd = [
+                self.COMPILER,
+                self.STD_FLAG,
+                *flags,
+                "-S",
+                "-masm=intel",
+                "-o", asm_out,
+                asm_src,
+            ]
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+            if result.returncode != 0:
+                return None
+
+            if not os.path.isfile(asm_out):
+                return None
+
+            with open(asm_out) as f:
+                asm_text = f.read()
+
+            # Parse the kernel's function signature to find its name
+            sig = parse_function_signature(code)
+            if sig is None:
+                # Return the first 50 non-directive lines
+                lines = [l for l in asm_text.splitlines() if not l.strip().startswith('.')]
+                return "\n".join(lines[:50])
+
+            # Find the function label in the assembly
+            func_name = sig.name
+            lines = asm_text.splitlines()
+            start_idx = None
+            for i, line in enumerate(lines):
+                # Look for the function label (e.g., "reduce:" or mangled name containing func_name)
+                stripped = line.strip()
+                if stripped.endswith(":") and func_name in stripped:
+                    start_idx = i
+                    break
+
+            if start_idx is None:
+                # Fallback: return first 50 meaningful lines
+                meaningful = [l for l in lines if l.strip() and not l.strip().startswith('.cfi')]
+                return "\n".join(meaningful[:50])
+
+            # Extract from function label until next function or end
+            func_lines = []
+            for line in lines[start_idx:]:
+                func_lines.append(line)
+                if len(func_lines) >= 50:
+                    break
+                # Stop at .size directive for this function (end of function)
+                if line.strip().startswith('.size') and func_name in line:
+                    break
+
+            return "\n".join(func_lines) if func_lines else None
+
+        except Exception:
+            return None
+
     def build(self, code: str) -> None:
         """Compile *code* (kernel source) into a benchmarkable binary.
 

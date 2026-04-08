@@ -17,4 +17,4 @@ Optimize the following {language} kernel for maximum performance.
 {code}
 ```
 
-Focus on algorithmic improvements, cache-friendly access patterns, vectorization opportunities, and instruction-level parallelism.
+{assembly_section}Focus on algorithmic improvements, cache-friendly access patterns, vectorization opportunities, and instruction-level parallelism.

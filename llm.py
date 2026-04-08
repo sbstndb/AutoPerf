@@ -1,6 +1,11 @@
 import re
+import logging
 
 import litellm
+
+litellm.suppress_debug_info = True
+logging.getLogger("LiteLLM").setLevel(logging.WARNING)
+logging.getLogger("litellm").setLevel(logging.WARNING)
 
 
 def call_llm(system_prompt: str, user_prompt: str, model: str, temperature: float = 0.3) -> str:

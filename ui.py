@@ -78,6 +78,10 @@ class UI:
         status: str,
         score: float | None = None,
         best_score: float | None = None,
+        parent_id: int | None = None,
+        depth_level: int | None = None,
+        retry_fix: bool = False,
+        elapsed: float | None = None,
     ) -> None:
         """Print a single iteration result with colour coding."""
         label = f"[d{depth}/b{branch}] #{candidate_id}"
@@ -104,12 +108,25 @@ class UI:
 
         best_str = f"  (best: {best_score:.1f})" if best_score is not None else ""
 
+        # Extra info: depth, parent, retry, elapsed
+        extras = []
+        if depth_level is not None:
+            extras.append(f"depth={depth_level}")
+        if parent_id is not None:
+            extras.append(f"parent=#{parent_id}")
+        if retry_fix:
+            extras.append("retry-fixed")
+        if elapsed is not None:
+            mins, secs = divmod(int(elapsed), 60)
+            extras.append(f"t={mins}m{secs:02d}s")
+        extra_str = f"  ({', '.join(extras)})" if extras else ""
+
         if self.console:
             self.console.print(
-                f"  {label}  [{style}]{tag}[/{style}]  {score_str}{best_str}"
+                f"  {label}  [{style}]{tag}[/{style}]  {score_str}{best_str}{extra_str}"
             )
         else:
-            print(f"  {label}  {tag}  {score_str}{best_str}", file=sys.stderr)
+            print(f"  {label}  {tag}  {score_str}{best_str}{extra_str}", file=sys.stderr)
 
     def result(
         self,
