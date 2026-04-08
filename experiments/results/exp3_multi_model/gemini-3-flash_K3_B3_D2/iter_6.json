@@ -1,0 +1,9 @@
+{
+  "id": 6,
+  "score": 5.22,
+  "status": "regression",
+  "strategy": "its in the exponent at once, significantly reducing the number of iterations for sparse exponents.\n*   **Early Exit for Small Bases:** Retaining the specialized logic for `base == 2` using the `shlx` instruction (via `1ULL << exp`) provides a massive speedup for a common case, as it bypasses the loop entirely.\n*   **Removing Redundant Checks:** Reordering the initial identity checks to minimize the number of comparisons for the \"general case\" (where `base > 2` and `exp > 0`).\n\n### OPTIMIZED CODE",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

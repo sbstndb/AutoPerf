@@ -1,0 +1,9 @@
+{
+  "id": 8,
+  "score": 4048.61,
+  "status": "improved",
+  "strategy": ":** Even though the `running_sum` is serial, the internal prefix sums of the individual 8-float blocks are independent. We calculate the internal sums for two blocks (16 floats) simultaneously before applying the carry-over, allowing the CPU to utilize more execution ports.\n*   **Eliminating Redundant Loads:** The assembly showed the compiler was re-loading data from memory after `vpslldq`. We ensure the data stays in registers by using explicit `__m256` variables and avoiding unnecessary casts.",
+  "parent_id": 4,
+  "depth": 3,
+  "retry_fix": true
+}

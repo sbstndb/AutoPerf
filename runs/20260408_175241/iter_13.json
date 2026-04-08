@@ -1,0 +1,9 @@
+{
+  "id": 13,
+  "score": 3643.97,
+  "status": "regression",
+  "strategy": "he floating-point units, reducing port pressure and bypass delays.\n3.  **Parallel Block Processing**: Processed two 8-float blocks per iteration but decoupled their internal scans. The second block's scan starts using the raw input while the first block's carry is still being finalized.\n4.  **Optimized Carry Propagation**: Instead of extracting to a scalar `float` and broadcasting back, we keep the `running_sum` in a `__m256` register to avoid the expensive transition between SIMD and GPR/Stack.",
+  "parent_id": 6,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,4 @@
+INFO: Run data will be saved to: runs/20260408_172512
+   #1  IMPROVED  3.7 ns/op  (best: 5.5)  (depth=1, parent=#0, t=0m00s)
+   #2  IMPROVED  2.6 ns/op  (best: 3.7)  (depth=1, parent=#0, t=1m56s)
+   #3  REGRESSION  3.0 ns/op  (best: 2.6)  (depth=1, parent=#0, t=6m37s)

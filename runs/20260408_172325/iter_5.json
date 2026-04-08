@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 2.64,
+  "status": "regression",
+  "strategy": "epresented as `0xFFFFFFFFFFFFFFFFULL` for `uint64_t`). While the original code handled it via the loop, an explicit check prevents unnecessary iterations for this common edge case.\n*   **Bit Manipulation for Loop Termination:** Using `__builtin_ctzll` (Count Trailing Zeros) allows the loop to skip trailing zeros in the exponent immediately, and `__builtin_clzll` (Count Leading Zeros) allows us to determine the exact number of iterations required, avoiding unnecessary `shr` and `test` operations.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

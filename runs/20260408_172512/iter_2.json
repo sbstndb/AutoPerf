@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "score": 2.59,
+  "status": "improved",
+  "strategy": "vious* iteration. Modern superscalar processors (like the Intel Core Ultra 7) have multiple ALU ports and will execute both of these independent multiplications simultaneously in the same cycle.\n4. **Loop Peeling & Early Exit**: Peeled the first iteration out of the loop to avoid multiplying by 1 and to provide an ultra-fast path for `exp = 1`. Additionally, the loop breaks immediately when `exp` reaches 0, saving a redundant and expensive `base *= base` operation at the end.\n\n### OPTIMIZED CODE",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

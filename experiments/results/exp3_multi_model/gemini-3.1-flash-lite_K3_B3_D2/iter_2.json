@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "score": 4.39,
+  "status": "regression",
+  "strategy": "\n*   **Instruction-Level Parallelism (ILP):** The algorithm is inherently serial due to the dependency chain of the result. However, by minimizing the number of operations per exponent bit, we reduce the total latency of the function, allowing the CPU to retire the instruction sequence much faster.\n*   **Strength Reduction:** The logic avoids unnecessary conditional checks inside the loop, relying on bitwise operations (`exp & 1` and `exp >>= 1`) which are extremely fast on x86_64 architectures.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

@@ -1,0 +1,22 @@
+INFO: Run data will be saved to: runs/20260408_172325
+   #1  REGRESSION  5.9 ns/op  (best: 2.0)  (depth=1, parent=#0, t=0m00s)
+   #2  REGRESSION  6.3 ns/op  (best: 2.0)  (depth=1, parent=#0, t=0m03s)
+   #3  REGRESSION  3.2 ns/op  (best: 2.0)  (depth=1, parent=#0, t=0m07s)
+   #4  REGRESSION  3.0 ns/op  (best: 2.0)  (depth=2, parent=#3, t=0m22s)
+   #5  REGRESSION  2.6 ns/op  (best: 2.0)  (depth=2, parent=#3, t=0m37s)
+   #6  REGRESSION  5.2 ns/op  (best: 2.0)  (depth=2, parent=#3, t=0m43s)
+   #7  REGRESSION  3.9 ns/op  (best: 2.0)  (depth=2, parent=#1, t=0m49s)
+   #8  REGRESSION  4.3 ns/op  (best: 2.0)  (depth=2, parent=#1, t=0m54s)
+   #9  REGRESSION  3.6 ns/op  (best: 2.0)  (depth=2, parent=#1, t=0m59s)
+   #10  REGRESSION  3.7 ns/op  (best: 2.0)  (depth=2, parent=#2, t=1m14s)
+   #11  REGRESSION  3.9 ns/op  (best: 2.0)  (depth=2, parent=#2, t=1m26s)
+   #12  REGRESSION  3.8 ns/op  (best: 2.0)  (depth=2, parent=#2, t=1m39s)
+INFO: Run summary saved to: runs/20260408_172325/summary.json
+[Baseline] Building and benchmarking kernels/pow_int.cpp...
+[Baseline] Score: 2.01 ns/op
+
+============================================================
+Best result: 2.01 ns/op (1.00x speedup)
+Strategy: baseline
+Depth: 0, ID: 0
+Optimized code saved to: kernels/pow_int_optimized.cpp

@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": 4788.21,
+  "status": "regression",
+  "strategy": "the loop to process 32 elements (4x AVX blocks) per iteration. This allows the CPU to overlap the memory loads and the initial shuffle/add stages of independent blocks while the previous `running_sum` is still being finalized.\n4.  **Reduced Extraction Overhead**: Instead of using `vextractf128` and `vshufps` repeatedly to get the `running_sum`, we use the fact that the last element of the computed prefix sum vector is the carry for the next block, keeping it in the registers as much as possible.",
+  "parent_id": 4,
+  "depth": 3,
+  "retry_fix": false
+}

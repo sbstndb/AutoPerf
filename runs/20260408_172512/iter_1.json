@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "score": 3.71,
+  "status": "improved",
+  "strategy": "ting `next_result` (`result * base`) and squaring `base` (`base * base`) are independent. Modern superscalar CPUs can execute these two multiplications simultaneously on different ALU ports.\n4. **Loop Peeling & Early Exit**: Added an unlikely check for `exp == 0` to handle the edge case immediately. The loop condition is set to `while (exp > 1)`, which peels the final multiplication out of the loop. This avoids a useless final squaring of `base` and saves an entire iteration.\n\n### OPTIMIZED CODE",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

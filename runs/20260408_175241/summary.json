@@ -1,0 +1,9 @@
+{
+  "best_score": 3289.51,
+  "baseline_score": 6796.86,
+  "speedup": 2.066222628902177,
+  "best_id": 14,
+  "best_depth": 3,
+  "strategy": " the previous version, the `running_sum` was extracted to a scalar and then broadcast back. The new version uses `vpermute2f128` and `vpermute_ps` to prepare the carry for the next block without leaving the YMM registers.\n*   **Loop Unrolling & Port Balancing**: Maintained a 2-block unroll (16 elements) to balance the load between the shuffle unit and the floating-point adders, ensuring the bottleneck remains the unavoidable serial dependency of the prefix sum rather than instruction throughput.",
+  "elapsed_seconds": 147.0
+}

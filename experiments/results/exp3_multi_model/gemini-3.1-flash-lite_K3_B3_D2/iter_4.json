@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "score": 3.87,
+  "status": "regression",
+  "strategy": " assembly.\n*   **Instruction-Level Parallelism (ILP):** By manually unrolling the binary exponentiation, we allow the CPU's out-of-order execution engine to better schedule the `base *= base` multiplications, which are independent of the `result` accumulation path.\n*   **Elimination of Redundant Operations:** The final iteration of a standard `while` loop performs an unnecessary `base *= base` multiplication when `exp` becomes 0. The optimized version terminates early to avoid this wasted cycle.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

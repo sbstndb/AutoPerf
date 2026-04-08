@@ -1,0 +1,9 @@
+{
+  "id": 6,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "e can replace the conditional `if` with a conditional multiplication pattern or a sequence that avoids pipeline stalls.\n*   **Strength Reduction:** The `exp >>= 1` operation is replaced by a loop that",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

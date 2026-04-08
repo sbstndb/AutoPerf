@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "score": 5.86,
+  "status": "regression",
+  "strategy": "lelism (ILP):** The binary exponentiation algorithm naturally utilizes the CPU's pipeline by alternating between squaring the base and conditionally updating the result, reducing data dependency stalls compared to a linear chain of multiplications.\n*   **Special Case Handling:** Added a check for `exp == 0` to return 1 immediately, matching the original behavior while allowing the main loop to assume at least one iteration if necessary (though the `while(exp)` structure handles this gracefully).",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

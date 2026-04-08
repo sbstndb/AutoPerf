@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": 4673.55,
+  "status": "improved",
+  "strategy": "the scalar carry. This minimizes the number of instructions in the critical path between iterations.\n*   **Loop Unrolling & ILP:** We maintain a 2x unrolled loop to allow the CPU to decode and schedule instructions for the next block while the current block's carry-over (the bottleneck) is being computed.\n*   **Alignment & Prefetching:** Given the hardware (Intel Ultra 7), the bottleneck is likely the serial dependency of the `running_sum`. We ensure the scalar extraction is as fast as possible.",
+  "parent_id": 4,
+  "depth": 3,
+  "retry_fix": false
+}

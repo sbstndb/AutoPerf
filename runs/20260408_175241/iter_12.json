@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 4662.88,
+  "status": "regression",
+  "strategy": "e data in the floating-point domain, reducing port pressure and bypass delays.\n3.  **Instruction Selection**: Used `vperm2f128` and `vshufps` more efficiently to handle cross-lane dependencies. The \"Kogge-Stone\" pattern is implemented to minimize the number of `vaddps` steps.\n4.  **Loop Unrolling & ILP**: Unrolled the main loop to process 16 elements (2 AVX registers). This allows the processor to schedule memory loads and independent additions more effectively while the serial carry propagates.",
+  "parent_id": 5,
+  "depth": 3,
+  "retry_fix": false
+}

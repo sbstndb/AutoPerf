@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "score": 2.95,
+  "status": "regression",
+  "strategy": " multiple zero bits in the exponent at once, reducing the total number of iterations for sparse exponents.\n*   **Early Exit for Small Bases:** Retained and refined the identity checks for `base` 0, 1, and 2, as these are common in many workloads and can be handled with single instructions (like `shl`).\n*   **Constant-Time-ish Execution:** By reducing the dependency on the specific bit pattern of the exponent, the execution time becomes more predictable and generally faster across varying inputs.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

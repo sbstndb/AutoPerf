@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "he horizontal sum (the last element) to the next iteration, we reduce the critical path from $N$ additions to $(N/8) + \\text{log2}(8)$ additions.\n3.  **Memory Alignment & Streaming:** We use `_mm256_l",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

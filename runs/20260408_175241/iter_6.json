@@ -1,0 +1,9 @@
+{
+  "id": 6,
+  "score": 4698.39,
+  "status": "regression",
+  "strategy": "and `_mm_cvtss_f32`, which keeps the data in registers and avoids costly L1 cache stores/loads.\n*   **Optimized Intra-lane Scan:** We use a more efficient sequence of `vpslldq` and `vaddps`. By using `vperm2f128` to broadcast the high element of the low lane to the high lane, we avoid complex masking and reduce the dependency chain.\n*   **Reduced Branching:** The tail handling and small-N cases are streamlined to minimize branch misprediction penalties, which is critical for smaller input sizes.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

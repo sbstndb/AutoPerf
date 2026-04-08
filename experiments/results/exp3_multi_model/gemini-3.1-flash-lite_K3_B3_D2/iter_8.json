@@ -1,0 +1,9 @@
+{
+  "id": 8,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "rhead of the `shr` and `jne` instructions and to allow the compiler to schedule the `imul` instructions more effectively, hiding the latency of the dependency chain.\n*   **Dependency Chain Management:",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

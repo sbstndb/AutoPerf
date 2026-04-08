@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": 4713.03,
+  "status": "improved",
+  "strategy": "ain of carry-overs.\n3.  **Instruction Level Parallelism (ILP):** We use a \"scan-then-propagate\" approach. For each 8-float chunk, we calculate the internal prefix sum and then add the cumulative sum of all previous chunks.\n4.  **Memory Throughput:** We use `_mm256_loadu_ps` and `_mm256_storeu_ps` to maximize bandwidth. Since the benchmark sizes are relatively small (up to 64k), staying within the L1/L2 cache boundaries with vectorized instructions provides a massive speedup over the scalar loop.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

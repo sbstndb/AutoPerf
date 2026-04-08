@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": 1.58,
+  "status": "improved",
+  "strategy": "ngine hide latency.\n*   **Strength Reduction:** The `exp >>= 1` and `exp & 1` operations are efficient, but by processing two bits at a time, we reduce the loop control overhead by 50%.\n*   **Register Pressure Management:** By keeping the `base` and `result` in registers throughout the unrolled loop, we minimize memory traffic and allow the compiler to utilize the full throughput of the `imul` units (which have a latency of 3 cycles but a throughput of 1 per cycle on modern Intel architectures).",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

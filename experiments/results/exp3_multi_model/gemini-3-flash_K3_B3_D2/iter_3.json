@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": 3.25,
+  "status": "regression",
+  "strategy": "bit of the exponent is processed.\n*   **Instruction Level Parallelism (ILP):** The binary exponentiation method allows the CPU to calculate the next square of the base (`base *= base`) while simultaneously deciding whether to multiply the current result by the base, utilizing the superscalar nature of the Intel Ultra 7.\n*   **Early Exit for Common Bases:** Added a check for `base == 0` and `base == 1` to return immediately, as these are common in many workloads and avoid unnecessary computation.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": 3.62,
+  "status": "regression",
+  "strategy": "xecution ports.\n*   **Bit Manipulation for Termination:** Using `__builtin_clzll` (Count Leading Zeros) allows us to determine exactly how many iterations are required, eliminating the need for a `while (exp > 1)` check in every iteration.\n*   **Instruction Level Parallelism (ILP):** By calculating powers of the base ahead of time or unrolling, we break the strict serial dependency of the `base *= base` chain, allowing the CPU's out-of-order execution engine to utilize multiple arithmetic units.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

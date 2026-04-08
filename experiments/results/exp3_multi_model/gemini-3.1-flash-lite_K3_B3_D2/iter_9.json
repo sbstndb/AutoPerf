@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": 3.26,
+  "status": "regression",
+  "strategy": " a latency of 3 cycles on modern Intel architectures.\n*   **Dependency Chain Management:** The `base *= base` operation creates a strict dependency chain. By unrolling, we allow the CPU's out-of-order execution engine to potentially overlap the `result *= base` operations with the `base *= base` chain more effectively.\n*   **Early Exit:** We retain the `exp == 0` check to ensure the function returns 1 immediately for the identity case, preserving the original logic while optimizing the hot path.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

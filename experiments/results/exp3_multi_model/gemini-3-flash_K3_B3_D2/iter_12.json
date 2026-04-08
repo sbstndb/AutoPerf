@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 3.75,
+  "status": "regression",
+  "strategy": "ion for Early Exit:** Using `__builtin_clzll` (Count Leading Zeros) allows us to determine the exact number of iterations required instantly. This eliminates unnecessary squaring operations once the highest set bit of the exponent is reached.\n*   **Instruction Level Parallelism (ILP):** By separating the update of `result` and the squaring of `base`, we exploit the fact that modern x86 CPUs (like the Ultra 7) have multiple execution units capable of performing `imul` instructions simultaneously.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

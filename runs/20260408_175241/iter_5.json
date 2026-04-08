@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 4695.9,
+  "status": "regression",
+  "strategy": "PU to overlap the execution of two independent prefix sum blocks, better utilizing the execution ports and hiding instruction latency.\n4.  **Optimized Carry Propagation**: Instead of broadcasting the `running_sum` into a full YMM register every time, we maintain the cumulative sum in a way that minimizes the critical path between iterations.\n5.  **Improved Tail Handling**: Replaced the scalar tail loop with a slightly more efficient version to handle remaining elements after the unrolled blocks.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

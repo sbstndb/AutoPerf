@@ -1,0 +1,33 @@
+INFO: Run data will be saved to: runs/20260408_172223
+   #1  REGRESSION  5.0 ns/op  (best: 4.2)  (depth=1, parent=#0, t=0m00s)
+   #2  REGRESSION  4.4 ns/op  (best: 4.2)  (depth=1, parent=#0, t=0m04s)
+   #3  IMPROVED  3.5 ns/op  (best: 4.2)  (depth=1, parent=#0, t=0m10s)
+   #4  REGRESSION  3.9 ns/op  (best: 3.5)  (depth=2, parent=#3, t=0m13s)
+   #5  TEST FAILED  N/A  (depth=2, parent=#3, t=0m18s)
+   #6  TEST FAILED  N/A  (depth=2, parent=#3, t=0m23s)
+   #7  IMPROVED  1.6 ns/op  (best: 3.5)  (depth=2, parent=#2, t=0m27s)
+   #8  TEST FAILED  N/A  (depth=2, parent=#2, t=0m31s)
+   #9  REGRESSION  3.3 ns/op  (best: 1.6)  (depth=2, parent=#2, t=0m37s)
+   #10  REGRESSION  4.1 ns/op  (best: 1.6)  (depth=2, parent=#1, t=0m40s)
+   #11  REGRESSION  2.1 ns/op  (best: 1.6)  (depth=2, parent=#1, t=0m45s)
+   #12  REGRESSION  4.3 ns/op  (best: 1.6)  (depth=2, parent=#1, t=0m49s)
+INFO: Run summary saved to: runs/20260408_172223/summary.json
+[Baseline] Building and benchmarking kernels/pow_int.cpp...
+[Baseline] Score: 4.18 ns/op
+[AutoPerf] Test FAILED (exit 1)
+FAIL: 2^10 != 1024
+
+[AutoPerf] Test FAILED (exit 1)
+FAIL: 2^10 != 1024
+
+[AutoPerf] Test FAILED (exit 1)
+FAIL: 3^5 != 243
+
+
+============================================================
+Best result: 1.58 ns/op (2.65x speedup)
+Strategy: ngine hide latency.
+*   **Strength Reduction:** The `exp >>= 1` and `exp & 1` operations are efficient, but by processing two bits at a time, we reduce the loop control overhead by 50%.
+*   **Register
+Depth: 2, ID: 7
+Optimized code saved to: kernels/pow_int_optimized.cpp

@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": 3.04,
+  "status": "regression",
+  "strategy": "exp < N) break;`). This eliminates loop overhead and branch mispredictions for all exponents up to 255 (which covers the vast majority of real-world cases), allowing them to execute in a single straight-line pass.\n4. **Trailing Zero Fast-Path**: Added `__builtin_ctzll` to efficiently count and skip trailing zeros in the exponent. This acts as a lightning-fast path for even numbers and powers of 2, replacing dummy multiplications with a tight, highly predictable squaring loop.\n\n### OPTIMIZED CODE",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

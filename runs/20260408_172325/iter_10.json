@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "score": 3.69,
+  "status": "regression",
+  "strategy": "iple bits of the exponent at once, we can expose more work to the CPU's execution ports.\n*   **Bit Manipulation for Termination:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip all trailing zeros in the exponent in one step, reducing the total number of iterations.\n*   **Pre-scaling the Result:** Instead of starting with `result = 1` and checking the first bit, we can initialize `result` with the `base` corresponding to the first set bit, reducing one `imul` and one iteration.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

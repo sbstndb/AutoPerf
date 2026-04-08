@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "score": 3298.64,
+  "status": "improved",
+  "strategy": "ath in a prefix sum is the `running_sum` update. We calculate the sum of the current 8-float block using `vaddps` and `vperm` instructions and add the *previous* block's total sum as a single vector addition at the end, allowing the CPU to calculate the internal prefix of the next block while the carry is still being finalized.\n*   **Loop Unrolling & ILP:** Unrolling to process 16 elements (2x AVX) per iteration allows the CPU to hide the latency of memory loads and the shuffle-heavy scan logic.",
+  "parent_id": 5,
+  "depth": 3,
+  "retry_fix": true
+}

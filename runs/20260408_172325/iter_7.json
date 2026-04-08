@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": 3.88,
+  "status": "regression",
+  "strategy": "imul` instruction (typically 3 cycles).\n*   **Bit Manipulation for Loop Termination:** Using `__builtin_clzll` (Count Leading Zeros) allows us to determine exactly how many iterations are needed. This transforms the `while (exp > 1)` loop into a fixed-count loop, which is much friendlier to the CPU's out-of-order execution engine.\n*   **Special Case Handling:** We handle `exp == 0` and `base == 0` (optional but good for robustness) at the start to simplify the logic in the high-performance path.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

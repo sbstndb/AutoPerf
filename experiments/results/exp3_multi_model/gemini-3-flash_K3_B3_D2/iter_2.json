@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "score": 6.31,
+  "status": "regression",
+  "strategy": "exits almost immediately.\n*   **Handling Edge Cases:** The algorithm naturally handles `exp = 0` (returning 1) and `base = 0` or `1` efficiently.\n*   **Compiler Optimization Compatibility:** Using `march=native` allows the compiler to use `IMUL` efficiently. Since this is a scalar integer operation, AVX2 vectorization is not applicable (as there is no data parallelism across an array), but the reduction in instruction count provides the maximum possible throughput for a single power calculation.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

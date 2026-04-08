@@ -1,0 +1,9 @@
+{
+  "id": 15,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "_sum` is still being applied.\n3.  **Reduced Broadcast Overhead**: Instead of extracting a scalar and broadcasting it back to a vector (which involves a round-trip to the scalar registers or L1 cache),",
+  "parent_id": 6,
+  "depth": 3,
+  "retry_fix": false
+}

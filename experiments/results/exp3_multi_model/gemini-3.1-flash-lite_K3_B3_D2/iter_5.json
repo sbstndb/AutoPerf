@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "mber of iterations for a 64-bit integer is at most 64, we can unroll the loop to reduce the overhead of the loop counter and branch instructions.\n*   **Strength Reduction:** We replace the conditional",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

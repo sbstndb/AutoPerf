@@ -1,0 +1,9 @@
+{
+  "id": 11,
+  "score": 2.15,
+  "status": "regression",
+  "strategy": "arly exit for `base == 0` and `base == 1` as they are highly effective. We also optimize the loop condition to reduce the number of iterations by processing bits in pairs, which is particularly effective for typical exponent sizes.\n*   **Instruction Scheduling:** By manually unrolling, we provide the compiler with a larger basic block, allowing the scheduler to interleave the `imul` instructions, effectively hiding the 3-cycle latency of the `imul` operation on the Intel Core Ultra architecture.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

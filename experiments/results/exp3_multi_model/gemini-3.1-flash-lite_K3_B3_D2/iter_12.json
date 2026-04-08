@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 4.3,
+  "status": "regression",
+  "strategy": "ation logic but minimize the overhead of the loop control logic.\n*   **Early Exit Optimization:** We keep the essential early exits (`exp == 0`, `base == 0`, `base == 1`) as they are branch-prediction friendly and prevent unnecessary computation.\n*   **Instruction Scheduling:** By unrolling, we provide the compiler with a larger basic block, which helps in scheduling `imul` instructions to hide their latency (typically 3 cycles on Intel architectures) by interleaving independent multiplications.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

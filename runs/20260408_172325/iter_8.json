@@ -1,0 +1,9 @@
+{
+  "id": 8,
+  "score": 4.27,
+  "status": "regression",
+  "strategy": "base` have different dependency chains, the CPU can execute them in parallel.\n*   **Bit Manipulation for Termination:** Using `__builtin_clzll` (Count Leading Zeros) allows us to determine the exact number of iterations required immediately, removing the need for a `while (exp > 1)` check in every iteration.\n*   **Special Case Handling:** Fast-pathing `exp == 0` and `exp == 1` to minimize overhead for small exponents while ensuring the main loop handles the bulk of the work with high throughput.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

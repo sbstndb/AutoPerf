@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "score": 4.13,
+  "status": "regression",
+  "strategy": " number of `imul` instructions performed when `exp` is small or has few set bits.\n*   **Early Exit Optimization:** The original code checks `base == 1` and `base == 0` inside the function. By hoisting these and using `__builtin_ctzll` to skip leading zeros in `exp`, we reduce the number of iterations for smaller exponents.\n*   **Strength Reduction:** Using `__builtin_ctzll` allows us to jump directly to the first set bit, effectively reducing the number of `imul` operations for sparse exponents.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

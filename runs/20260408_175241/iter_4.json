@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "score": 4688.35,
+  "status": "improved",
+  "strategy": "e Kogge-Stone style scan. Using `vpslldq` is efficient for intra-lane shifts, and we handle the cross-lane carry with a single 128-bit permutation.\n4.  **Loop Unrolling:** Unrolled the main loop by a factor of 2 (16 floats per iteration). This allows the CPU to overlap the execution of two independent prefix sum blocks, hiding the latency of the floating-point additions.\n5.  **Pointer Arithmetic:** Used pointer increments instead of indexed access to simplify address calculation in the hot loop.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}
