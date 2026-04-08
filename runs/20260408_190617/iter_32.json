@@ -1,0 +1,9 @@
+{
+  "id": 32,
+  "score": 194.49,
+  "status": "regression",
+  "strategy": "masks already in registers.\n*   **Memory Alignment Handling:** While `loadu` is used for safety, the loop is structured to maximize the throughput of the L1 cache ports by issuing 8 independent loads per iteration, which the Intel Ultra 7 (Meteor Lake/Arrow Lake) can handle efficiently via its multiple load ports.\n*   **Minimizing `vzeroupper` overhead:** Structured the return paths to ensure `vzeroupper` is called correctly before returning to scalar code, avoiding AVX-SSE transition penalties.",
+  "parent_id": 13,
+  "depth": 3,
+  "retry_fix": false
+}

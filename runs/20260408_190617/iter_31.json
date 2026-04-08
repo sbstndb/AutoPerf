@@ -1,0 +1,9 @@
+{
+  "id": 31,
+  "score": 172.0,
+  "status": "regression",
+  "strategy": "icient on certain microarchitectures and avoids penalty across cache lines.\n*   **Micro-architectural Tuning:** Reordered instructions to ensure the `vpcmpeqd` (Comparison) and `vmovdqu` (Load) operations are interleaved, allowing the CPU's out-of-order execution engine to better hide load latencies.\n*   **Streamlined Tail Processing:** Simplified the 8-element chunk loop to use a single `vmovmskps` check, ensuring the transition from the unrolled loop to the end of the function is low-overhead.",
+  "parent_id": 13,
+  "depth": 3,
+  "retry_fix": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": 38,
+  "score": 234.19,
+  "status": "regression",
+  "strategy": " 3-wide SIMD execution ports.\n*   **Prefetching and Memory Alignment**: Maintained the 32-byte alignment check but simplified the loop structure to ensure the compiler can better predict the exit condition.\n*   **Fast-Path Masking**: Used `_mm256_movemask_ps` instead of `_mm256_movemask_epi8`. Since we are comparing 32-bit integers, `movemask_ps` extracts only 1 bit per 32-bit lane (8 bits total), which is faster and easier to process with `__builtin_ctz` than the 32-bit mask produced by `epi8`.",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

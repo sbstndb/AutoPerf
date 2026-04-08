@@ -1,0 +1,9 @@
+{
+  "id": 30,
+  "score": 266.03,
+  "status": "regression",
+  "strategy": " the complexity of address generation in the hot loop.\n*   **Aggressive Unrolling with Early Exit:** We unroll by 4 (32 elements). By combining the masks into a single 32-bit integer, we can perform a single branch check for the entire block. If a hit is found, `__builtin_ctz` on the combined mask identifies the exact index immediately without further branching.\n*   **Alignment Handling:** We use `_mm256_loadu_si256` for simplicity, but the loop is structured to keep the load-to-use latency low.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

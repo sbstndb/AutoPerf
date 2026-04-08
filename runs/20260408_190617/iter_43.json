@@ -1,0 +1,9 @@
+{
+  "id": 43,
+  "score": 258.34,
+  "status": "regression",
+  "strategy": "from 8 to 4 (32 elements per iteration). On the Intel Ultra 7 (Meteor Lake/Lunar Lake architecture), a 4-wide unroll often hits the sweet spot for the Out-of-Order engine's load buffers and avoids excessive register pressure while still saturating the memory bandwidth.\n*   **Branch Prediction Friendly Tail**: Replaced the multi-step scalar tail with a single SIMD load for the final elements (using an unaligned load that may overlap with the previous block) to avoid the overhead of a scalar loop.",
+  "parent_id": 16,
+  "depth": 3,
+  "retry_fix": true
+}

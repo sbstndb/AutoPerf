@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": 203.17,
+  "status": "regression",
+  "strategy": " on Intel Ultra (Meteor Lake/Arrow Lake) architectures comes from ensuring the load-to-use latency is hidden.\n*   **Optimized Tail Handling:** The scalar fallback is replaced with a more efficient check.\n*   **AVX2 `_mm256_movemask_ps` vs `_mm256_movemask_epi8`:** For `int32` comparisons, `_mm256_movemask_ps` (treating the register as floats) is often faster or equivalent but results in a smaller mask (8 bits instead of 32 bits), which simplifies the trailing zero count logic (no `>> 2` needed).",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

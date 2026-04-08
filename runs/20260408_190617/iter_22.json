@@ -1,0 +1,9 @@
+{
+  "id": 22,
+  "score": 247.25,
+  "status": "regression",
+  "strategy": "ly extracts 8 bits (one per 32-bit lane), perfectly matching our `int` array search.\n*   **Pointer-Based Iteration:** Switched from index-based to pointer-based arithmetic in the hot loop to reduce the number of instructions (eliminating `shl` and `add` for index scaling).\n*   **Prefetching and Alignment:** Maintained the alignment logic but streamlined the transition to the vectorized loop. The use of `_mm256_load_si256` ensures we take advantage of the 32-byte alignment for maximum throughput.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

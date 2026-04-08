@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "score": 219.15,
+  "status": "regression",
+  "strategy": "ison operations.\n*   **Unaligned Load Handling:** Since the input pointer alignment isn't guaranteed, we use `_mm256_loadu_si256`. Modern Intel architectures (like the Ultra 7) handle unaligned loads very efficiently unless they cross page boundaries.\n*   **Pointer Arithmetic & Tail Handling:** We use pointer-based iteration to reduce induction variable overhead and handle the remaining elements (less than 32) with a simple scalar loop to ensure correctness and avoid out-of-bounds memory access.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

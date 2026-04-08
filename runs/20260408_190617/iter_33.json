@@ -1,0 +1,9 @@
+{
+  "id": 33,
+  "score": 242.51,
+  "status": "regression",
+  "strategy": "o direct pointer increments to simplify address generation and reduce the number of registers used for induction variables.\n*   **Branch Prediction Optimization:** Used `__builtin_expect` to hint that the \"match found\" condition is unlikely, keeping the hot loop code dense and linear for the instruction fetcher.\n*   **Efficient Tail Handling:** Used a single 8-element SIMD check for the medium tail and a simple scalar loop for the final remainder to minimize code bloat and branch mispredictions.",
+  "parent_id": 13,
+  "depth": 3,
+  "retry_fix": false
+}

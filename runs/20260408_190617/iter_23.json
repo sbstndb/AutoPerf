@@ -1,0 +1,9 @@
+{
+  "id": 23,
+  "score": 242.9,
+  "status": "regression",
+  "strategy": "ask_epi8`. Since we are comparing 32-bit integers, `movemask_ps` extracts 1 bit per 32-bit lane (8 bits total), which is faster and more direct than extracting 32 bits with `epi8`.\n*   **Pointer Arithmetic:** Switched to raw pointer increments in the hot loop to minimize index-to-address calculation overhead.\n*   **Prefetching and Alignment:** Maintained the 32-byte alignment logic to ensure `vmovdqa` (aligned loads) can be used effectively by the hardware, preventing cache line split penalties.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

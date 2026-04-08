@@ -1,0 +1,9 @@
+{
+  "id": 15,
+  "score": 165.93,
+  "status": "regression",
+  "strategy": "o quickly narrow down which half of the 64-element block contains the match, reducing the number of `movemask` and `tzcnt` operations.\n*   **Pointer-Based Arithmetic**: Switched to pointer increments instead of index-based offsets to reduce the number of instructions in the inner loop (eliminating some `lea` and `movsx` instructions).\n*   **Memory Alignment Handling**: While `loadu` is used for safety, the loop structure encourages the compiler to utilize the high-bandwidth L1 cache effectively.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

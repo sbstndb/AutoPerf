@@ -1,0 +1,9 @@
+{
+  "id": 27,
+  "score": 185.52,
+  "status": "regression",
+  "strategy": "timized Mask Extraction:** We use `_mm256_movemask_ps` (extracting 1 bit per 32-bit lane) which is faster and more direct than `_mm256_movemask_epi8` for integer comparisons.\n*   **Pointer Arithmetic:** We use raw pointer increments and comparisons to avoid redundant index scaling calculations (`data + i`) inside the loop.\n*   **Short-Circuiting Logic:** The logic is structured to stay in the \"fast path\" as long as no match is found, only entering the bit-scanning block when a hit is guaranteed.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

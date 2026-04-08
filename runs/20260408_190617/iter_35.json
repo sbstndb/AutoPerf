@@ -1,0 +1,9 @@
+{
+  "id": 35,
+  "score": 211.83,
+  "status": "regression",
+  "strategy": "tions in the hot loop and simplifies the address generation unit (AGU) pressure.\n*   **Optimized Match Extraction:** Used `_mm256_movemask_ps` instead of `_mm256_movemask_epi8`. Since we are comparing 32-bit integers, `movemask_ps` produces a 4-bit or 8-bit mask (one bit per 32-bit lane), which is faster to process with `tzcnt` than a 32-bit mask.\n*   **Loop Alignment:** Ensured the main loop is structured to be friendly to the CPU's decoders and branch predictors, keeping the \"hot\" path linear.",
+  "parent_id": 13,
+  "depth": 3,
+  "retry_fix": false
+}

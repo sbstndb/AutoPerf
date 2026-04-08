@@ -1,0 +1,9 @@
+{
+  "id": 17,
+  "score": 218.69,
+  "status": "regression",
+  "strategy": "n.\n*   **Reduced Dependency Chains:** By using `vpor` to aggregate results in a tree-like structure, we maintain high throughput. The use of `_mm256_castsi256_ps` with `_mm256_movemask_ps` is faster than integer movemasks on many Intel architectures because it avoids certain domain transition penalties and uses a simpler execution port.\n*   **Pointer Arithmetic Simplification:** Calculated the base offset once a match is found to minimize redundant subtractions and additions inside the hot loop.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

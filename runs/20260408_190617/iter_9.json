@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": 190.56,
+  "status": "regression",
+  "strategy": "he number of `test/je` sequences needed to locate the exact index while maintaining high throughput.\n*   **Pointer-based Iteration**: Switched from index-based to pointer-based arithmetic in the assembly-critical loop to reduce the number of instructions required for address calculation (eliminating `shl` and `add` for indices).\n*   **Memory Alignment**: The loop handles unaligned loads efficiently, but the structure ensures that the CPU's prefetcher can easily predict the linear access pattern.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

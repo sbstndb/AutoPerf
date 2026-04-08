@@ -1,0 +1,9 @@
+{
+  "id": 20,
+  "score": 217.34,
+  "status": "regression",
+  "strategy": " is faster than `_mm256_movemask_epi8` for 32-bit integers) and `__builtin_ctz` to calculate the exact index without further looping or complex logic.\n*   **Pointer Arithmetic Simplification:** Maintained a single pointer and used a fixed offset for the base address to minimize the number of instructions in the loop.\n*   **Tail Handling:** Kept a simple scalar loop for the final elements (0-63), which is efficient for small remaining sizes and avoids the overhead of complex partial-vector logic.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

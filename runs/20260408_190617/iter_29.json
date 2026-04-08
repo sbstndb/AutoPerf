@@ -1,0 +1,9 @@
+{
+  "id": 29,
+  "score": 202.51,
+  "status": "regression",
+  "strategy": " exact index immediately. This minimizes the \"hit\" path overhead.\n*   **Memory Alignment & Prefetching:** While `loadu` is used for safety, the loop structure encourages the compiler to utilize the hardware prefetcher. The unrolling factor of 4 (32 elements) matches the L1 cache line size (64 bytes) effectively (2 lines per iteration).\n*   **Pointer Arithmetic:** Switched to pointer-based iteration to reduce the number of scale-index-base calculations in the assembly, allowing for tighter loops.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

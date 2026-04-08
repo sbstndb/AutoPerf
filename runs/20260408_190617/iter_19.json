@@ -1,0 +1,9 @@
+{
+  "id": 19,
+  "score": 201.05,
+  "status": "regression",
+  "strategy": "ber of branches in the hot path.\n*   **Bit-Manipulation for Index Extraction:** Once a match is found in a 64-element block, we use a two-stage approach: first identifying which 32-element half contains the match, then using `vmovmskps` to generate a bitmask where `tzcnt` (trailing zero count) provides the exact index.\n*   **Pointer-Based Arithmetic:** Replaced index-based logic with pointer arithmetic to minimize address calculation overhead and simplify the assembly generated for the hot loop.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

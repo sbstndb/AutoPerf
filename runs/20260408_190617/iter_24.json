@@ -1,0 +1,9 @@
+{
+  "id": 24,
+  "score": 237.43,
+  "status": "regression",
+  "strategy": "he-line loads.\n*   **Efficient Index Calculation:** Used `__builtin_ctz` on the movemask result. `_mm256_movemask_ps` is preferred over `_mm256_movemask_epi8` for `int32` comparisons because it produces 1 bit per element (8 bits total), mapping directly to the array indices without needing to divide the bit index by 4.\n*   **Software Prefetching:** Added `_mm_prefetch` for the next block of data to hide memory latency, which is beneficial for the large L3/RAM traversal on this specific hardware.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": true
+}

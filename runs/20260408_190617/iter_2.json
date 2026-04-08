@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "score": 171.55,
+  "status": "improved",
+  "strategy": "s per iteration (4 SIMD registers). This hides instruction latency and maximizes the utilization of the CPU's execution ports.\n*   **Memory Alignment & Safety**: The code handles the \"tail\" of the array (elements that don't fit into a full SIMD block) using a standard scalar loop to ensure correctness and prevent out-of-bounds memory access.\n*   **Early Exit**: The function returns immediately upon finding the first occurrence, maintaining the original semantics while benefiting from SIMD speed.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

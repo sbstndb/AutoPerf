@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 233.68,
+  "status": "regression",
+  "strategy": "ct index using `__builtin_ctz` (count trailing zeros) and return.\n*   **Pointer Alignment Handling:** The code handles the initial unaligned portion of the array element-by-element to reach a 32-byte boundary, ensuring that the main loop performs aligned loads (`_mm256_load_si256`), which are more efficient on many x86 architectures.\n*   **Minimized Branching:** The hot loop contains only one branch (the check for a match). This keeps the CPU branch predictor stable and prevents pipeline stalls.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

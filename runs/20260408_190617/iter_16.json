@@ -1,0 +1,9 @@
+{
+  "id": 16,
+  "score": 139.82,
+  "status": "regression",
+  "strategy": ", for AVX2, the most efficient way to find the index is to check the combined OR first, then use `movemask` on individual registers only when a match is guaranteed in that block.\n*   **Pointer Arithmetic & Alignment**: Switched to using a byte-offset for the loop condition to reduce the number of instructions in the loop header.\n*   **Tail Handling**: Maintained a simple scalar tail for the remaining elements, which is efficient for the small number of elements left after 64-way and 8-way steps.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

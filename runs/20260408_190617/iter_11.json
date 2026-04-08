@@ -1,0 +1,9 @@
+{
+  "id": 11,
+  "score": 317.7,
+  "status": "regression",
+  "strategy": "bit integers, `movemask_ps` extracts only 1 bit per 32-bit lane (8 bits total), which is faster and avoids the need for bit-shifting (e.g., `>> 2`) required by the byte-mask version.\n*   **Pointer Arithmetic:** Switched to pointer-based iteration to reduce the number of instructions in the loop header (eliminating index-to-address scaling).\n*   **Tail Handling:** Maintained a vectorized 8-element step for the remainder to ensure large arrays not divisible by 64 are still processed at high speed.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

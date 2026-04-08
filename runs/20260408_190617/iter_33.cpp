@@ -1,0 +1,63 @@
+#include <cstddef>
+#include <immintrin.h>
+
+int find(const int* data, int size, int value) {
+    if (__builtin_expect(size <= 0, 0)) return -1;
+
+    const int* ptr = data;
+    const int* end = data + size;
+    __m256i target = _mm256_set1_epi32(value);
+
+    // Process in blocks of 32 (4 vectors of 8 ints)
+    // This balances ILP and reduces the cost of the "hit" check
+    while (ptr <= end - 32) {
+        __m256i r0 = _mm256_loadu_si256((const __m256i*)ptr);
+        __m256i r1 = _mm256_loadu_si256((const __m256i*)(ptr + 8));
+        __m256i r2 = _mm256_loadu_si256((const __m256i*)(ptr + 16));
+        __m256i r3 = _mm256_loadu_si256((const __m256i*)(ptr + 24));
+
+        __m256i c0 = _mm256_cmpeq_epi32(r0, target);
+        __m256i c1 = _mm256_cmpeq_epi32(r1, target);
+        __m256i c2 = _mm256_cmpeq_epi32(r2, target);
+        __m256i c3 = _mm256_cmpeq_epi32(r3, target);
+
+        // Combine masks using OR to check 32 elements with one branch
+        __m256i m01 = _mm256_or_si256(c0, c1);
+        __m256i m23 = _mm256_or_si256(c2, c3);
+        __m256i combined = _mm256_or_si256(m01, m23);
+
+        if (__builtin_expect(!_mm256_testz_si256(combined, combined), 0)) {
+            // Match found, identify which vector and which lane
+            int mask;
+            if ((mask = _mm256_movemask_ps(_mm256_castsi256_ps(c0)))) 
+                return (int)(ptr - data) + __builtin_ctz(mask);
+            if ((mask = _mm256_movemask_ps(_mm256_castsi256_ps(c1)))) 
+                return (int)(ptr - data) + 8 + __builtin_ctz(mask);
+            if ((mask = _mm256_movemask_ps(_mm256_castsi256_ps(c2)))) 
+                return (int)(ptr - data) + 16 + __builtin_ctz(mask);
+            
+            mask = _mm256_movemask_ps(_mm256_castsi256_ps(c3));
+            return (int)(ptr - data) + 24 + __builtin_ctz(mask);
+        }
+        ptr += 32;
+    }
+
+    // Handle remaining 8-element chunks
+    while (ptr <= end - 8) {
+        __m256i r = _mm256_loadu_si256((const __m256i*)ptr);
+        __m256i c = _mm256_cmpeq_epi32(r, target);
+        int mask = _mm256_movemask_ps(_mm256_castsi256_ps(c));
+        if (mask != 0) {
+            return (int)(ptr - data) + __builtin_ctz(mask);
+        }
+        ptr += 8;
+    }
+
+    // Final scalar tail
+    while (ptr < end) {
+        if (*ptr == value) return (int)(ptr - data);
+        ptr++;
+    }
+
+    return -1;
+}

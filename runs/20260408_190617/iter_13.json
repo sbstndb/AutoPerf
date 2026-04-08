@@ -1,0 +1,9 @@
+{
+  "id": 13,
+  "score": 117.45,
+  "status": "improved",
+  "strategy": "und, we then extract individual masks. This keeps the \"no-match\" path (the most common case in large searches) extremely lean.\n*   **Pointer Arithmetic**: Switched to pointer-based iteration (`data + i`) to reduce the number of instructions needed for index calculation within the hot loop.\n*   **Alignment & Prefetching**: The hardware prefetcher on modern Intel CPUs is highly efficient; by keeping the loop simple and linear, we allow the L1d prefetcher to maximize throughput.\n\n### OPTIMIZED CODE",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

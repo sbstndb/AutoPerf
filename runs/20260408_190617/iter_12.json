@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 141.81,
+  "status": "regression",
+  "strategy": "logic. This allows us to identify the exact index across multiple registers more efficiently.\n*   **Pointer-based Arithmetic**: Switched from index-based access to pointer-based traversal to reduce the number of instructions in the loop header and simplify address calculation for the compiler.\n*   **Memory Alignment Handling**: While `_mm256_loadu_si256` is used for safety, the unrolled loop structure encourages the compiler to utilize the high-bandwidth L1 cache of the Intel Ultra architecture.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

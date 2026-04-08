@@ -1,0 +1,9 @@
+{
+  "id": 26,
+  "score": 175.13,
+  "status": "regression",
+  "strategy": "2`. This is faster than `_mm256_movemask_epi8` because it only extracts 1 bit per 32-bit lane (8 bits total), which maps directly to the integer indices.\n*   **Pointer Arithmetic:** Switched to raw pointer increments to avoid redundant scale-index-base calculations in the assembly, allowing the compiler to use simpler addressing modes.\n*   **Prefetching and Alignment:** While `loadu` is used for safety, the loop structure encourages the hardware prefetcher to recognize the linear access pattern.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

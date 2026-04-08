@@ -1,0 +1,9 @@
+{
+  "id": 46,
+  "score": 127.99,
+  "status": "regression",
+  "strategy": "t of each 32-bit lane is sufficient and faster than integer-specific mask moves.\n*   **Memory Alignment Handling**: While `_mm256_loadu_si256` is used for compatibility, the unrolled loop structure encourages the compiler to utilize the hardware's ability to prefetch sequential cache lines.\n*   **Zero-Overhead Tail Handling**: Maintained a tiered fallback (8-element SIMD then scalar) to handle arrays that are not multiples of 64, ensuring no performance regression on small or oddly-sized inputs.",
+  "parent_id": 12,
+  "depth": 3,
+  "retry_fix": false
+}

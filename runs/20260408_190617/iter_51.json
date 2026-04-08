@@ -1,0 +1,9 @@
+{
+  "id": 51,
+  "score": 212.3,
+  "status": "regression",
+  "strategy": "prefetching can help reduce latency in tight loops when processing large contiguous arrays.\n*   **Simplified Alignment**: Maintained the 32-byte alignment logic but streamlined the transition to the vectorized loop to ensure the compiler generates a clean entry point.\n*   **Instruction Selection**: Continued using `_mm256_movemask_ps` as it is generally faster or equal to `_mm256_movemask_epi8` on Intel cores for 32-bit lane masks, as it generates fewer bits to process in the subsequent `tzcnt`.",
+  "parent_id": 25,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 41,
+  "score": 183.9,
+  "status": "regression",
+  "strategy": "ts per iteration). While 8-way unrolling (64 elements) was used before, 4-way often fits better in the out-of-order execution window of the Ultra 7 (Meteor Lake/Arrow Lake) without causing excessive register pressure or instruction cache misses.\n*   **Optimized Search Exit:** Used `_mm256_movemask_ps` for the search check. This instruction is extremely fast on Intel and maps directly to a single bit per `int32` element, making `__builtin_ctz` perfectly accurate for finding the first match index.",
+  "parent_id": 16,
+  "depth": 3,
+  "retry_fix": true
+}

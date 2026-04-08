@@ -1,0 +1,9 @@
+{
+  "id": 37,
+  "score": 188.08,
+  "status": "regression",
+  "strategy": "tectures (like the Ultra 7 255U). 4 vectors (128 bytes) per iteration strikes a better balance for the L1 cache bandwidth and the 256-bit wide execution ports.\n*   **Prefetching and Alignment:** Maintained strict 32-byte alignment for the main loop to utilize `vmovdqa` (implicit in `_mm256_load_si256`), which avoids penalty cycles on cache line splits.\n*   **Fast-Path Exit:** Used `__builtin_ctz` directly on the movemask result for the fastest possible index calculation once a match is detected.",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

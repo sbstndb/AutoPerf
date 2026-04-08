@@ -1,0 +1,9 @@
+{
+  "id": 42,
+  "score": 185.83,
+  "status": "regression",
+  "strategy": "LP.\n*   **Optimized Tail Processing**: Replaced the scalar tail loop with a \"sliding window\" SIMD load for the final elements. By loading the last 8 elements of the array (even if they overlap with previously processed elements), we avoid slow scalar iterations and branchy code.\n*   **Instruction Selection**: Used `_mm256_movemask_ps` instead of `_mm256_movemask_epi8` because it produces a smaller mask (8 bits vs 32 bits), which is faster to process and sufficient for 32-bit integer comparisons.",
+  "parent_id": 16,
+  "depth": 3,
+  "retry_fix": false
+}

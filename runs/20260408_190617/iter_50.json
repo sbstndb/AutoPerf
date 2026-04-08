@@ -1,0 +1,9 @@
+{
+  "id": 50,
+  "score": 192.07,
+  "status": "regression",
+  "strategy": "ts, reducing the complexity of the bit-scan (`tzcnt`) logic.\n*   **Pointer Arithmetic Optimization:** Maintained a single moving pointer and calculated the final index only upon finding a match, minimizing redundant additions and subtractions inside the main loop.\n*   **Memory Alignment Handling:** The code uses `loadu` for safety, but the unrolled loop structure allows the CPU's hardware prefetcher to effectively manage the stream, especially given the large L2/L3 caches on the target hardware.",
+  "parent_id": 12,
+  "depth": 3,
+  "retry_fix": false
+}

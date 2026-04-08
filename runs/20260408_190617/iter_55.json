@@ -1,0 +1,9 @@
+{
+  "id": 55,
+  "score": 253.74,
+  "status": "regression",
+  "strategy": "he load ports of the Intel Ultra 7 (Meteor Lake architecture), which can handle multiple loads per cycle.\n*   **Minimized Branching:** The unaligned prefix and the vectorized loop are structured to minimize the number of jumps. The \"found\" path is moved out of the hot loop to keep the execution pipeline clean.\n*   **Pointer-based Iteration:** Switched to pointer arithmetic for the main loop to simplify address calculation and reduce register pressure, avoiding `lea` instructions inside the loop.",
+  "parent_id": 25,
+  "depth": 3,
+  "retry_fix": false
+}

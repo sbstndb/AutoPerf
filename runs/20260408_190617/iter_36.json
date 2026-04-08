@@ -1,0 +1,9 @@
+{
+  "id": 36,
+  "score": 216.57,
+  "status": "regression",
+  "strategy": "brid architecture.\n*   **Optimized Exit Path:** Used `_mm256_movemask_epi8` instead of `_mm256_movemask_ps`. While both work, `epi8` is the native integer domain instruction for `vpcmpeqd` results, avoiding potential domain-crossing latencies on some microarchitectures.\n*   **Minimized Loop Overhead:** Adjusted the unrolling factor to 4 (32 elements per loop) to better balance the L1i cache pressure and the execution port utilization (specifically ports 0 and 5 for vector comparisons and masks).",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 34,
+  "score": 192.4,
+  "status": "regression",
+  "strategy": "ten have lower latency/higher throughput on Intel architectures.\n*   **Alignment-Friendly Tail Handling:** The main loop processes 64 elements. The secondary loop processes 8 elements. This tiered approach ensures that we stay in SIMD as long as possible before falling back to scalar code.\n*   **VZEROUPPER Management:** Ensured `vzeroupper` is implicitly handled by the compiler or explicitly considered in the return paths to prevent AVX-SSE transition penalties, though g++ -O3 handles this well.",
+  "parent_id": 13,
+  "depth": 3,
+  "retry_fix": false
+}

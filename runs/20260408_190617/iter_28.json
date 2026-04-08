@@ -1,0 +1,9 @@
+{
+  "id": 28,
+  "score": 204.16,
+  "status": "regression",
+  "strategy": "nrolling but streamlined the \"hit\" path. By using `movemask` on the combined result first, we ensure the heavy `__builtin_ctz` and individual mask checks only execute when a match is guaranteed.\n*   **Pointer Arithmetic:** Switched to pointer-based iteration to reduce the number of instructions in the hot loop (eliminating some index scaling).\n*   **Branch Prediction Friendly:** Structured the loop to keep the \"no-match\" case (the most common in large searches) as a straight-line execution path.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

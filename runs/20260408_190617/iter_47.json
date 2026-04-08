@@ -1,0 +1,9 @@
+{
+  "id": 47,
+  "score": 167.29,
+  "status": "regression",
+  "strategy": "rolling**: Adjusted the unroll factor to 2x (16 elements) for the main loop. While 4x provides more ILP, it often increases register pressure and branch misprediction costs on the Ultra 7's hybrid architecture. 2x provides a better balance for \"find\" operations where the search might terminate early.\n*   **Branchless Masking**: Used `_mm256_movemask_ps` (treating 32-bit ints as floats) which is a single-cycle latency instruction on Intel, providing a compact 8-bit mask of the comparison results.",
+  "parent_id": 12,
+  "depth": 3,
+  "retry_fix": false
+}

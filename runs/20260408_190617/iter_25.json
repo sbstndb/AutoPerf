@@ -1,0 +1,9 @@
+{
+  "id": 25,
+  "score": 151.66,
+  "status": "regression",
+  "strategy": "ith `_mm256_or_si256`. `movemask` is generally faster and provides the bitmask needed for index calculation immediately.\n*   **Alignment and Prefetching:** Maintained the alignment logic but simplified the loop structure to ensure the compiler can easily identify the linear access pattern for the hardware prefetcher.\n*   **Minimizing Register Pressure:** Structured the unrolled loop to reuse registers efficiently, ensuring that the `target` value and intermediate masks stay in the YMM registers.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

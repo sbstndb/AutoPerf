@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "score": 235.56,
+  "status": "improved",
+  "strategy": "If a match is found, we calculate the exact index and return immediately, preserving the \"first occurrence\" semantics.\n*   **Alignment Handling:** The code handles unaligned starts to ensure the main loop operates on 32-byte boundaries, though for modern Intel CPUs, `_mm256_loadu_si256` is highly optimized.\n*   **Branch Reduction:** By processing blocks and only branching when a match is found within a block, we significantly reduce the number of conditional jumps compared to the scalar version.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 52,
+  "score": 242.9,
+  "status": "regression",
+  "strategy": "\n*   **Memory Alignment & Prefetching:** Maintained the 32-byte alignment for `vmovdqa` (via `_mm256_load_si256`). Added `__builtin_prefetch` to bring upcoming data into the L1 cache, which is effective for large contiguous scans on the Intel Ultra 7 architecture.\n*   **Instruction Selection:** Used `_mm256_movemask_ps` on casted integer results. This is a common trick because `vmovmskps` has shorter encoding and often better latency/throughput than `vpmovmskb` when checking 32-bit lane results.",
+  "parent_id": 25,
+  "depth": 3,
+  "retry_fix": false
+}

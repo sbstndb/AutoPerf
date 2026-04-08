@@ -1,0 +1,9 @@
+{
+  "id": 48,
+  "score": 169.84,
+  "status": "regression",
+  "strategy": "se the mask result, reducing the total number of instructions in the hot loop.\n*   **Pointer-Based Indexing**: Switched to using a single pointer `ptr` and comparing against `end` to minimize register pressure and simplify the address calculation in the assembly.\n*   **VZEROUPPER Management**: Ensured the compiler handles the transition between AVX and scalar code efficiently. The logic is structured to keep the hot path streamlined for the most common case (no match found in the current block).",
+  "parent_id": 12,
+  "depth": 3,
+  "retry_fix": false
+}

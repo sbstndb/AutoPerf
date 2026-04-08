@@ -1,0 +1,9 @@
+{
+  "id": 18,
+  "score": 181.87,
+  "status": "regression",
+  "strategy": "ase (the most frequent for large arrays) is streamlined. By combining masks into two 64-bit integers (using `|`), we can check 64 elements with just two branches.\n*   **Pointer Arithmetic Optimization:** Calculated the base index once per iteration and used `tzcnt` directly on the movemask results to avoid redundant calculations.\n*   **Memory Alignment Awareness:** Used `_mm256_loadu_si256` for safety, but the unrolling helps hide the cost of potential misalignments by saturating the load ports.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

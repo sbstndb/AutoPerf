@@ -1,0 +1,9 @@
+{
+  "id": 45,
+  "score": 235.82,
+  "status": "regression",
+  "strategy": "t to 2 bits or dividing by 4), ensuring we catch the exact byte-offset of the match.\n*   **Memory Alignment Handling**: While `loadu` is used for safety, the loop is structured to maximize the efficiency of the L1 cache line (64 bytes), matching the unroll factor exactly to one cache line per iteration.\n*   **Branch Minimization**: The \"found\" logic is moved outside the main hot loop to keep the loop body as lean as possible, favoring high-frequency execution of the comparison and OR operations.",
+  "parent_id": 16,
+  "depth": 3,
+  "retry_fix": false
+}

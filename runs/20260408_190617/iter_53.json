@@ -1,0 +1,9 @@
+{
+  "id": 53,
+  "score": 279.48,
+  "status": "regression",
+  "strategy": " iteration. This simplifies address calculation in the assembly, reducing the number of registers used for scaling and offsetting.\n*   **Aggressive Unrolling with Early Exit:** Maintained the 8x unrolling (64 elements) to saturate the load ports and execution units of the Intel Ultra 7 (Meteor Lake architecture), which has high IPC capabilities.\n*   **Minimized Scalar Overhead:** Streamlined the alignment and tail-handling logic to ensure the CPU spends maximum cycles in the vectorized hot loop.",
+  "parent_id": 25,
+  "depth": 3,
+  "retry_fix": false
+}

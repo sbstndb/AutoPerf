@@ -1,0 +1,9 @@
+{
+  "id": 49,
+  "score": 188.15,
+  "status": "regression",
+  "strategy": "nly when a match is found, keeping the loop increment as a simple pointer addition.\n*   **Memory Alignment Handling**: By using `_mm256_loadu_si256`, we maintain compatibility with unaligned data, but the Intel Ultra 7 (Meteor Lake/Lunar Lake) architecture handles these very efficiently as long as they don't cross cache lines.\n*   **Tail Optimization**: We use a single 8-element vector check before falling back to scalar to handle the remaining elements, minimizing the overhead for small arrays.",
+  "parent_id": 12,
+  "depth": 3,
+  "retry_fix": false
+}

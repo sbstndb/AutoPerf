@@ -1,0 +1,9 @@
+{
+  "id": 44,
+  "score": 136.51,
+  "status": "regression",
+  "strategy": "nts, we minimize the branch misprediction penalty during the search.\n*   **Pointer Arithmetic & Alignment**: Used pointer-based traversal to reduce index calculation overhead. The logic handles unaligned loads using `_mm256_loadu_si256`, which is highly optimized on modern Intel CPUs (Meteor Lake/Ultra 7).\n*   **Refined Tail Handling**: Used a 2-stage fallback (8-wide SIMD then scalar) to handle remaining elements, ensuring no large performance drops for array sizes that are not multiples of 64.",
+  "parent_id": 16,
+  "depth": 3,
+  "retry_fix": false
+}

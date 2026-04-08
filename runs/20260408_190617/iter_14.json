@@ -1,0 +1,9 @@
+{
+  "id": 14,
+  "score": 200.86,
+  "status": "regression",
+  "strategy": "king masks in pairs or small groups, we minimize the \"found\" overhead while keeping the \"not found\" path extremely lean.\n*   **Aligned-Aware Tail Processing**: Adjusted the transition between the unrolled loop and the scalar tail to handle 8-element chunks more efficiently, reducing the overhead for medium-sized arrays.\n*   **Pointer Arithmetic**: Shifted to using pointer-based iteration in the assembly-critical loop to reduce the number of instructions needed for index calculation (`data + i`).",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

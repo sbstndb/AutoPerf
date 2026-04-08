@@ -1,0 +1,9 @@
+{
+  "id": 40,
+  "score": 187.47,
+  "status": "regression",
+  "strategy": "t loop.\n*   **Pointer-Based Iteration**: Switched from index-based (`data[i]`) to pointer-based arithmetic to simplify address generation and reduce the number of registers used for indexing, allowing the compiler to optimize the loop header more effectively.\n*   **Minimized Dependency Chains**: Structured the `OR` operations to minimize the latency between the loads and the final branch decision, allowing the CPU's out-of-order execution engine to better overlap memory fetches with comparisons.",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}

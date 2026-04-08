@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "score": 131.22,
+  "status": "improved",
+  "strategy": "t the comparison result into a bitmask. A non-zero mask indicates at least one match within the 8-element vector.\n*   **Trailing Element Handling**: Use a scalar fallback for the remaining elements when the size is not a multiple of 32. This ensures correctness while keeping the hot loop aligned and simple.\n*   **Pointer Arithmetic & Early Exit**: The function returns immediately upon finding the first occurrence, minimizing unnecessary work for large arrays where the target value appears early.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

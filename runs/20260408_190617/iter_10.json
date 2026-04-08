@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "score": 222.44,
+  "status": "regression",
+  "strategy": "total). This eliminates the need for the `>> 2` shift and simplifies the trailing zero count.\n*   **Pointer Arithmetic Optimization:** Used a pointer-based loop increment rather than index-based to reduce the number of instructions in the hot loop (eliminating some `lea` or `add` operations for address calculation).\n*   **Tail Handling:** Maintained a simple scalar loop for the final elements to avoid complex masking logic for small remainders, ensuring the overhead for small arrays remains low.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

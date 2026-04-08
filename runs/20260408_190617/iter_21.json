@@ -1,0 +1,9 @@
+{
+  "id": 21,
+  "score": 270.28,
+  "status": "regression",
+  "strategy": "s.\n*   **Reduced Instruction Latency:** Replaced `_mm256_testz_si256` with `_mm256_movemask_ps` (which operates on the sign bit of floats). Since `vpcmpeqd` produces all 1s (negative float) or all 0s, `movemask_ps` is a very fast way to extract the comparison results into a general-purpose register.\n*   **Efficient Index Calculation:** Used `__builtin_ctzll` on the aggregated 64-bit mask to find the exact index of the first match without any further branching once a match is detected in a block.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

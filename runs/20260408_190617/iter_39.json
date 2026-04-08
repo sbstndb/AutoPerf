@@ -1,0 +1,9 @@
+{
+  "id": 39,
+  "score": 249.86,
+  "status": "regression",
+  "strategy": "ions and reduces the number of instructions in the loop header.\n*   **Efficient Tail Handling:** Replaced the scalar tail loop with a single unaligned SIMD load (if at least 8 elements remain) or a simple scalar loop for the very end. This ensures that even for sizes just under the block size, we maintain high throughput.\n*   **Branch Hinting:** Used `__builtin_expect` to hint that the \"match found\" condition is unlikely, allowing the compiler to optimize the layout for the fast path (scanning).",
+  "parent_id": 8,
+  "depth": 3,
+  "retry_fix": false
+}
