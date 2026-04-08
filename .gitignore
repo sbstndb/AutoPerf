@@ -11,3 +11,4 @@ orchestrator/.env
 compile_commands.json
 .DS_Store
 
+.env
