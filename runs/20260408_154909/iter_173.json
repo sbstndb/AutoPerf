@@ -1,0 +1,9 @@
+{
+  "id": 173,
+  "score": 2.93,
+  "status": "regression",
+  "strategy": "e base, we start with `res = 1` and handle the first bit naturally. This reduces the instruction count for small exponents.\n*   **Early Exit for Overflow/Identity**: Maintained the fast path for `base == 2` and added a check for `exp == 0` and `base <= 1` to handle identity cases with minimal latency.\n*   **Compiler-Friendly Structure**: Structured the code to ensure the compiler generates `IMUL` and `CMOV` instructions, which are highly optimized on the Intel Ultra 7 (Meteor Lake) architecture.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

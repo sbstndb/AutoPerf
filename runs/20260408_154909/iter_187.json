@@ -1,0 +1,9 @@
+{
+  "id": 187,
+  "score": 2.61,
+  "status": "regression",
+  "strategy": " and ensuring the `base *= base` and `res *= base` operations are scheduled to minimize stall cycles, we maximize throughput.\n*   **Special Case Handling:** Added a check for `base == 2`. Powers of 2 are extremely common in computing and can be handled via a single shift instruction (`1ULL << (exp * original_tz_factor)`), though the constraints of `uint64_t` overflow must be respected. (Note: The provided version focuses on the general case to ensure identical results for all `uint64_t` inputs).",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

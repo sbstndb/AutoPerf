@@ -1,0 +1,9 @@
+{
+  "id": 180,
+  "score": 4.3,
+  "status": "regression",
+  "strategy": "ILP):** We separate the squaring of the base (`b *= b`) from the accumulation into the result (`res *= b`). Modern Intel CPUs (like the Ultra 7) have multiple execution units; by ensuring `b` and `res` updates are independent in their operand dependencies within a single cycle, we maximize throughput.\n*   **Special Case for Small Exponents:** We handle the most common small exponents (0, 1) immediately to provide a fast path and simplify the logic for the general binary exponentiation algorithm.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

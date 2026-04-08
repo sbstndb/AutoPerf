@@ -1,0 +1,9 @@
+{
+  "id": 69,
+  "score": 1.95,
+  "status": "regression",
+  "strategy": "rhead**: While `__builtin_ctzll` is fast, the logic following it to square the base can be simplified. We use a simple loop that the compiler can unroll or transform into a sequence of `imul` instructions.\n*   **Instruction Latency**: `imul` has a latency of 3 cycles on this architecture. The bottleneck is the serial dependency `base *= base`. By structuring the loop to minimize auxiliary operations (like masking), we allow the execution units to focus on the critical path of the exponentiation.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

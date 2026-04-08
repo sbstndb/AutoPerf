@@ -1,0 +1,9 @@
+{
+  "id": 139,
+  "score": 5.93,
+  "status": "regression",
+  "strategy": ".\n*   **Branchless Accumulation**: While branches are often well-predicted, at very high speeds (sub 2ns), the overhead of the `if (exp & 1)` check and the resulting pipeline bubbles become significant. We use a conditional move or a multiplication by a masked value to keep the execution flow linear.\n*   **Optimized Small Exponent Path**: The most frequent cases (exp 0-2) are handled with a single comparison and a jump table or direct return to minimize the instruction count for the common case.",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

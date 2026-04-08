@@ -1,0 +1,9 @@
+{
+  "id": 40,
+  "score": 2.03,
+  "status": "regression",
+  "strategy": "s.\n3.  **Early Exit for Small Exponents**: Added a fast path for `exp < 2`. Since many real-world calls use small exponents, skipping the loop entirely for 0 or 1 provides a significant boost.\n4.  **Instruction Level Parallelism (ILP)**: While binary exponentiation is inherently sequential (each `base` depends on the previous `base * base`), unrolling allows the compiler to use `lea` or multiple registers to prepare the next power of the base while the `result` multiplication is still in flight.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

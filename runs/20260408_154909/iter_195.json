@@ -1,0 +1,9 @@
+{
+  "id": 195,
+  "score": 2.6,
+  "status": "regression",
+  "strategy": "ntiation overflows extremely quickly (e.g., $2^{64}$), the number of iterations is naturally capped at 64. Most practical cases use small exponents.\n4.  **Eliminating Redundant Logic**: The \"trailing zeros\" optimization in the original code adds significant branching and complexity for a marginal gain in specific cases. A streamlined \"Square-and-Multiply\" loop with unrolling is often faster on modern out-of-order CPUs like the Intel Ultra 7 because it maintains a more predictable execution flow.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

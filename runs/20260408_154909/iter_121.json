@@ -1,0 +1,9 @@
+{
+  "id": 121,
+  "score": 2.86,
+  "status": "regression",
+  "strategy": "nch misprediction penalties).\n*   **Trailing Zero Optimization:** Using `__builtin_ctzll` to skip trailing zeros in the exponent. This reduces the number of iterations and allows the initial `res` to be seeded with a higher power of `base`, shortening the dependency chain.\n*   **Loop Unrolling and Dependency Breaking:** By calculating the next power of the base independently of the result accumulation, the CPU's execution units can overlap the squaring operations with the result multiplications.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

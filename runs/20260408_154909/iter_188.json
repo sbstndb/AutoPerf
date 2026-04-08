@@ -1,0 +1,9 @@
+{
+  "id": 188,
+  "score": 3.25,
+  "status": "regression",
+  "strategy": "s` accumulation chain to maximize Instruction Level Parallelism (ILP).\n*   **Optimized Trailing Zero Handling:** The previous implementation used a loop for trailing zeros. Since `base^(2^tz)` is just repeated squaring, we can unroll this or use the fact that `tz` is typically small to avoid the overhead of a formal loop structure.\n*   **Early Exit for Small Exponents:** Added a fast-path for very small exponents (2, 3) which are statistically common, bypassing the `ctz` and loop logic entirely.",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

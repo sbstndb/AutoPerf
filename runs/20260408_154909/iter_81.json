@@ -1,0 +1,9 @@
+{
+  "id": 81,
+  "score": 3.2,
+  "status": "regression",
+  "strategy": "erations required. This replaces the `while (exp > 1)` check with a fixed-count loop, which is perfectly predictable by the branch predictor.\n*   **Special Case for Base 2:** While the general case is optimized, the hardware `shlx` or `1 << exp` is significantly faster for `base == 2`. This is a common case in many workloads.\n*   **Avoid Redundant Multiplications:** By calculating the loop limit exactly, we ensure the final squaring of the base (which isn't needed after the last bit) is skipped.",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

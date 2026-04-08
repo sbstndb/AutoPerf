@@ -1,0 +1,9 @@
+{
+  "id": 57,
+  "score": 4.43,
+  "status": "regression",
+  "strategy": "dency chain (`res` depends on `current_base`, which depends on its previous value). By pre-calculating the number of iterations, we can use a more linear approach.\n*   **Special Case Handling**: Handled `base == 2` using bit-shifting (`1ULL << exp`), which is significantly faster than multiplication for this common case.\n*   **Optimized Squaring**: Reduced the number of variables and operations in the loop to keep the working set in registers and minimize the latency between `imul` instructions.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

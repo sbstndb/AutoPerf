@@ -1,0 +1,9 @@
+{
+  "id": 58,
+  "score": 2.91,
+  "status": "regression",
+  "strategy": "e use `__builtin_ctzll` to skip trailing zeros and initialize `res` directly to the first required power of `base`. This removes the redundant `res = 1` multiplication and several squaring steps.\n*   **Bit Manipulation for Loop Control**: By using `63 - __builtin_clzll(exp)` (the position of the highest set bit), we can determine the exact number of iterations required, allowing for a cleaner loop structure that the compiler can optimize better than a `while (exp > 0)` loop with internal breaks.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

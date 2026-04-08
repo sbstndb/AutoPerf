@@ -1,0 +1,9 @@
+{
+  "id": 155,
+  "score": 4.56,
+  "status": "regression",
+  "strategy": "in parallel. We structure the loop to maximize this overlap.\n*   **Special Case Removal**: While the original had many special cases (base 0, 1, 2), these often introduce extra branches for cases that are rare in high-performance computing contexts. We keep only the most critical ones and ensure the general path is extremely fast.\n*   **Loop Unrolling & Dependency Chain Shortening**: By calculating the next square of the base before the multiplication, we ensure the multiplier unit is saturated.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

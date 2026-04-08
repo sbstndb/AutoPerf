@@ -1,0 +1,9 @@
+{
+  "id": 118,
+  "score": 4.35,
+  "status": "regression",
+  "strategy": "Trailing Zero Handling**: Instead of a loop to pre-square the base for trailing zeros, we use a more direct approach. Since `exp` is shifted by `tzcnt`, we only need to square the base `tzcnt` times. Unrolling this or using a more compact loop reduces the prologue overhead.\n*   **Short-Circuiting for Small Exponents**: Many real-world calls to `pow` involve small exponents. Adding a fast path for `exp < 4` after the initial checks can bypass the heavy machinery of the binary exponentiation loop.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

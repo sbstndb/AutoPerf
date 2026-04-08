@@ -1,0 +1,9 @@
+{
+  "id": 94,
+  "score": 4.25,
+  "status": "regression",
+  "strategy": " via a conditional move (`cmov`) or by multiplying by `(1 + (bit * (base-1)))`.\n*   **Loop Unrolling and Dependency Breaking**: By unrolling the loop, we allow the CPU to schedule multiple `base *= base` operations. Even though `res` still depends on its previous value, the calculation of the next multiplier (`base`) can happen in parallel.\n*   **Optimized Power-of-2 and Base-0/1 Cases**: Simplified the entry logic to minimize the preamble for common small exponents or bases.\n\n### OPTIMIZED CODE",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

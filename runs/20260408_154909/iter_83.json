@@ -1,0 +1,9 @@
+{
+  "id": 83,
+  "score": 4.27,
+  "status": "regression",
+  "strategy": "chedule much more effectively.\n*   **Minimize the Critical Path**: The \"Square and Multiply\" algorithm has two dependencies: the `base` squaring chain and the `result` accumulation chain. By calculating the number of iterations upfront, we remove the `exp > 1` check from the critical path.\n*   **Avoid Redundant Checks**: The special cases for `exp == 0` and `exp == 1` are handled, but the loop is structured to process the remaining bits without re-checking the exponent's state in every sub-step.",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 96,
+  "score": 5.04,
+  "status": "regression",
+  "strategy": " we ensure the CPU pipeline remains full.\n*   **Trailing Zero Optimization**: We use `__builtin_ctzll` to skip all trailing zeros in the exponent at once. This initializes `res` to a power of the base and reduces the total number of iterations.\n*   **Loop Invariant and Early Exit**: The loop condition `exp > 0` combined with `exp >>= 1` allows the compiler to optimize the loop structure. Using `__builtin_clzll` to determine the exact number of iterations further helps the CPU's branch predictor.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

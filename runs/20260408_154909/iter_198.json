@@ -1,0 +1,9 @@
+{
+  "id": 198,
+  "score": 5.01,
+  "status": "regression",
+  "strategy": "mber of iterations for even exponents and shifts the \"starting point\" of the base squaring.\n*   **Early Exit for Overflow/Zero:** Added a check for `exp == 0` at the very top to simplify the main loop logic. The logic handles `base == 0` and `base == 1` implicitly and efficiently through the bit-scanning approach.\n*   **Micro-architectural Alignment:** The code is structured to minimize branches inside the loop, relying on the CPU's branch predictor for the loop exit and the `exp >>= 1` pattern.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

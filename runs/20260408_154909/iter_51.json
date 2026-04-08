@@ -1,0 +1,9 @@
+{
+  "id": 51,
+  "score": 5.4,
+  "status": "regression",
+  "strategy": " exactly the number of bits required, minimizing the total number of `imul` instructions.\n*   **Loop Unrolling and ILP**: Unrolled the squaring and multiplication steps. While binary exponentiation is inherently sequential, reducing loop overhead and allowing the compiler to schedule `imul` instructions more effectively improves throughput.\n*   **Special Case Handling**: Handled `exp == 0` and `exp == 1` at the start to provide a fast path for small exponents, which are common in many workloads.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

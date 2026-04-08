@@ -1,0 +1,9 @@
+{
+  "id": 24,
+  "score": 2.18,
+  "status": "regression",
+  "strategy": "t, which the compiler can unroll more effectively than a `while(exp > 0)` loop.\n*   **Special Case for Base 2:** Added a check for `base == 2`. Since `2^exp` is just a bit shift (`1ULL << exp`), this provides a massive speedup for a common power-of-two case, provided `exp < 64`.\n*   **Minimize Latency Chain:** Reorganized the square-and-multiply logic to reduce the dependency chain length. By calculating the number of bits once, we avoid repeated `exp > 0` checks and shifting in every iteration.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

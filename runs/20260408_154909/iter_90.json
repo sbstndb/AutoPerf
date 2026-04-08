@@ -1,0 +1,9 @@
+{
+  "id": 90,
+  "score": 4.46,
+  "status": "regression",
+  "strategy": "erations are required. This replaces the `while(exp > 0)` check with a fixed-count loop that the compiler can unroll more effectively.\n*   **Special Case for Base 2**: Added a check for `base == 2` to use bit-shifting, which is significantly faster than multiplication, though the primary focus remains on the general case.\n*   **Optimized Initial State**: By initializing `res` with the base and adjusting the exponent immediately, we skip the first iteration's identity multiplication (`1 * side`).",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

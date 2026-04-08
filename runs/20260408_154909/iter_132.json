@@ -1,0 +1,9 @@
+{
+  "id": 132,
+  "score": 6.48,
+  "status": "regression",
+  "strategy": "tion-Level Parallelism (ILP) by allowing the CPU to schedule multiple independent `side *= side` operations.\n*   **Early Exit for Overflow/Zero:** While the original code handled `base == 2`, we maintain the fast path for small bases and add a check for `exp` becoming zero early during unrolling to avoid unnecessary work.\n*   **Optimized Bit Scanning:** Used `__builtin_clzll` to strictly limit the loop iterations to the minimum required, avoiding the full 64-bit sweep when the exponent is small.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

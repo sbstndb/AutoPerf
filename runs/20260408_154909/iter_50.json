@@ -1,0 +1,9 @@
+{
+  "id": 50,
+  "score": 2.62,
+  "status": "regression",
+  "strategy": "al bit-width of the exponent.\n*   **Fixed-Iteration Unrolling**: By knowing the exact position of the highest set bit, we can process the exponent in a tight loop without the `exp > 1` check inside the loop, allowing the compiler to better optimize the instruction pipeline.\n*   **Instruction Level Parallelism (ILP)**: While binary exponentiation is inherently sequential, reducing the overhead of the loop control and branching allows the execution units to focus entirely on the `imul` throughput.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

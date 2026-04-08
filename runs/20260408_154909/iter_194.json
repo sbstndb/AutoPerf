@@ -1,0 +1,9 @@
+{
+  "id": 194,
+  "score": 2.36,
+  "status": "regression",
+  "strategy": "ntiation overflows quickly, `trailing_zeros` is rarely large.\n*   **Instruction Level Parallelism (ILP):** Reorganized the loop to update `base` and `res` such that the `base *= base` calculation (the bottleneck) can start as early as possible in the pipeline, independent of the `res` update.\n*   **Early Exit for Overflow/Small Bases:** Added a check for `base == 2` using a bit-shift, which is significantly faster than the general binary exponentiation loop for the most common power-of-two case.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

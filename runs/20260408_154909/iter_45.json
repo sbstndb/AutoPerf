@@ -1,0 +1,9 @@
+{
+  "id": 45,
+  "score": 3.13,
+  "status": "regression",
+  "strategy": "`result *= base` in parallel.\n*   **Loop Unrolling and Early Exit**: Since `uint64_t` exponents have at most 64 bits, we can unroll the loop or use `__builtin_clzll` to determine exactly how many iterations are needed, avoiding unnecessary shifts and tests.\n*   **Data Dependency Breaking**: By calculating the next `base` and the potential `next_result` simultaneously, we utilize the multiple execution ports (specifically the multiple `imul` units) on the Intel Ultra 7 (Meteor Lake) architecture.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

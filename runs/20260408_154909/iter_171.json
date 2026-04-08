@@ -1,0 +1,9 @@
+{
+  "id": 171,
+  "score": 2.13,
+  "status": "regression",
+  "strategy": "o maximize Instruction Level Parallelism (ILP).\n*   **Optimized Initialization**: We skip the `__builtin_ctzll` loop which was causing high overhead for small exponents. Instead, we initialize `res` to 1 and enter a streamlined loop.\n*   **Early Exit for Base 2**: Kept the bit-shift optimization for base 2 as it is the most efficient way to handle powers of 2 on x86_64.\n*   **Loop Unrolling**: Unrolling the loop by a factor of 2 reduces the number of shifts and comparisons on the exponent `exp`.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

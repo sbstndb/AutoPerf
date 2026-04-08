@@ -1,0 +1,9 @@
+{
+  "id": 172,
+  "score": 1.9,
+  "status": "regression",
+  "strategy": "lling and using temporary variables, we allow the CPU to execute the squaring of the base for the *next* iteration while the multiplication for the *current* result is still in flight.\n*   **Base-2 Specialization**: Kept the bit-shift optimization for base 2 as it is a common case and significantly faster than any multiplication loop.\n*   **Reduced Loop Overhead**: By shifting the exponent and checking for zero at the end of a 2-step unrolled block, we reduce the number of jumps and comparisons.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

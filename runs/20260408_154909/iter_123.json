@@ -1,0 +1,9 @@
+{
+  "id": 123,
+  "score": 3.87,
+  "status": "regression",
+  "strategy": "predictions, which are frequent in exponentiation where bit patterns are unpredictable.\n*   **Trailing Zero Optimization:** Used `__builtin_ctzll` to skip initial trailing zeros of the exponent. This reduces the number of iterations and ensures the first set bit is handled by an assignment rather than a multiplication, saving cycles.\n*   **Early Exit for Small Bases:** Maintained and refined early exits for `base == 0, 1` and `exp == 0` to avoid unnecessary computation for common identity cases.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 142,
+  "score": 3.26,
+  "status": "regression",
+  "strategy": "etter schedule the `imul` instructions.\n*   **Branchless Selection:** We use a small local array to select the multiplier for the result. This encourages the compiler to use `CMOV` or simple indexing rather than branches, which is critical for performance when the exponent bits are unpredictable.\n*   **Optimized Trailing Zero Handling:** Replaced the loop for trailing zeros with a more direct sequence of squarings, which is faster for the small exponents typically encountered in `uint64_t` math.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

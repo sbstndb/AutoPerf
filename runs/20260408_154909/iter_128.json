@@ -1,0 +1,9 @@
+{
+  "id": 128,
+  "score": 6.15,
+  "status": "regression",
+  "strategy": "llelism (ILP):** We separate the squaring chain (`side`) from the accumulation chain (`res`). Modern Intel CPUs (like the Ultra 7) have multiple execution units; by removing the branch, we allow the CPU to execute the squaring for the next iteration while the current multiplication for `res` is still in flight.\n*   **Optimized Bit Scanning:** We use `__builtin_ctzll` to skip trailing zeros at the start, reducing the total number of multiplications for exponents that are multiples of powers of 2.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

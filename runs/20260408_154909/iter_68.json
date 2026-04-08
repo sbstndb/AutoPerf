@@ -1,0 +1,9 @@
+{
+  "id": 68,
+  "score": 3.32,
+  "status": "regression",
+  "strategy": "ways small (max 63). A standard square-and-multiply loop is more efficient for this range.\n*   **Minimize Loop Overhead**: By checking `exp > 1` and performing the final multiplication outside the loop, we save one `base *= base` operation which would otherwise be redundant.\n*   **Instruction Latency**: `imul` has a latency of 3 cycles on Intel Ultra (Meteor Lake). By keeping the `result` and `base` updates independent within the loop, we allow the CPU to execute them in parallel where possible.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

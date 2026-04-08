@@ -1,0 +1,9 @@
+{
+  "id": 192,
+  "score": 4.94,
+  "status": "regression",
+  "strategy": "ial squaring phase (trailing zeros) is unrolled to process two squares per iteration, reducing loop overhead and improving instruction-level parallelism (ILP).\n*   **Optimized Bit Manipulation:** Used `__builtin_ctzll` and `shrx` (via compiler optimization) to handle the exponent efficiently.\n*   **Dependency Chain Decoupling:** Structured the main loop to allow the CPU to speculatively execute `base *= base` independently of the `res` update, maximizing the throughput of the `imul` instruction.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

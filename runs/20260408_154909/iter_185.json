@@ -1,0 +1,9 @@
+{
+  "id": 185,
+  "score": 3.49,
+  "status": "regression",
+  "strategy": "he CPU to schedule the `base *= base` squaring chain and the `res *= base` accumulation chain more effectively.\n*   **Optimized Trailing Zero Handling:** Instead of a loop for `tz`, we use a small unrolled sequence. Since `uint64_t` overflows quickly, `tz` is rarely large for bases > 1.\n*   **MSB-to-LSB vs LSB-to-MSB:** While LSB-to-MSB (current) is generally good for ILP, we ensure the final multiplication is handled outside the loop to reduce the total number of iterations.\n\n### OPTIMIZED CODE",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

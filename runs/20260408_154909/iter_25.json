@@ -1,0 +1,9 @@
+{
+  "id": 25,
+  "score": 2.5,
+  "status": "regression",
+  "strategy": "of the loop exit condition.\n*   **Specialized Fast Paths:** Added immediate returns for `exp == 1` and `exp == 2` to bypass the `tzcnt` and loop logic for the most common small exponents.\n*   **Instruction Level Parallelism (ILP):** Structured the \"Square-and-Multiply\" logic to minimize the dependency chain. By calculating `side * side` independently of the `res` update, the CPU can execute the squaring for the next iteration while the multiplication for the current iteration is still in flight.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

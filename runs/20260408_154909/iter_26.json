@@ -1,0 +1,9 @@
+{
+  "id": 26,
+  "score": 2.78,
+  "status": "regression",
+  "strategy": " instructions in parallel where data dependencies permit.\n*   **Fast-Path for Common Small Exponents:** Exponents 1 and 2 are extremely common in integer power functions. Providing immediate returns for these bypasses the `tzcnt` and loop setup overhead.\n*   **Optimized Bit Manipulation:** Using `__builtin_clzll` to determine the exact number of iterations required for the binary exponentiation loop avoids unnecessary checks and allows for a cleaner loop structure that the compiler can optimize.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

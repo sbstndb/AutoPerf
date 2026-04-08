@@ -1,0 +1,9 @@
+{
+  "id": 167,
+  "score": 3.18,
+  "status": "regression",
+  "strategy": "overhead. A simple `while (exp > 0)` loop with a single conditional multiply is more predictable for the branch predictor in common cases.\n*   **Fast Path Optimization**: Retained and streamlined fast paths for `exp == 0` and `base <= 1`. The `exp == 1` case is naturally handled by the loop with minimal overhead.\n*   **Elimination of Memory Access**: Removed the `lookup` table entirely. All operations now happen strictly within registers, avoiding L1 cache latency and stack pointer manipulation.",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

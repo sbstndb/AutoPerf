@@ -1,0 +1,9 @@
+{
+  "id": 11,
+  "score": 3.86,
+  "status": "regression",
+  "strategy": "fectively, increasing Instruction Level Parallelism.\n*   **Bit-Scan for Early Exit:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip all leading zeros in the exponent and process the first set bit immediately, reducing the number of iterations for small or sparse exponents.\n*   **Special Case Optimization:** Moving the `base == 0` check to a cold path and handling `exp == 0` as a fast-return ensures the common case (non-zero base/exponent) enters the loop with minimal overhead.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

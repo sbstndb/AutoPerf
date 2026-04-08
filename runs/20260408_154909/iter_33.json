@@ -1,0 +1,9 @@
+{
+  "id": 33,
+  "score": 4.62,
+  "status": "regression",
+  "strategy": " then $res = res \\times base$). By unrolling or restructuring, we allow the CPU to speculate on the squaring operation while the multiplication is retiring.\n*   **Special Case Handling**: Simplified the entry logic. Since $0^n = 0$ and $n^0 = 1$, we use a single check for `exp == 0` and then handle the `base == 0` case implicitly or via a simple branch that the CPU can easily predict.\n*   **Loop Unrolling**: Unrolled the squaring process to reduce the overhead of the loop counter and bit shifts.",
+  "parent_id": 6,
+  "depth": 2,
+  "retry_fix": false
+}

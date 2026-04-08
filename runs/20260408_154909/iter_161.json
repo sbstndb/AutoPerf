@@ -1,0 +1,9 @@
+{
+  "id": 161,
+  "score": 4.42,
+  "status": "regression",
+  "strategy": "on Unrolling**: Binary exponentiation for a 64-bit integer can only run for a maximum of 64 iterations. By checking the leading zeros of the exponent (`__builtin_clzll`), we can determine the exact number of iterations needed, allowing the compiler to optimize the loop structure better.\n*   **ILP via Dependency Breaking**: The `res` update and the `base` squaring are interleaved. By calculating the \"multiplier\" for `res` independently where possible, we reduce the length of the dependency chain.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

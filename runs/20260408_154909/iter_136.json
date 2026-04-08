@@ -1,0 +1,9 @@
+{
+  "id": 136,
+  "score": 4.87,
+  "status": "regression",
+  "strategy": "nt, the CPU can better pipeline the `base *= base` and `res *= base` operations.\n*   **Optimized Base 2:** The base 2 case is handled using a single `shlx` or `1ULL << exp` with a check for overflow, which is significantly faster than a loop.\n*   **Branchless Accumulation:** For the binary exponentiation loop, we use a simple `if (exp & 1)` which modern Intel CPUs (like the Ultra 7 255U) predict extremely well when the exponent bits are stable, or execute via `cmov` if the compiler deems it fit.",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

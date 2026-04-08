@@ -1,0 +1,9 @@
+{
+  "id": 41,
+  "score": 3.25,
+  "status": "regression",
+  "strategy": "out-of-order execution engine to schedule independent `imul` instructions more effectively.\n*   **Fast Path for Small Exponents**: Many calls to `pow` functions involve small exponents. Adding a check for `exp == 0` and `exp == 1` allows for an immediate return, bypassing the loop logic entirely.\n*   **Bit Manipulation for Loop Bounds**: Using `__builtin_clzll` allows us to determine the exact number of iterations required, avoiding unnecessary squaring operations once the exponent is exhausted.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

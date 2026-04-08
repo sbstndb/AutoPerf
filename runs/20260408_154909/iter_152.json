@@ -1,0 +1,9 @@
+{
+  "id": 152,
+  "score": 2.2,
+  "status": "regression",
+  "strategy": "ttleneck.\n*   **Optimized Initialization**: Used `__builtin_ctzll` to handle trailing zeros efficiently, but simplified the squaring logic to avoid the overhead of small loops.\n*   **Early Exits**: Added a check for `base == 2` which allows using a bit-shift, significantly speeding up a common power-of-two case.\n*   **Reduced Dependency Chain**: By calculating `b2 = b * b` and `b4 = b2 * b2` inside an unrolled loop, we allow the CPU to execute multiple multiplications in parallel where possible.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

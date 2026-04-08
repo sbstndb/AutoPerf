@@ -1,0 +1,9 @@
+{
+  "id": 19,
+  "score": 3.37,
+  "status": "regression",
+  "strategy": "* Added an immediate return for `exp == 1` and `exp == 0` to minimize latency for small exponents.\n*   **Reduced Loop Overhead:** By checking `exp > 1` and performing the final multiplication outside the loop, we reduce the number of jumps and comparisons.\n*   **Compiler Optimization Hints:** Used `__builtin_ctzll` (Count Trailing Zeros) to quickly skip trailing zeros in the exponent, which is common in power-of-two exponents or even numbers, effectively shifting the base multiple times at once.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

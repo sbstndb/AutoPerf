@@ -1,0 +1,9 @@
+{
+  "id": 71,
+  "score": 4.3,
+  "status": "regression",
+  "strategy": "ve `__builtin_clzll` Overhead:** By using a standard `while (exp > 0)` loop with LSB, we avoid the latency of the `lzcnt` instruction and the subsequent subtraction/loop setup.\n*   **Early Exit for Common Cases:** Retained and streamlined checks for `base <= 2` and `exp == 0` to handle small inputs with minimal latency.\n*   **Compiler-Friendly Loop Structure:** The LSB pattern `if (exp & 1) res *= base; base *= base; exp >>= 1;` is highly optimized by GCC to use `imul` and `test/cmov` sequences.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

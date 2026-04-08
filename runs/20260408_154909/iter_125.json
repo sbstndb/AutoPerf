@@ -1,0 +1,9 @@
+{
+  "id": 125,
+  "score": 4.64,
+  "status": "regression",
+  "strategy": " This prevents branch mispredictions, which are extremely costly in this kernel because the bit pattern of the exponent is typically unpredictable.\n*   **Loop Unrolling and Early Exit:** The loop now terminates as soon as `exp` becomes zero. This is significantly faster for smaller exponents while maintaining correctness for large ones.\n*   **Special Case Handling:** Maintained fast paths for `exp == 0` and `base <= 1`, but streamlined the logic to minimize the instruction count in the prologue.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

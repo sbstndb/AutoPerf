@@ -1,0 +1,9 @@
+{
+  "id": 147,
+  "score": 3.38,
+  "status": "regression",
+  "strategy": " small stack-allocated lookup table for the pre-computed powers. Since the table is tiny (128 bytes) and accessed frequently, it stays in L1d. The compiler uses `mov` and `imul` without branch misprediction penalties.\n*   **Unrolled Squaring:** For each 4-bit window, we perform exactly 4 squarings. These are unrolled to maximize throughput and minimize loop overhead.\n*   **Special Case Handling:** Maintained fast paths for common small exponents and bases to ensure no regression on simple cases.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 18,
+  "score": 3.58,
+  "status": "regression",
+  "strategy": "ws us to skip leading zeros in the exponent and potentially unroll or structure the loop more efficiently.\n*   **Instruction Level Parallelism (ILP):** By pre-calculating the loop limit and using a fixed-iteration approach where possible, the CPU can better pipeline the `imul` instructions.\n*   **Special Case Handling:** Added a fast path for `exp == 1` and `exp == 0` to return immediately, while structuring the main loop to handle the most common \"large\" exponent cases without redundant checks.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

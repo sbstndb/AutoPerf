@@ -1,0 +1,9 @@
+{
+  "id": 113,
+  "score": 3.93,
+  "status": "regression",
+  "strategy": "oits the out-of-order execution capabilities of the Intel Ultra 7 (Meteor Lake) architecture.\n*   **Optimized Initialization**: Replaced the `__builtin_ctzll` loop with a more efficient initialization. By starting the loop from the first set bit, we avoid unnecessary multiplications and handle the `res = 1` case implicitly.\n*   **Special Case Handling**: Maintained the fast paths for `exp=0`, `base=0/1`, and `base=2`, as these are common in many workloads and can be resolved with minimal cycles.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

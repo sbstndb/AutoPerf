@@ -1,0 +1,9 @@
+{
+  "id": 23,
+  "score": 5.27,
+  "status": "regression",
+  "strategy": "educes the number of branch instructions.\n*   **Fast-Path for Small Exponents:** Added a specialized check for `exp < 4`. In many workloads, small exponents are statistically frequent. Handling them early avoids the overhead of the bit-scan and loop setup.\n*   **Instruction Level Parallelism (ILP):** By calculating `side * side` and the potential `res * side` in a way that minimizes dependency chains, we allow the CPU's out-of-order execution engine to overlap the squaring and the result update.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 182,
+  "score": 3.24,
+  "status": "regression",
+  "strategy": "* The initial squaring for trailing zeros is handled by a simple loop. Since `base` is `uint64_t`, the number of squarings is naturally limited (max 6), making this very fast.\n*   **Instruction Level Parallelism (ILP):** By calculating `b * b` and `res * b` in a way that minimizes data dependency stalls, we allow the CPU's execution units to stay saturated.\n*   **Special Case Handling:** Maintained fast paths for `exp == 0` and `base <= 1` to ensure correctness and low latency for trivial cases.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 119,
+  "score": 3.39,
+  "status": "regression",
+  "strategy": "ers of the base in parallel with the accumulation into `res`.\n3.  **Optimized Trailing Zero Handling**: Instead of a loop to pre-square the base for trailing zeros, we use the fact that `base *= base` is a chain. We can optimize the initialization of `res` and `base` by handling the first set bit of the exponent separately.\n4.  **Small Exponent Fast Path**: Since many integer powers in real-world applications use small exponents, we ensure the loop condition is checked efficiently to exit early.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

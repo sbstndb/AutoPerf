@@ -1,0 +1,9 @@
+{
+  "id": 149,
+  "score": 5.23,
+  "status": "regression",
+  "strategy": "lue is typically compiled into a conditional move or a simple indexed load, avoiding branch mispredictions.\n*   **Optimized Initial State:** We handle the first few bits of the exponent separately to avoid unnecessary multiplications by 1 and to jump-start the `res` value.\n*   **Reduced Loop Overhead:** By using `__builtin_clzll` (Count Leading Zeros), we determine exactly how many iterations are needed, allowing us to use a more efficient downward-counting loop or a fixed-width window approach.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

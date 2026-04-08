@@ -1,0 +1,9 @@
+{
+  "id": 37,
+  "score": 2.61,
+  "status": "regression",
+  "strategy": "y.\n*   **Bit Manipulation for Loop Termination**: Using `__builtin_clzll` (Count Leading Zeros) allows us to determine exactly how many iterations are needed, transforming the `while (exp > 0)` into a finite loop that the compiler can better optimize and the CPU can better speculate.\n*   **Instruction Level Parallelism (ILP)**: By calculating the next `base * base` independently of the `result` update, we allow the CPU's execution units to process the squaring and the multiplication in parallel.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

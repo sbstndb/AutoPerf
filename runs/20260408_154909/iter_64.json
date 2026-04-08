@@ -1,0 +1,9 @@
+{
+  "id": 64,
+  "score": 2.88,
+  "status": "regression",
+  "strategy": "e number of instructions in the hot loop.\n*   **Special Case for Small Exponents**: We keep the fast paths for `exp <= 2` to bypass the bit-scanning logic entirely for the most common cases.\n*   **Remove Trailing Zero Pre-processing**: While skipping trailing zeros reduces iterations, the overhead of the `ctz` and the initial squaring loop often outweighs the benefit for 64-bit integers unless the exponent is very large and sparse. A unified loop is often faster due to better instruction fusion.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

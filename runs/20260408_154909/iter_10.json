@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "score": 4.44,
+  "status": "regression",
+  "strategy": "arse.\n*   **Minimize Initial Latency:** The `base == 0` check is moved to the start, and the initial `result` is set to the first power of `base` corresponding to the lowest set bit of `exp`. This avoids an unnecessary `1 * base` multiplication.\n*   **Instruction Level Parallelism (ILP):** By restructuring the loop to calculate the next `base` and the `result` update independently, we allow the CPU to execute the two `imul` instructions in parallel (as they have different destination registers).",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

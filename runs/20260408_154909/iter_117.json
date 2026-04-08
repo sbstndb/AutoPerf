@@ -1,0 +1,9 @@
+{
+  "id": 117,
+  "score": 3.1,
+  "status": "regression",
+  "strategy": "op Unrolling**: Unrolled the main `while` loop to process multiple bits of the exponent per iteration. This reduces the overhead of the `exp >>= 1` and `exp > 0` checks and allows the CPU to schedule multiple `imul` instructions across different execution ports.\n*   **Meteor Lake Specific Tuning**: Given the Intel Ultra 7 (Meteor Lake) architecture, which has high-throughput integer multipliers, we prioritize keeping the execution pipeline full by providing independent multiplication operations.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

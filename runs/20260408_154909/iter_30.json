@@ -1,0 +1,9 @@
+{
+  "id": 30,
+  "score": 3.9,
+  "status": "regression",
+  "strategy": "he first relevant power of the base. This reduces the total number of iterations.\n*   **Specialized Small Exponent Handling:** Added a fast path for `exp < 2`. Since many calls to `pow` functions involve small exponents, this avoids the overhead of the bit-scanning logic for the most trivial cases.\n*   **Bit Manipulation Efficiency:** Used `shrx` (via `>>` with `-march=native`) and `__builtin_clzll` to determine the exact loop bounds, ensuring the loop only runs for the necessary number of bits.",
+  "parent_id": 6,
+  "depth": 2,
+  "retry_fix": false
+}

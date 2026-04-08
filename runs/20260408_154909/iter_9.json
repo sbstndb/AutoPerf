@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "score": 4.37,
+  "status": "regression",
+  "strategy": "tter schedule instructions by knowing the loop bounds are small (max 64).\n3.  **Special Case Handling:** The `base == 0` check is kept as a fast path. For `base == 1`, the result is always 1 (except for `0^0` which is 1). For `base == 2`, we use a bit shift, which is significantly faster than multiplication.\n4.  **Instruction Level Parallelism (ILP):** By restructuring the loop to check the exponent bits more efficiently, we reduce the dependency chain length between `result` and `base` updates.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

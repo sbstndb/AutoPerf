@@ -1,0 +1,9 @@
+{
+  "id": 53,
+  "score": 3.93,
+  "status": "regression",
+  "strategy": "ination condition.\n*   **Instruction Level Parallelism (ILP)**: By calculating the number of iterations upfront, the compiler can unroll the loop more effectively. Binary exponentiation is inherently sequential, but reducing the control-flow overhead allows the CPU to schedule the `imul` instructions closer to their theoretical latency limits.\n*   **Special Case Handling**: Fast-path for `exp == 0` and `exp == 1` to minimize latency for small exponents while keeping the general case streamlined.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

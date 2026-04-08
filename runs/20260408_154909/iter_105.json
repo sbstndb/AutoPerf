@@ -1,0 +1,9 @@
+{
+  "id": 105,
+  "score": 4.66,
+  "status": "regression",
+  "strategy": "emove `lzcnt` and Bit Scanning**: By iterating while `exp > 0`, we eliminate the need for leading-zero counts and fixed-width loops. The loop naturally terminates as soon as the remaining exponent bits are zero.\n*   **Instruction Pipeline Balancing**: In the Right-to-Left method, `base *= base` and `result *= (condition ? base : 1)` can be partially overlapped by the CPU's out-of-order execution engine, unlike the Left-to-Right method where every squaring must wait for the previous bit's result.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

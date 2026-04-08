@@ -1,0 +1,9 @@
+{
+  "id": 44,
+  "score": 3.82,
+  "status": "regression",
+  "strategy": "or Common Cases**: Added a fast path for `exp == 0` and `base == 0/1`. For `uint64_t`, the result often overflows to zero or remains small; however, the primary bottleneck in the provided assembly was the serial dependency of the `imul` instructions and the branch.\n*   **Bit Scan for Loop Termination**: Used `__builtin_clzll` (Count Leading Zeros) to determine the exact number of iterations required. This avoids unnecessary squaring operations once the highest set bit of the exponent is reached.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

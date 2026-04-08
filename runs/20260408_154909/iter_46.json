@@ -1,0 +1,9 @@
+{
+  "id": 46,
+  "score": 4.86,
+  "status": "regression",
+  "strategy": " process multiple bits of the exponent per iteration. Since `uint64_t` exponents often have many leading zeros, we use `__builtin_clzll` to determine the exact number of iterations needed, avoiding unnecessary `imul` operations for high-order bits that are zero.\n*   **Bit Manipulation:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip initial zero bits in the exponent, effectively starting the `result` at a higher power of `base` and reducing the total number of multiplications.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

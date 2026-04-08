@@ -1,0 +1,9 @@
+{
+  "id": 35,
+  "score": 4.95,
+  "status": "regression",
+  "strategy": "ecial Case Handling**: Handled `exp == 0` and `base == 0` with early returns, but optimized the `base == 1` and `base == 2` cases implicitly. For `base == 2`, the operation is a simple bit shift, though for a general-purpose `pow_int`, we focus on minimizing the `imul` latency.\n*   **Bit Manipulation for Loop Control**: Using `63 - __builtin_clzll(exp)` allows us to skip leading zeros of the exponent entirely without a `while(exp > 0)` check every iteration, reducing the total instruction count.",
+  "parent_id": 6,
+  "depth": 2,
+  "retry_fix": false
+}

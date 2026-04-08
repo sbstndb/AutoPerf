@@ -1,0 +1,9 @@
+{
+  "id": 143,
+  "score": 2.23,
+  "status": "regression",
+  "strategy": "eping all operations in registers.\n*   **Bit-Manipulation Intrinsics**: Used `__builtin_ctzll` to handle the initial power-of-two component of the exponent, which reduces the number of iterations in the main loop for even exponents.\n*   **Branchless Tail**: The main loop is unrolled to handle the most common exponent ranges (up to 64 bits) with minimal branching. The `if (exp & 1)` checks are highly predictable or can be optimized by the compiler into `test/cmov` or simple conditional execution.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

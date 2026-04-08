@@ -1,0 +1,9 @@
+{
+  "id": 196,
+  "score": 4.66,
+  "status": "regression",
+  "strategy": " * base` (the squaring) and `res * multiplier` (the accumulation) in parallel.\n*   **Optimized Initialization:** Streamlined the handling of `trailing_zeros`. Instead of a loop to square the base for trailing zeros, we use the same unrolled logic, reducing the overhead for small exponents.\n*   **Early Exit for Overflow/Zero:** While the contract requires identical results (including 64-bit wrap-around), the logic is structured to minimize the path length for the most common small-exponent cases.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

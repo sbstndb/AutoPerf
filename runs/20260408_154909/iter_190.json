@@ -1,0 +1,9 @@
+{
+  "id": 190,
+  "score": 2.31,
+  "status": "regression",
+  "strategy": "g chain) and `res * base` (the accumulation chain) more independently.\n*   **Optimized Initialization:** Instead of a loop for trailing zeros, we use a series of conditional squarings. Since `uint64_t` exponents are at most 64 bits, the number of squarings is small and bounded.\n*   **Pre-computation for Small Bases:** For the most common case (base 2), the operation is a simple bit shift. While the general algorithm handles it, minimizing the overhead for small bases improves average throughput.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

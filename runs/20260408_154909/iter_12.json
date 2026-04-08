@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "score": 3.92,
+  "status": "regression",
+  "strategy": "s the initial `result = base` assignment more efficiently.\n*   **Loop Unrolling & Dependency Reduction:** The \"Exponentiation by Squaring\" algorithm is inherently sequential. By handling the final bit outside the loop and using `__builtin_clzll` (Count Leading Zeros) to determine the exact number of iterations, we can minimize the loop overhead.\n*   **Special Case Optimization:** The `base == 0` check is kept minimal to ensure the common case (non-zero base) enters the logic as fast as possible.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 150,
+  "score": 3.49,
+  "status": "regression",
+  "strategy": " allow the CPU to speculate further.\n*   **Special Case for Small Bases**: For `base == 2`, the operation is a simple shift. However, to maintain the signature and general performance, we focus on the general case while ensuring the \"identity\" checks are as fast as possible.\n*   **Peephole Optimization**: Using `__builtin_ctzll` is excellent, but we can further optimize the transition from the \"trailing zeros\" phase to the \"accumulation\" phase to minimize the total number of `imul` instructions.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

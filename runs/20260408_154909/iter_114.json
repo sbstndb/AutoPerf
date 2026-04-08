@@ -1,0 +1,9 @@
+{
+  "id": 114,
+  "score": 4.42,
+  "status": "regression",
+  "strategy": "ws the CPU to schedule independent multiplications, we better utilize the multiple execution ports of the Intel Ultra 7.\n*   **Optimized Initialization**: Instead of a loop to handle trailing zeros, we use a single `__builtin_ctzll` and a series of squares. This avoids the overhead of the small loop for common cases.\n*   **Bit Manipulation Instructions**: Leveraging `shrx` and `tzcnt` (via `-march=native`) to manipulate the exponent efficiently without affecting the flags register unnecessarily.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 22,
+  "score": 4.66,
+  "status": "regression",
+  "strategy": "d the result update (`res *= side`) are partially independent. We structure the code to allow the CPU to speculate on the next squaring while the current multiplication is retiring.\n*   **Bit Manipulation Optimization:** Using `__builtin_clzll` (Count Leading Zeros) allows us to determine the exact number of iterations required. This transforms the `while (exp > 0)` loop into a fixed-count `for` loop, which is more amenable to compiler unrolling and reduces branch misprediction at the loop exit.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

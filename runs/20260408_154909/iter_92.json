@@ -1,0 +1,9 @@
+{
+  "id": 92,
+  "score": 4.63,
+  "status": "regression",
+  "strategy": "tzll` to skip trailing zeros in the exponent initially, setting the starting `res`. Then, we use `__builtin_clzll` to determine the exact number of iterations needed, avoiding unnecessary work.\n*   **Instruction Level Parallelism (ILP)**: By separating the `res` update and the `base` squaring, we utilize the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture. The `imul` instructions for `res` and `base` can often be dispatched in the same cycle if they don't share operands.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

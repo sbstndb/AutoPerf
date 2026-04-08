@@ -1,0 +1,9 @@
+{
+  "id": 21,
+  "score": 1.62,
+  "status": "improved",
+  "strategy": "andling:** Added a fast path for `exp == 1` and `exp == 2` to bypass the loop logic entirely for small exponents, which are common in many workloads.\n*   **Loop Unrolling & Bit Manipulation:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip multiple squaring operations when the exponent has trailing zeros, effectively \"jumping\" through the binary representation.\n*   **Compiler Hints:** Used `__builtin_expect` to hint that `exp == 0` is unlikely, keeping the hot path streamlined.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

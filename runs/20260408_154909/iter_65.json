@@ -1,0 +1,9 @@
+{
+  "id": 65,
+  "score": 4.12,
+  "status": "regression",
+  "strategy": "ed the manual loop for trailing zeros with a direct shift-based approach using `__builtin_ctzll`. Since $base^{2^n}$ is just repeated squaring, we can minimize the overhead of the \"pre-squaring\" phase.\n*   **Special Case for Base 2**: Added a fast path for `base == 2` using bit shifting, which is a common case in many workloads.\n*   **Reduced Register Pressure**: Streamlined the variable usage to keep the hot loop entirely within the fastest execution ports of the Intel Meteor Lake architecture.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

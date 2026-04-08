@@ -1,0 +1,9 @@
+{
+  "id": 129,
+  "score": 3.48,
+  "status": "regression",
+  "strategy": "lelism (ILP):** We maintain the independence of the `side *= side` (squaring chain) and `res *= side` (accumulation chain). Modern out-of-order CPUs like the Intel Ultra 7 can execute these multiplications in parallel if they don't share a dependency chain.\n*   **Special Case Optimization:** The `base == 2` case is optimized using `shlx` and a conditional move, which is extremely fast on modern x86. We also keep the early exits for 0 and 1 to avoid unnecessary computation for common small bases.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

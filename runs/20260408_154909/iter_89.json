@@ -1,0 +1,9 @@
+{
+  "id": 89,
+  "score": 5.24,
+  "status": "regression",
+  "strategy": "tecture.\n*   **Bit Manipulation for Loop Control**: Used `__builtin_clzll` to determine the exact number of iterations required. This transforms the `while(exp > 0)` loop into a fixed-count loop, which is significantly easier for the hardware loop predictor and allows the compiler to apply more aggressive unrolling.\n*   **Special Case Handling**: Maintained fast paths for small exponents and bases to avoid the overhead of bit-counting and loop setup for the most common small-integer power cases.",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

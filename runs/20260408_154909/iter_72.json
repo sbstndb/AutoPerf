@@ -1,0 +1,9 @@
+{
+  "id": 72,
+  "score": 5.18,
+  "status": "regression",
+  "strategy": "ion by a value derived from the bit. This prevents branch mispredictions, which are costly in tight loops.\n*   **Loop Unrolling and Early Exit:** Since `uint64_t` overflows very quickly (e.g., $3^{41}$ overflows), the loop will never run for more than 64 iterations. By using `while(exp)`, we exit as soon as the remaining exponent bits are zero.\n*   **Optimized Base Cases:** Kept the fast path for base 2 (using `shlx` or `1ULL << exp`) and handled common small exponents/bases to minimize latency.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

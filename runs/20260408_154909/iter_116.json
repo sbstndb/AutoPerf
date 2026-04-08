@@ -1,0 +1,9 @@
+{
+  "id": 116,
+  "score": 4.58,
+  "status": "regression",
+  "strategy": "Parallelism (ILP) by allowing the CPU to calculate `base^2`, `base^4`, etc., in parallel with the result accumulation.\n*   **Optimized Initialization**: Instead of a loop for trailing zeros, we use a sequence of squares. Since `base` is a 64-bit integer, it will overflow to 0 or 1 very quickly if `base > 2`. We cap the pre-squaring to prevent unnecessary work.\n*   **Special Case Handling**: We maintain fast paths for `base == 2` and small exponents, which are common in performance-critical code.",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

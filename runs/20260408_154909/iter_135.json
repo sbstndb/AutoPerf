@@ -1,0 +1,9 @@
+{
+  "id": 135,
+  "score": 4.46,
+  "status": "regression",
+  "strategy": "ing a fixed-count loop based on the bit-width of the exponent, we reduce the dependency chain on the `exp` variable, allowing the CPU to speculatively execute the `base *= base` and `res *= base` operations more effectively.\n*   **Micro-Architecture Tuning:** On Intel Ultra 7 (Redwood Cove), `imul` has a latency of 3 cycles. The bottleneck is the data dependency between iterations. By handling the final multiplication outside the loop and using the `clz` hint, we reduce the critical path length.",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

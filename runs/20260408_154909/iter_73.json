@@ -1,0 +1,9 @@
+{
+  "id": 73,
+  "score": 3.8,
+  "status": "regression",
+  "strategy": "SB approach only requires a shift and a test against zero.\n4.  **Data Dependency Optimization:** In the LSB approach, the squaring of the base (`base *= base`) and the conditional result update (`res *= base`) can be partially overlapped by the CPU's out-of-order execution engine, whereas the MSB approach has a strict `res = (res * res) * base` dependency chain.\n5.  **Special Case Pruning:** We keep the fast-path for `base == 2` using `shlx` (or standard shift) as it is a single-cycle operation.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

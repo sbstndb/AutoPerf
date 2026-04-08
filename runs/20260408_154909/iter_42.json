@@ -1,0 +1,9 @@
+{
+  "id": 42,
+  "score": 3.16,
+  "status": "regression",
+  "strategy": "ntel CPUs (like the Ultra 7) have multiple execution ports for `imul`.\n*   **Loop Unrolling and Bit Scanning**: Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip all trailing zeros in the exponent at once. This reduces the total number of iterations and ensures the first multiplication into `result` is handled efficiently.\n*   **Early Exit for Common Cases**: Added a check for `exp == 0` to handle the identity case immediately, which is the only case where the loop should not run.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

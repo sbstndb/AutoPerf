@@ -1,0 +1,9 @@
+{
+  "id": 106,
+  "score": 3.44,
+  "status": "regression",
+  "strategy": " the CPU's out-of-order engine.\n*   **Optimized Trailing Zero Handling**: Instead of a `while` loop for trailing zeros, we use the fact that `base^(2^tz)` is just repeated squaring. This can be partially unrolled.\n*   **ILP (Instruction Level Parallelism)**: Binary exponentiation is inherently sequential ($base = base^2$ must happen before the next bit). We optimize the \"multiply-by-result\" step to ensure it doesn't block the \"squaring\" step, allowing the CPU to pipeline the two multiplications.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

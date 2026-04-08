@@ -1,0 +1,9 @@
+{
+  "id": 91,
+  "score": 5.24,
+  "status": "regression",
+  "strategy": "ation where the bit pattern of `exp` is unpredictable.\n*   **Fixed-Iteration Loop**: By using `__builtin_clzll`, we determine the exact number of bits to process. This allows us to use a loop with a known trip count, which the compiler can unroll effectively, or even fully unroll manually for the maximum possible `uint64_t` exponent (64 bits).\n*   **Special Case Handling**: We maintain fast paths for `exp < 2` and `base < 2` to avoid the overhead of the main loop for the most common small cases.",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

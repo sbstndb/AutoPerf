@@ -1,0 +1,9 @@
+{
+  "id": 60,
+  "score": 4.21,
+  "status": "regression",
+  "strategy": "lled loop where the compiler can use `test/cmov` or predictable branches.\n*   **Special Case Handling**: Maintained fast paths for `exp=0`, `exp=1`, and `base <= 1` to avoid the overhead of bit manipulation instructions for the simplest cases.\n*   **Instruction Level Parallelism (ILP)**: By calculating `current_base` squares independently of the `res` multiplication where possible, we allow the CPU to execute squaring (which is always needed) in parallel with the conditional result accumulation.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

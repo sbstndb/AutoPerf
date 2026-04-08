@@ -1,0 +1,9 @@
+{
+  "id": 176,
+  "score": 3.01,
+  "status": "regression",
+  "strategy": "o count and loop, we use a standard square-and-multiply starting from the first bit. Modern Intel CPUs (like the Ultra 7) have extremely fast multipliers, making the overhead of a few extra `imul` instructions lower than the overhead of complex branching/shifting logic.\n*   **Reduction of Data Dependencies**: Structured the multiplications such that the update to `res` and the update to `b` are independent within the same cycle, allowing the execution units to retire more instructions per clock.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

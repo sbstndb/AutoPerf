@@ -1,0 +1,9 @@
+{
+  "id": 122,
+  "score": 4.73,
+  "status": "regression",
+  "strategy": "re costly in tight loops.\n*   **Trailing Zero Optimization:** Using `__builtin_ctzll` to skip all trailing zeros in the exponent. This reduces the number of iterations and ensures the first operation is a simple assignment rather than a multiplication by 1.\n*   **Loop Unrolling and Dependency Breaking:** By calculating `base *= base` and `res *= base` in the same iteration, the CPU can execute these multiplications in parallel on different execution ports (Intel Ultra 7 has multiple IMUL units).",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

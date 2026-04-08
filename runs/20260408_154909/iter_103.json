@@ -1,0 +1,9 @@
+{
+  "id": 103,
+  "score": 4.18,
+  "status": "regression",
+  "strategy": " Unrolling & Early Exit**: The loop now terminates as soon as `exp` becomes zero. This automatically handles the \"highest set bit\" logic without needing `lzcnt` or `clz`, saving several instructions in the preamble.\n*   **Instruction Level Parallelism (ILP)**: By calculating `base *= base` and `result *= multiplier` in the same iteration, we allow the CPU's out-of-order execution engine to overlap the two multiplications, as they belong to independent dependency chains within a single iteration.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

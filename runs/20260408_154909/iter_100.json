@@ -1,0 +1,9 @@
+{
+  "id": 100,
+  "score": 4.27,
+  "status": "regression",
+  "strategy": "e exponent at once. This significantly reduces the number of iterations for even exponents or exponents with many low-order zeros.\n*   **Special Case Handling**: Handled `exp == 0` and `base == 0/1` early to minimize latency for common small inputs.\n*   **Dependency Chain Shortening**: By updating `base` (squaring) and `result` (multiplying) in a way that doesn't create a long serial dependency chain, we better utilize the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

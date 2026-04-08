@@ -1,0 +1,9 @@
+{
+  "id": 159,
+  "score": 2.52,
+  "status": "regression",
+  "strategy": "entirely.\n*   **Bit Manipulation for Initial State**: By using `__builtin_ctzll` to find the first set bit, we can initialize `res = base` (after appropriate squaring) and shift `exp` immediately. This reduces the total number of multiplications by at least one.\n*   **ILP via Square-and-Multiply**: The loop is structured to allow the CPU to calculate `base * base` (the next power) in parallel with `res * base` (the accumulation), as these two operations are independent within a single iteration.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

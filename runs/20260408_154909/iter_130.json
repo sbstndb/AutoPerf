@@ -1,0 +1,9 @@
+{
+  "id": 130,
+  "score": 2.98,
+  "status": "regression",
+  "strategy": "ation (`res *= side`) are partially independent, allowing the pipeline to overlap these operations.\n*   **Optimized Bit Manipulation:** Using `__builtin_ctzll` to skip trailing zeros allows us to initialize `res` with a shifted `base`, reducing the total number of iterations and multiplications for many inputs.\n*   **Reduced Loop Overhead:** By calculating the exact number of iterations needed using `lzcnt` and processing bits in a more streamlined fashion, we minimize the control flow overhead.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

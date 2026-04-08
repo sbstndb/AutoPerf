@@ -1,0 +1,9 @@
+{
+  "id": 115,
+  "score": 4.04,
+  "status": "regression",
+  "strategy": "timized Initialization**: Used `__builtin_ctzll` to handle trailing zeros in the exponent, which effectively shifts the starting point of the algorithm and reduces the total number of multiplications required for many inputs.\n*   **Hardware-Specific Tuning**: Targeted the Intel Ultra 7's high IPC (Instructions Per Cycle) by providing a dense sequence of independent `imul` instructions. This saturates the arithmetic ports (Ports 1, 5, and 6 on Meteor Lake typically handle integer multiplication).",
+  "parent_id": 93,
+  "depth": 4,
+  "retry_fix": false
+}

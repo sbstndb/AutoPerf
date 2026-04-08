@@ -1,0 +1,9 @@
+{
+  "id": 154,
+  "score": 4.5,
+  "status": "regression",
+  "strategy": "to avoid the \"trailing zeros\" pre-processing loop entirely, which was adding significant overhead for small exponents.\n*   **Special Case for Common Bases**: Added a check for `base == 2`. Since $2^n$ is just `1 << n`, this provides a massive speedup for a very common use case without penalizing other cases significantly.\n*   **Minimal Control Flow**: Reduced the number of initial jumps. By handling `exp == 0` and `base <= 1` early and then moving into a high-ILP loop, we keep the pipeline full.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

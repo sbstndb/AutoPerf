@@ -1,0 +1,9 @@
+{
+  "id": 27,
+  "score": 2.04,
+  "status": "regression",
+  "strategy": "ng the squaring of the base (`side *= side`) and the result update to happen in parallel.\n*   **Bit Manipulation Optimization:** Used `__builtin_clzll` to determine the exact number of iterations required, allowing for a fixed-count loop which the compiler can unroll more aggressively than a `while (exp > 0)` loop.\n*   **Reduced Dependency Chains:** By restructuring the loop to calculate `side` squares independently of the `res` multiplication where possible, we reduce the critical path latency.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

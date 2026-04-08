@@ -1,0 +1,9 @@
+{
+  "id": 39,
+  "score": 3.65,
+  "status": "regression",
+  "strategy": "significantly reduces the number of iterations for sparse exponents.\n*   **Reduce Dependency Chain Latency**: In the standard binary exponentiation, `base *= base` and `result *= base` form a tight serial dependency. By pre-calculating the next `base` square while simultaneously checking the next bit, we maximize instruction-level parallelism (ILP).\n*   **Handle Early Exit**: If `exp` becomes zero after a shift, we exit immediately to avoid unnecessary `imul` instructions on the `base` variable.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

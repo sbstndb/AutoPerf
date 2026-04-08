@@ -1,0 +1,9 @@
+{
+  "id": 67,
+  "score": 2.19,
+  "status": "regression",
+  "strategy": "`pow_int` usage (as they would overflow `uint64_t` quickly), a straightforward binary exponentiation is often faster due to lower instruction count.\n*   **Instruction Level Parallelism (ILP)**: We restructure the loop to minimize the dependency chain between `base *= base` and `result *= base`.\n*   **Special Case for Common Small Exponents**: We keep the fast paths for `exp == 0, 1, 2` but streamline the logic to ensure the compiler generates a clean jump table or a series of simple comparisons.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 104,
+  "score": 4.92,
+  "status": "regression",
+  "strategy": "penalties, which are the primary bottleneck in exponentiation loops.\n*   **Loop Unrolling & Early Exit**: The loop terminates as soon as `exp` becomes zero. This avoids unnecessary iterations for small exponents while maintaining a tight, high-throughput loop for larger ones.\n*   **Instruction Pipeline Optimization**: The structure `result *= (exp & 1) ? base : 1` is specifically designed to map to `test`, `cmov`, and `imul`, which are highly optimized on Intel Ultra (Meteor Lake) architectures.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

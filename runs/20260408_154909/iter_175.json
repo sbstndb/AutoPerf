@@ -1,0 +1,9 @@
+{
+  "id": 175,
+  "score": 1.62,
+  "status": "regression",
+  "strategy": "ess two bits per iteration. This allows the CPU to overlap the squaring of the base (`b *= b`) with the multiplication of the result (`res *= b`), increasing Instruction Level Parallelism.\n*   **Early Exit for Base 2**: Maintained the specialized bit-shift for base 2, as it is a common case and significantly faster than the general algorithm.\n*   **Reduced Instruction Count**: Simplified the entry logic to minimize the path for small exponents, which are statistically frequent in many workloads.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

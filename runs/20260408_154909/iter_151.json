@@ -1,0 +1,9 @@
+{
+  "id": 151,
+  "score": 3.31,
+  "status": "regression",
+  "strategy": "can be simplified to a bit shift. However, since the signature must remain generic, we focus on the general case while ensuring the \"early exit\" for `base <= 1` is as cheap as possible.\n*   **Optimized Initialization**: Instead of counting trailing zeros and looping to square the base, we use a standard \"Square and Multiply\" approach but start the loop from the first set bit. This avoids the overhead of the `tzcnt` and the initial squaring loop which was causing regressions in previous attempts.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

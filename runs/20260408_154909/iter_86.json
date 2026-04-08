@@ -1,0 +1,9 @@
+{
+  "id": 86,
+  "score": 2.14,
+  "status": "regression",
+  "strategy": "es` using a bit-masking approach, we can sometimes allow the CPU to schedule the `side *= side` chain slightly ahead of the `res *= side` updates.\n4.  **Special Case for Power of 2**: Added a check for `base == 2`, which is a common case and can be solved with a simple bit shift, though the hard constraints focus on the general kernel.\n5.  **Refined Initial State**: By starting `res` at the first set bit and processing remaining bits, we save one multiplication compared to starting at `res = 1`.",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

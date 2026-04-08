@@ -1,0 +1,9 @@
+{
+  "id": 169,
+  "score": 2.87,
+  "status": "regression",
+  "strategy": "s the CPU to calculate the next `b * b` while the previous `res * b` is still in flight.\n*   **Special Case Handling**: Kept the high-performance shortcuts for `exp == 0`, `base <= 2`, and added a check for `exp == 1` to return immediately, covering the most common small-integer cases.\n*   **Minimized Dependency Chains**: By calculating `next_res` and using `cmov`, we allow the squaring of `b` to proceed independently of the result update, maximizing the utilization of the CPU's execution ports.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

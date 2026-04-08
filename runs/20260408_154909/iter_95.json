@@ -1,0 +1,9 @@
+{
+  "id": 95,
+  "score": 2.44,
+  "status": "regression",
+  "strategy": " of iterations. The loop is then unrolled to process bits until the exponent is exhausted.\n*   **Eliminate Redundant Checks**: Removed the `base == 2` special case. While shifts are fast, the overhead of the branch to check for `base == 2` often outweighs the benefit in a general-purpose kernel, especially when the main loop is highly optimized.\n*   **Compiler Hinting**: Used `__builtin_clzll` to determine the exact number of iterations required, allowing the CPU to better predict the loop exit.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 108,
+  "score": 5.37,
+  "status": "regression",
+  "strategy": "ed block reduces loop overhead.\n*   **Bit Manipulation for Exponent Processing**: Used `__builtin_clzll` to determine the exact number of iterations required. This allows us to use a fixed-count loop which is easier for the CPU to pipeline than a `while (exp > 0)` loop.\n*   **Instruction Level Parallelism (ILP)**: Structured the square-and-multiply steps to minimize the dependency chain between `base` updates and `result` updates where possible, though binary exponentiation is inherently serial.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

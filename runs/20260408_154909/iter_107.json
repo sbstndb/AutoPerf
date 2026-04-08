@@ -1,0 +1,9 @@
+{
+  "id": 107,
+  "score": 5.26,
+  "status": "regression",
+  "strategy": "ng the strict serial dependency chain.\n*   **Optimized Trailing Zero Handling**: Used `__builtin_ctzll` and `shrx` (via compiler optimization) to handle trailing zeros. Instead of a loop for pre-squaring, we use a compact loop that the compiler can unroll, ensuring the first bit processed by the main loop is always the first set bit after the trailing zeros.\n*   **Small Exponent Specialization**: Retained and refined fast paths for `exp <= 3` to handle the most common cases with minimal latency.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

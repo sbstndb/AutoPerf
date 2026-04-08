@@ -1,0 +1,9 @@
+{
+  "id": 189,
+  "score": 1.99,
+  "status": "regression",
+  "strategy": "uare and the `res` update simultaneously.\n*   **Optimized Trailing Zero Handling:** Replaced the `while(tz--)` loop with a manually unrolled sequence. Since `uint64_t` exponentiation overflows quickly, `tz` is rarely large. A small unrolled loop or a few `if` checks are more efficient than a formal loop.\n*   **Early Exit for Small Exponents:** Added a fast path for the most common small exponents (2 and 3) to bypass the `ctz` and loop logic entirely, as these appear frequently in many workloads.",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

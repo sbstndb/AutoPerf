@@ -1,0 +1,9 @@
+{
+  "id": 160,
+  "score": 3.2,
+  "status": "regression",
+  "strategy": " determine the exact number of squaring steps needed. This transforms the `while(exp > 1)` into a fixed-count `for` loop, which is more friendly to the CPU's front-end and allows the compiler to unroll more aggressively.\n*   **Instruction Level Parallelism (ILP)**: By separating the `res` update and the `base` squaring, we allow the CPU to execute these two independent multiplication chains in parallel. The `base *= base` chain is the critical path (latency), while `res *= ...` can be pipelined.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

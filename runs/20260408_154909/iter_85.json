@@ -1,0 +1,9 @@
+{
+  "id": 85,
+  "score": 3.98,
+  "status": "regression",
+  "strategy": " = 1` and starting the loop immediately, we remove several redundant checks. The `__builtin_ctzll` optimization is kept but streamlined to reduce the instruction count before the first multiplication.\n*   **Reduced Dependency Chain**: Structured the `side *= side` and `res *= side` operations to minimize the critical path latency. Modern Intel CPUs (like the Ultra 7) have high throughput for `imul`, so keeping the pipeline full is more important than reducing the total number of multiplications.",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

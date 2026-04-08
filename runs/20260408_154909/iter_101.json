@@ -1,0 +1,9 @@
+{
+  "id": 101,
+  "score": 4.89,
+  "status": "regression",
+  "strategy": " This avoids the branch misprediction penalty seen in the assembly of the original code (`jnc .L3`).\n*   **Loop Unrolling and Early Exit**: The loop terminates as soon as `exp` becomes zero. For small exponents (very common in integer power functions), this significantly reduces the number of `imul` instructions compared to the fixed-bit-width approach.\n*   **Strength Reduction**: Handled the first bit outside the loop to initialize `result` directly, saving one iteration and one multiplication.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

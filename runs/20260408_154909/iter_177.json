@@ -1,0 +1,9 @@
+{
+  "id": 177,
+  "score": 4.52,
+  "status": "regression",
+  "strategy": "h loop or a more aggressive unrolling strategy. This reduces the overhead of `exp >>= 1` and the associated zero-checks.\n4.  **Dependency Chain Breaking**: In the standard \"Square and Multiply\" algorithm, `res` depends on the previous `res` and the current `b`. By processing from MSB to LSB, we maintain a tighter loop that maps better to the CPU's execution units.\n5.  **Special Case Handling**: Maintained fast paths for `exp == 0` and `base <= 1` to ensure zero-latency returns for trivial cases.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

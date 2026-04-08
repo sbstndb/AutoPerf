@@ -1,0 +1,9 @@
+{
+  "id": 70,
+  "score": 5.11,
+  "status": "regression",
+  "strategy": "we can unroll the loop to reduce the overhead of the exponent shifting and loop control.\n*   **Special Case for Base 2**: Powers of 2 are extremely common in computing. Using a bit shift `1ULL << (exp * log2(base))` is significantly faster than iterative multiplication.\n*   **Early Exit for Small Exponents**: Since `uint64_t` overflows very quickly (e.g., $3^{41}$ overflows), the exponent is almost always small. A tight, unrolled loop for the first few bits is more efficient than a generic loop.",
+  "parent_id": 21,
+  "depth": 3,
+  "retry_fix": false
+}

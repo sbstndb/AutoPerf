@@ -1,0 +1,9 @@
+{
+  "id": 183,
+  "score": 2.76,
+  "status": "regression",
+  "strategy": ".\n*   **Instruction Level Parallelism (ILP):** We separate the `base` squaring chain from the `res` accumulation chain. By calculating the next `base * base` independently of the `res` update, the CPU can execute these multiplications in parallel using different execution ports.\n*   **Optimized Trailing Zero Handling:** The initial squaring for trailing zeros in the exponent is replaced with a more direct approach. Since `uint64_t` overflows quickly, the number of squarings is naturally limited.",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 134,
+  "score": 2.52,
+  "status": "regression",
+  "strategy": "led loop with predictable branches often outperforms complex bit-manipulation.\n*   **Special Case Pruning:** Kept the fast paths for `base <= 2` and `exp <= 2` but streamlined the logic to ensure the compiler generates a jump table or a series of high-performance `cmov` instructions.\n*   **Dependency Chain Breaking:** In the main loop, we ensure that the squaring of the base is not strictly serialized with the result multiplication until necessary, maximizing Instruction Level Parallelism (ILP).",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

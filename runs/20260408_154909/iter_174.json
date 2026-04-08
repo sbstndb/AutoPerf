@@ -1,0 +1,9 @@
+{
+  "id": 174,
+  "score": 2.77,
+  "status": "regression",
+  "strategy": "ithin the standard loop structure. This simplifies the entry logic and reduces the instruction count for small exponents.\n*   **Loop Unrolling**: Unrolled the binary exponentiation loop twice to reduce the overhead of the `exp >>= 2` and `test/jne` instructions, providing more work per branch.\n*   **Special Case Handling**: Maintained the fast path for `base == 2` using `shlx` (via bit shift) and added a check for `exp == 1` to return `base` immediately, which is a common case in many workloads.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

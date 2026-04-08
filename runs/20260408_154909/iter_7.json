@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "score": 2.95,
+  "status": "regression",
+  "strategy": "the total instruction count.\n*   **Eliminating Redundant Squaring:** The loop terminates immediately after the last set bit of the exponent is processed, avoiding unnecessary squaring operations of the `base` variable.\n*   **Hardware-Friendly Branching:** Modern CPUs like the Ultra 7 handle the small number of iterations in binary exponentiation (max 64) extremely well with their branch predictors, making this significantly faster than linear iteration or even SIMD approaches for integer powers.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

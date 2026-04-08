@@ -1,0 +1,9 @@
+{
+  "id": 138,
+  "score": 4.92,
+  "status": "regression",
+  "strategy": "nimize the critical path latency of the `base *= base` chain.\n*   **Branchless Accumulation**: Replaced the conditional `if (exp & 1)` with a multiplication by a value selected via a conditional move (`cmov`). This prevents branch mispredictions for random exponents while keeping the instruction pipeline full.\n*   **Special Case Pruning**: Maintained high-performance paths for `exp <= 2` and `base <= 2` using `__builtin_expect` to ensure the compiler prioritizes the most likely execution traces.",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

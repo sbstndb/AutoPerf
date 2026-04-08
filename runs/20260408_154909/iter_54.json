@@ -1,0 +1,9 @@
+{
+  "id": 54,
+  "score": 5.19,
+  "status": "regression",
+  "strategy": ". This allows the compiler to unroll the loop or at least eliminates the `exp > 1` branch overhead.\n*   **Instruction Level Parallelism (ILP)**: Binary exponentiation is inherently sequential. However, we can reduce the dependency chain length by pre-calculating the number of iterations and using a fixed-count loop which the CPU can speculate through more effectively.\n*   **Special Case Handling**: We handle `exp == 0` and the final multiplication outside the main loop to keep the hot path lean.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

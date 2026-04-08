@@ -1,0 +1,9 @@
+{
+  "id": 93,
+  "score": 2.0,
+  "status": "regression",
+  "strategy": "h are devastating in loops with unpredictable exponents.\n*   **Loop Unrolling and Early Exit**: We use `__builtin_ctzll` to skip trailing zeros in the exponent, initializing `res` to the first required power of `base`. This reduces the total number of iterations.\n*   **Instruction Level Parallelism (ILP)**: By calculating `base *= base` at the end of the loop, the CPU can begin the next squaring operation while the `res *= multiplier` is still retiring, effectively pipelining the exponentiation.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

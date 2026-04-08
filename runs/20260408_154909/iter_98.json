@@ -1,0 +1,9 @@
+{
+  "id": 98,
+  "score": 3.27,
+  "status": "regression",
+  "strategy": "ization**: Used `__builtin_ctzll` to skip all trailing zeros in the exponent at once. This reduces the number of iterations and ensures the first bit processed is always a 1, allowing us to initialize `res = base` and skip the first multiplication.\n*   **Loop Unrolling & Dependency Breaking**: The bottom-up approach allows the CPU to calculate `base *= base` and `res *= base` in parallel (to an extent) within the pipeline, whereas the top-down approach forces a strict serial dependency on `res`.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

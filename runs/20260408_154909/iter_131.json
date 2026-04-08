@@ -1,0 +1,9 @@
+{
+  "id": 131,
+  "score": 4.27,
+  "status": "regression",
+  "strategy": "nd the multiplication into `res` to happen in parallel pipelines.\n*   **Bit Manipulation Optimization:** Used `__builtin_ctzll` to skip trailing zeros at the start. If `exp` is even, we can square the `base` multiple times before starting the multiplication into `res`, reducing the total number of operations in the main loop.\n*   **Special Case Handling:** Maintained fast paths for common small bases and exponents, but streamlined the logic to minimize the prologue overhead before the main loop.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

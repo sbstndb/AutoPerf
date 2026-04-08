@@ -1,0 +1,9 @@
+{
+  "id": 193,
+  "score": 2.22,
+  "status": "regression",
+  "strategy": "`base * base`) and the result update (`res * multiplier`) concurrently.\n*   **Optimized Trailing Zero Handling:** Replaced the loop for trailing zeros with a series of conditional squares. Since `uint64_t` exponentiation overflows quickly, the number of successful squares is small. Hardcoding the first few squares reduces loop overhead.\n*   **Small Exponent Fast-Path:** Added a check for very small exponents to return early, avoiding the overhead of `ctzll` and loop setup for common small cases.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

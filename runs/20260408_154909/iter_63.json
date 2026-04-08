@@ -1,0 +1,9 @@
+{
+  "id": 63,
+  "score": 2.05,
+  "status": "regression",
+  "strategy": "because it keeps the working value in a single register.\n*   **Loop Unrolling with ILP**: The loop is unrolled to process multiple bits per iteration. By squaring the result twice and then multiplying by the pre-calculated powers, we increase Instruction Level Parallelism (ILP).\n*   **Branch Reduction**: Using a fixed-iteration loop based on the leading zero count allows the compiler to generate a more linear instruction stream, reducing branch misprediction penalties for varying exponent sizes.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

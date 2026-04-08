@@ -1,0 +1,9 @@
+{
+  "id": 28,
+  "score": 2.71,
+  "status": "regression",
+  "strategy": " Using `63 - __builtin_clzll(exp)` determines the exact number of iterations required, allowing us to use a fixed-count loop which the compiler can unroll more effectively than a `while(exp > 0)` loop.\n*   **Special Case Handling:** Added a fast path for `base == 2` (using bit shifts) and very small exponents to bypass the loop overhead entirely.\n*   **Instruction Selection:** Using `imul` with careful dependency chaining to ensure the \"squaring\" path (the critical path) is as short as possible.",
+  "parent_id": 7,
+  "depth": 2,
+  "retry_fix": false
+}

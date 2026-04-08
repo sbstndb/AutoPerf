@@ -1,0 +1,9 @@
+{
+  "id": 79,
+  "score": 3.12,
+  "status": "regression",
+  "strategy": "(Square and Multiply) algorithm is inherently sequential. We minimize the critical path by ensuring the `base *= base` (squaring) and `result *= base` (accumulation) can be pipelined as much as possible by the CPU's out-of-order execution engine.\n*   **Avoid Manual Unrolling:** Modern x86 CPUs (like the Ultra 7) have sophisticated branch predictors and loop buffers. Clean, tight loops often perform better than manual unrolling which can increase register pressure and bloat the instruction cache.",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 153,
+  "score": 2.22,
+  "status": "regression",
+  "strategy": ", we skip all leading \"0\" bits of the exponent's binary representation, reducing the total number of iterations.\n*   **Pre-squaring for Trailing Zeros**: Instead of a loop for trailing zeros, we use a small unrolled sequence. Since `uint64_t` overflow happens quickly, the number of successful squarings before reaching 0 or overflowing is small, making deep unrolling efficient.\n*   **Eliminating Redundant Checks**: The `base <= 1` and `exp == 0` checks are handled early to keep the hot loop lean.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

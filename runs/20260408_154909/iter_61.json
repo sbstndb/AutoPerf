@@ -1,0 +1,9 @@
+{
+  "id": 61,
+  "score": 3.31,
+  "status": "regression",
+  "strategy": "p which the compiler can unroll more effectively.\n*   **Minimize Dependency Chains**: The \"Square-and-Multiply\" algorithm is inherently sequential. To maximize throughput, we reduce the number of conditional branches inside the loop by using a simple `while(exp)` loop that the CPU's branch predictor can handle easily for small exponents.\n*   **Special Case Handling**: Handled `base == 2` using bit-shifting (`1ULL << exp`), which is significantly faster than multiplication for this specific case.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

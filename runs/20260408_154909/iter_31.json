@@ -1,0 +1,9 @@
+{
+  "id": 31,
+  "score": 2.62,
+  "status": "regression",
+  "strategy": "rallel. This exploits the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture.\n*   **Bit Manipulation Instructions**: Using `__builtin_clzll` allows us to determine the exact number of iterations needed, avoiding the `while (exp > 0)` check and allowing for a fixed-count loop which the compiler can optimize better.\n*   **Specialized Small Exponent Path**: Added a fast-path for `exp < 4` to handle the most common small cases with minimal overhead, bypassing the complex logic.",
+  "parent_id": 6,
+  "depth": 2,
+  "retry_fix": false
+}

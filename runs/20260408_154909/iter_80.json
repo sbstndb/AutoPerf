@@ -1,0 +1,9 @@
+{
+  "id": 80,
+  "score": 4.59,
+  "status": "regression",
+  "strategy": "*Bit-Scan for Termination:** Instead of checking `exp > 1` every iteration, we use `__builtin_clzll` (Count Leading Zeros) to determine the exact number of iterations needed. This allows for a cleaner loop structure and avoids the final \"cleanup\" multiplication.\n*   **Special Case for Base 2:** While the general case is optimized, the compiler can often optimize `base == 2` into a shift if the logic is simple enough, though the primary focus here is the general integer multiplication throughput.",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

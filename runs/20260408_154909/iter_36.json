@@ -1,0 +1,9 @@
+{
+  "id": 36,
+  "score": 5.28,
+  "status": "regression",
+  "strategy": "red. This eliminates the need for a \"while exp > 0\" check at every step, allowing for a fixed-count loop that the compiler can optimize more aggressively.\n*   **Exploiting Intel Ultra 7 (Meteor Lake) Throughput**: The `imul` instruction on this architecture has a latency of 3 cycles but high throughput. By separating the `base *= base` chain from the `result *= base` chain, we allow the CPU to work on the next power of the base while the previous multiplication into the result is still retiring.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

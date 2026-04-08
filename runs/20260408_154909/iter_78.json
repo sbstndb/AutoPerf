@@ -1,0 +1,9 @@
+{
+  "id": 78,
+  "score": 2.84,
+  "status": "regression",
+  "strategy": "esult`). We can break this slightly by pre-calculating powers or processing bits in a way that allows the CPU to execute independent `imul` instructions.\n4.  **Special Case for Base 2:** While the constraints require identical results, `base == 2` is a frequent case in many workloads. Using a bit shift for `base == 2` provides a massive speedup, though we must ensure it handles the `exp >= 64` overflow case identically to the multiplication-based version (which naturally wraps around in 64-bit).",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

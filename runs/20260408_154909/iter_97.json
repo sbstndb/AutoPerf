@@ -1,0 +1,9 @@
+{
+  "id": 97,
+  "score": 3.92,
+  "status": "regression",
+  "strategy": "pdated only when the LSB is set.\n*   **Special Case for Base 0 and 1**: Handled early to avoid unnecessary logic.\n*   **Power of 2 Optimization**: Retained the shift-based optimization for `base == 2` but simplified the logic to ensure it fits the 64-bit wrapping behavior.\n*   **Instruction Level Parallelism (ILP)**: By squaring the `base` independently of the `res` update, the CPU can execute the `base *= base` and the `res *= base` (when applicable) with some degree of overlap in the pipeline.",
+  "parent_id": 24,
+  "depth": 3,
+  "retry_fix": false
+}

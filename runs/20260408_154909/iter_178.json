@@ -1,0 +1,9 @@
+{
+  "id": 178,
+  "score": 4.1,
+  "status": "regression",
+  "strategy": "xed-count loop or a more aggressive unrolling strategy that avoids checking `exp > 0` every iteration.\n*   **Instruction Level Parallelism (ILP)**: The \"Square-and-Multiply\" algorithm is inherently serial. However, by pre-calculating `b * b` and using a lookup-style approach or unrolling, we can reduce the latency of the critical path.\n*   **Specialized Small Exponent Handling**: Added a fast path for small exponents which are common in many workloads, bypassing the complex initialization logic.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

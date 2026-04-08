@@ -1,0 +1,9 @@
+{
+  "id": 168,
+  "score": 5.3,
+  "status": "regression",
+  "strategy": "ons and instruction count.\n*   **Loop Unrolling and Dependency Breaking**: We process the exponent bits from most-significant to least-significant. By unrolling the squaring and multiplication, we allow the CPU's out-of-order execution engine to schedule instructions more effectively.\n*   **Branchless/Low-Branch Logic**: Using `__builtin_clzll` to find the starting bit avoids iterating over leading zeros. The main loop is kept tight to ensure it fits within the CPU's Decoded Stream Buffer (DSB).",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

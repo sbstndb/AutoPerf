@@ -1,0 +1,9 @@
+{
+  "id": 77,
+  "score": 3.17,
+  "status": "regression",
+  "strategy": "al algorithm. Specifically, `base == 2` is optimized using the `shlx` instruction (or standard shift) which is extremely fast.\n4.  **Square-and-Multiply (Right-to-Left):** While the original used Left-to-Right, Right-to-Left allows us to avoid the `__builtin_clzll` overhead in the hot path and simplifies the loop condition. We use a temporary `multiplier` that squares itself every iteration, allowing the CPU to potentially execute the squaring and the result update in parallel if the bit is set.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

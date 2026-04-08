@@ -1,0 +1,9 @@
+{
+  "id": 186,
+  "score": 4.21,
+  "status": "regression",
+  "strategy": "ths:** Since many calls to `pow` involve small exponents, we provide a fast path for `exp < 16` using a small unrolled loop or a lookup-like structure to bypass the `ctz` and complex logic.\n*   **Optimized Trailing Zero Handling:** Instead of a loop for `base^(2^tz)`, we use the fact that `tz` is typically small. We use a sequence of `base *= base` operations that the compiler can optimize, avoiding the overhead of the `while(tz--)` loop which was identified as a bottleneck in previous attempts.",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

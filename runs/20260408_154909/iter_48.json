@@ -1,0 +1,9 @@
+{
+  "id": 48,
+  "score": 6.0,
+  "status": "regression",
+  "strategy": " exponent.\n*   **Instruction Level Parallelism (ILP)**: While binary exponentiation is inherently sequential (`base *= base`), we can slightly improve throughput by ensuring the compiler can schedule the `exp >>= 1` and the `result` update independently of the `base` squaring.\n*   **Handling the Final Iteration**: By checking the loop condition based on the number of bits remaining, we can avoid the final `base *= base` calculation which is never used, saving one high-latency `imul` instruction.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

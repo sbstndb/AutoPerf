@@ -1,0 +1,9 @@
+{
+  "id": 76,
+  "score": 4.94,
+  "status": "regression",
+  "strategy": "ing and Bit Manipulation:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip all trailing zero bits of the exponent at once, reducing the total number of iterations.\n*   **Optimized Base Cases:** Retained and streamlined the fast paths for common bases (0, 1, 2) to ensure no regression on simple inputs.\n*   **Compiler-Friendly Structure:** The structure is designed to let `g++` use `imul` and `test/cmov` effectively, matching the target hardware's high-throughput execution units.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

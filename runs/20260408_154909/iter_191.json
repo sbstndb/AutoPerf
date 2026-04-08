@@ -1,0 +1,9 @@
+{
+  "id": 191,
+  "score": 2.74,
+  "status": "regression",
+  "strategy": "ruction Level Parallelism (ILP).\n*   **Reduced Dependency Latency:** Reorganized the `res *= base` and `base *= base` operations. By calculating the \"next\" base and the \"potential\" result update in parallel, we better utilize the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture.\n*   **Early Exit for Overflow/Small Bases:** Added a check for `base == 2` which allows for a simple bit-shift, though the primary focus remains on the general `imul` path which is the bottleneck.",
+  "parent_id": 120,
+  "depth": 5,
+  "retry_fix": false
+}

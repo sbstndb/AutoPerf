@@ -1,0 +1,9 @@
+{
+  "id": 111,
+  "score": 3.02,
+  "status": "regression",
+  "strategy": "tead of a loop for `base *= base`, we use a sequence of squares. Since `exp` is a 64-bit integer, the maximum number of squares is 63.\n*   **Small Exponent Specialization**: Retained and refined fast paths for very small exponents (0-3) to bypass the general logic entirely for the most common cases.\n*   **Binary Exponentiation Refinement**: The LSB is handled by initializing `result = base` after shifting out trailing zeros, ensuring the loop always starts with a set bit, reducing one iteration.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": true
+}

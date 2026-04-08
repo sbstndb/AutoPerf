@@ -1,0 +1,9 @@
+{
+  "id": 202,
+  "score": 3.33,
+  "status": "regression",
+  "strategy": "x86 CPUs that avoids manual bit shifting.\n*   **Dependency Chain Shortening:** In the original code, `res` was updated twice per bit (square then multiply). In the optimized version, `base` squares itself continuously while `res` is only updated when a bit is set, reducing the critical path length for `res`.\n*   **Refined Fast Paths:** Maintained fast paths for common small exponents and bases but streamlined the logic to ensure the compiler generates a jump table or efficient conditional moves.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

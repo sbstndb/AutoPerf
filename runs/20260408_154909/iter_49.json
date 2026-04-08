@@ -1,0 +1,9 @@
+{
+  "id": 49,
+  "score": 2.26,
+  "status": "regression",
+  "strategy": "ng zero bits of the exponent immediately, reducing the number of iterations from a potential 64 down to the actual bit-width of the exponent.\n*   **Loop Unrolling and Dependency Reduction**: We unroll the loop to process bits more efficiently. By calculating the necessary squares and only multiplying into the result when needed, we minimize the critical path latency.\n*   **Special Case Handling**: Added a fast-path for `exp == 0` to return 1 immediately, which is the standard behavior for $x^0$.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

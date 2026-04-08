@@ -1,0 +1,9 @@
+{
+  "id": 146,
+  "score": 2.17,
+  "status": "regression",
+  "strategy": "the Ultra 7) handle this pattern efficiently via `mov` and `imul` without branch mispredictions.\n*   **Loop Unrolling and Squaring:** Since we process 2 bits at a time, we perform two consecutive squarings (`side = side * side * side * side`) in each step. This allows the compiler to better schedule the `imul` instructions.\n*   **Optimized Bit Handling:** We use `__builtin_clzll` to find the starting point and handle the remaining odd bit (if any) at the end to keep the main loop clean and fast.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

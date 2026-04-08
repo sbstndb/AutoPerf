@@ -1,0 +1,9 @@
+{
+  "id": 163,
+  "score": 2.2,
+  "status": "regression",
+  "strategy": "sing stack memory, even if cached, introduces latency compared to keeping values in registers.\n*   **Bit Manipulation Optimization**: Used `__builtin_clzll` to skip leading zeros of the exponent immediately, reducing the number of loop iterations to the minimum necessary.\n*   **Branch Prediction Friendly**: Simplified the loop to a standard `while` or `for` that the CPU's branch predictor can easily track, avoiding the \"2 bits at a time\" logic which created complex edge cases and extra branches.",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

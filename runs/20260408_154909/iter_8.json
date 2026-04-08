@@ -1,0 +1,9 @@
+{
+  "id": 8,
+  "score": 4.8,
+  "status": "regression",
+  "strategy": "ring of the base (`base *= base`) with the update of the result, increasing Instruction Level Parallelism (ILP).\n*   **Early Exit for Small Exponents:** Added a fast path for `exp < 2`. Since many calls to `pow` functions involve small exponents (0 or 1), skipping the loop logic entirely provides a significant speedup for these cases.\n*   **Optimized Zero-Base Logic:** Simplified the `base == 0` check to a single branch. The compiler can optimize this into a simple test and conditional move/set.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

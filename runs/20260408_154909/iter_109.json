@@ -1,0 +1,9 @@
+{
+  "id": 109,
+  "score": 4.71,
+  "status": "regression",
+  "strategy": "sm (ILP)**: The \"square\" (`base * base`) and \"multiply\" (`result * base`) operations are partially decoupled. By calculating the next square while the previous multiplication is still in flight, we better utilize the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture.\n*   **Table-based Branchless Selection**: Using a small 2-element array `vals[2] = {1, base}` and multiplying by `vals[exp & 1]` allows the compiler to use `cmov` or simple indexing, keeping the pipeline full.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

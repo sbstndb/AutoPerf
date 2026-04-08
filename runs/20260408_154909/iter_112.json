@@ -1,0 +1,9 @@
+{
+  "id": 112,
+  "score": 2.66,
+  "status": "regression",
+  "strategy": "sing Instruction Level Parallelism (ILP).\n*   **Branchless Multiplication**: We use a conditional move or a simple bitwise mask to incorporate the multiplication. However, on modern Intel architectures (like Ultra 7), simple branches are often highly predictable. We use a structure that minimizes the critical path of the `result` calculation.\n*   **Early Exit for Base 0 or 1**: Added checks for `base <= 1` which are common in many workloads and allow for an immediate return, bypassing all logic.",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

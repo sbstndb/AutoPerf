@@ -1,0 +1,9 @@
+{
+  "id": 141,
+  "score": 3.31,
+  "status": "regression",
+  "strategy": "l local array to store pre-calculated powers and access them via indexing. The compiler generates `CMOV` or simple offsets, avoiding branch mispredictions which are costly in tight loops.\n*   **Optimized Special Cases**: We handle the most common small exponents (0-2) and bases (0-1) immediately to minimize the prologue overhead for the most frequent calls.\n*   **Bit Manipulation**: Using `__builtin_clzll` to find the exact bit depth allows us to skip unnecessary iterations of the squaring loop.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 170,
+  "score": 3.69,
+  "status": "regression",
+  "strategy": "re the base for trailing zeros, we use the property that `res` starts as 1 and the first bit of the exponent encountered (even after shifting) will trigger the first multiplication.\n*   **Reduced Instruction Count**: Removed the `base == 2` special case and the `ctz` logic in favor of a tighter, more uniform binary exponentiation loop that handles all bases efficiently. Modern x86 CPUs handle `imul` with very low latency (3 cycles), making a unified path faster than branching for specific bases.",
+  "parent_id": 152,
+  "depth": 5,
+  "retry_fix": false
+}

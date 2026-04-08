@@ -1,0 +1,9 @@
+{
+  "id": 43,
+  "score": 4.15,
+  "status": "regression",
+  "strategy": "ltaneously.\n*   **Fast-Path for Small Exponents**: Added a check for `exp == 0` to handle the identity case immediately, and utilized `__builtin_ctzll` (Count Trailing Zeros) to skip leading zeros in the exponent, reducing the total number of iterations.\n*   **Loop Unrolling (Manual)**: Manually unrolling the squaring process allows the compiler to better schedule the `imul` instructions, which have a latency of ~3 cycles on Intel architectures. This helps hide the latency of the multiplication.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

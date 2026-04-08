@@ -1,0 +1,9 @@
+{
+  "id": 199,
+  "score": 4.11,
+  "status": "regression",
+  "strategy": "a variable `i`.\n*   **Branch Prediction Optimization:** Kept the fast paths for common small exponents (0, 1, 2) and bases (0, 1, 2) using `__builtin_expect` to ensure the compiler generates optimal layouts for the most likely execution paths.\n*   **Dependency Chain Reduction:** In the Right-to-Left method, `base *= base` and `res *= base` can be pipelined by the CPU's out-of-order execution engine, significantly improving throughput compared to the sequential `res = (res * res) * base` pattern.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

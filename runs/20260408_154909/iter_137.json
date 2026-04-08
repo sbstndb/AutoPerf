@@ -1,0 +1,9 @@
+{
+  "id": 137,
+  "score": 4.05,
+  "status": "regression",
+  "strategy": ") chains.\n*   **Branch Minimization**: Replaced the conditional `if (exp & 1)` inside the loop with a more pipeline-friendly structure. While modern branch predictors are good, at this scale (2ns), the overhead of branch mispredictions on high-entropy exponents is significant.\n*   **Special Case Pruning**: Kept the fast paths for `exp <= 2` and `base <= 2` but streamlined the logic to ensure the \"hot\" path (general case) has the shortest possible instruction sequence to the first multiplication.",
+  "parent_id": 67,
+  "depth": 4,
+  "retry_fix": false
+}

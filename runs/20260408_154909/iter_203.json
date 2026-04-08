@@ -1,0 +1,9 @@
+{
+  "id": 203,
+  "score": 3.03,
+  "status": "regression",
+  "strategy": "ling Zero Optimization:** Used `__builtin_ctzll` to skip all trailing zeros in the exponent. This reduces the number of iterations and ensures the first operation is always a direct assignment to `res`, eliminating one unnecessary multiplication by 1.\n*   **Early Exit for Small Exponents:** Retained and refined the fast paths for `exp <= 2` and `base <= 2` using `__builtin_expect` to ensure the compiler places these on the cold path or handles them with minimal latency for the most common cases.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

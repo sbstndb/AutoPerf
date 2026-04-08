@@ -1,0 +1,9 @@
+{
+  "id": 166,
+  "score": 2.85,
+  "status": "regression",
+  "strategy": "e` squaring can happen in parallel with the `res` update.\n3.  **Removal of `ctz` and `clz` overhead**: While `clz` is fast, using it to calculate loop bounds often introduces more overhead than a simple `while(exp)` loop on modern x86 architectures where branch prediction is highly efficient.\n4.  **Optimized Fast Paths**: Simplified the initial checks to cover the most common small exponents and bases without redundant logic, ensuring the \"hot\" path for general exponentiation is reached quickly.",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 55,
+  "score": 3.35,
+  "status": "regression",
+  "strategy": "n is inherently sequential. However, we can reduce the critical path by pre-calculating the \"result\" update.\n*   **Special Case Handling**: Fast-pathing `exp == 0` and `exp == 1` to minimize overhead for small exponents, which are common in many workloads.\n*   **Table-less Approach**: While tables can be fast, they often miss L1 cache in random-access scenarios. This implementation focuses on maximizing the throughput of the `imul` execution units on the Intel Ultra 7 (Meteor Lake) architecture.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

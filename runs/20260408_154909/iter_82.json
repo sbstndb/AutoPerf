@@ -1,0 +1,9 @@
+{
+  "id": 82,
+  "score": 2.98,
+  "status": "regression",
+  "strategy": "ly.\n3.  **Minimize Critical Path Latency**: The \"Square and Multiply\" algorithm is inherently sequential. By pre-calculating the number of iterations, we remove the `exp >>= 1` and `exp > 1` check from the dependency chain of the `base *= base` calculation, allowing the CPU to execute squaring and bit-testing in parallel.\n4.  **Special Case for Base 2**: Added a fast path for `base == 2` using the `shl` instruction, which is significantly faster than repeated multiplications for large exponents.",
+  "parent_id": 40,
+  "depth": 3,
+  "retry_fix": false
+}

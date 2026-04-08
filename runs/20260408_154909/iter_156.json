@@ -1,0 +1,9 @@
+{
+  "id": 156,
+  "score": 2.11,
+  "status": "regression",
+  "strategy": "iation to allow the squaring of the `base` and the accumulation into `res` to happen in parallel. Modern Intel CPUs (like the Ultra 7) have multiple execution units that can handle independent `imul` instructions.\n*   **Lookup Table for Small Bases**: Added a specific fast path for `base == 2` using the `shl` instruction, which is significantly faster than the general loop.\n*   **Loop Peeling**: Handled the final bit outside the loop to remove one conditional check from the main iteration cycle.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

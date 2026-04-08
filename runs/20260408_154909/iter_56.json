@@ -1,0 +1,9 @@
+{
+  "id": 56,
+  "score": 3.38,
+  "status": "regression",
+  "strategy": "he `exp >>= 1` dependency from the loop exit condition.\n*   **Reduce Dependency Chain**: By handling the first few bits or restructuring the loop, we ensure the `base *= base` and `result *= base` operations have maximum breathing room for Instruction Level Parallelism (ILP).\n*   **Special Case Handling**: Fast-pathing `exp == 0` and `exp == 1` to return immediately, while using the bit-scan to handle the final multiplication outside the loop to avoid an unnecessary `imul` in the last iteration.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

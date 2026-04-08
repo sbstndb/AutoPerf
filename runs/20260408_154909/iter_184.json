@@ -1,0 +1,9 @@
+{
+  "id": 184,
+  "score": 3.62,
+  "status": "regression",
+  "strategy": " Since `base` is squared $tz$ times, we use the fact that $tz$ is usually small and the CPU can handle the dependency chain of `base *= base` efficiently without the overhead of the previous `while` loop logic.\n*   **Instruction Level Parallelism (ILP):** Structured the binary exponentiation to keep the `base` squaring chain and the `res` accumulation chain independent as long as possible, maximizing the utilization of the multiple execution ports on the Intel Ultra 7 (Meteor Lake) architecture.",
+  "parent_id": 143,
+  "depth": 5,
+  "retry_fix": false
+}

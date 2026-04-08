@@ -1,0 +1,9 @@
+{
+  "id": 148,
+  "score": 5.21,
+  "status": "regression",
+  "strategy": "d addressing or `cmov` instructions, avoiding branch mispredictions during the exponent processing.\n*   **Optimized Initialization**: We handle the first few bits of the exponent separately to initialize the result register, avoiding an unnecessary multiplication by 1.\n*   **Hardware-Specific Tuning**: The Intel Ultra 7 (Meteor Lake) has high throughput for `imul` (latency 3, throughput 1). The 2-bit window strikes the best balance between pre-computation overhead and reduction in loop overhead.",
+  "parent_id": 95,
+  "depth": 4,
+  "retry_fix": false
+}

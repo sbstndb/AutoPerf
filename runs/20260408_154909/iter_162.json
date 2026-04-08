@@ -1,0 +1,9 @@
+{
+  "id": 162,
+  "score": 3.32,
+  "status": "regression",
+  "strategy": "e primary bottleneck in serial exponentiation.\n*   **Removal of Redundant Checks**: Simplified the initial fast paths. The logic handles `exp=1` and `exp=2` naturally within the main loop, reducing branch misprediction penalties for small exponents.\n*   **Efficient Bit Manipulation**: Used `__builtin_ctzll` to handle trailing zeros in the exponent by squaring the base upfront. This reduces the total number of iterations in the main loop without the overhead of a lookup table.\n\n### OPTIMIZED CODE",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

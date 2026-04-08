@@ -1,0 +1,9 @@
+{
+  "id": 16,
+  "score": 3.86,
+  "status": "regression",
+  "strategy": "arison from the loop and allows the compiler to better optimize the loop structure.\n*   **Instruction Level Parallelism (ILP):** By restructuring the loop to calculate the next `base * base` independently of the `result` update, we allow the CPU's execution units to process these multiplications in parallel.\n*   **Special Case Handling:** Added `__builtin_expect` for the `exp == 0` case to move it out of the hot path, and handled `base == 0` or `base == 1` implicitly through the optimized logic.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

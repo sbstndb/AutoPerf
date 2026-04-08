@@ -1,0 +1,9 @@
+{
+  "id": 126,
+  "score": 2.77,
+  "status": "regression",
+  "strategy": "d perform a final set of squarings if necessary, though the \"bottom-up\" (binary exponentiation) approach is naturally more efficient for this.\n*   **Bottom-Up Approach:** Switching from the \"top-down\" (MSB to LSB) to the \"bottom-up\" (LSB to MSB) approach allows us to square the base independently of the result accumulation. This increases Instruction Level Parallelism (ILP) because `base *= base` and `res *= base` can often be calculated in the same cycle if the CPU has multiple execution units.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

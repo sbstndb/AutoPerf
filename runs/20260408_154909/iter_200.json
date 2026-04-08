@@ -1,0 +1,9 @@
+{
+  "id": 200,
+  "score": 2.5,
+  "status": "regression",
+  "strategy": "s branch mispredictions, which are costly in exponentiation where bits are often pseudo-random.\n*   **Optimized Bit Scanning:** Used `__builtin_ctzll` to skip trailing zeros at the start. This reduces the number of iterations for even exponents and handles the initial `res = base` assignment without an explicit multiplication by 1.\n*   **Early Exit for Overflow/Zero:** Maintained fast paths for common small bases and exponents while ensuring the logic remains robust for 64-bit unsigned integers.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 5,
+  "score": 2.53,
+  "status": "regression",
+  "strategy": "eration (`base *= base`) while simultaneously calculating the `result *= base` for the current bit.\n*   **Special Case Handling:** Added an early exit for `exp == 0` to match the original behavior and handle the most common identity case immediately.\n*   **Compiler Hints:** The use of `__builtin_ctzll` (Count Trailing Zeros) can further optimize the initial shifting if the exponent is a power of two or has many trailing zeros, though a standard binary loop is often more robust for general cases.",
+  "parent_id": 0,
+  "depth": 1,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "best_score": 1.6,
+  "baseline_score": 4.1,
+  "speedup": 2.5624999999999996,
+  "best_id": 29,
+  "best_depth": 2,
+  "strategy": "0` check. While mathematically correct, in a performance-critical kernel, the standard algorithm handles `0^exp` correctly (returning 0 for `exp > 0`). The `exp == 0` case is handled as a fast-path.\n*   **Bit Manipulation Optimization:** Used `__builtin_clzll` to determine the exact number of iterations needed. This avoids the `while(exp > 0)` check and allows the compiler to generate a fixed-iteration loop or a jump table, significantly reducing branch mispredictions for varying exponent sizes.",
+  "elapsed_seconds": 3725.0
+}

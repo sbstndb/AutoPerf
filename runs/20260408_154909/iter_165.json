@@ -1,0 +1,9 @@
+{
+  "id": 165,
+  "score": 2.31,
+  "status": "regression",
+  "strategy": "g step.\n4.  **Remove Redundant Logic**: The \"Skip trailing zeros\" optimization is often counter-productive for small-to-medium exponents because it adds branching and a separate loop. Standard binary exponentiation naturally handles these bits efficiently.\n5.  **Micro-Architectural Alignment**: The code is structured to keep all variables in registers (`RAX`, `RDX`, `RCX`), avoiding the stack entirely after the initial function prologue, which is critical for a kernel with a ~2ns latency target.",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

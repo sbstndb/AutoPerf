@@ -1,0 +1,9 @@
+{
+  "id": 110,
+  "score": null,
+  "status": "test_failed",
+  "strategy": "nce squaring is independent of the previous `result`, we can overlap these operations.\n*   **Special Case for Base 2**: While not explicitly requested, most `pow` implementations benefit from checking",
+  "parent_id": 69,
+  "depth": 4,
+  "retry_fix": false
+}

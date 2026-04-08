@@ -1,0 +1,9 @@
+{
+  "id": 74,
+  "score": 3.19,
+  "status": "regression",
+  "strategy": " by a conditional result or using a temporary.\n*   **Trailing Zero Optimization:** We use `__builtin_ctzll` to skip all trailing zeros in the exponent at once. This reduces the number of iterations and initializes `res` to the first required power of `base`, avoiding the initial `res = 1` multiplication.\n*   **Loop Unrolling and Early Exit:** The loop is structured to terminate as soon as `exp` becomes zero, which is faster than calculating the MSB position and iterating a fixed number of times.",
+  "parent_id": 34,
+  "depth": 3,
+  "retry_fix": false
+}

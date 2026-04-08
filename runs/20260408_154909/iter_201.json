@@ -1,0 +1,9 @@
+{
+  "id": 201,
+  "score": 5.47,
+  "status": "regression",
+  "strategy": "iltin_clzll` to find the last. This allows the loop to skip trailing zeros (where only squaring happens) and leading zeros (where nothing happens), significantly narrowing the execution window.\n4.  **Optimized Base 2 Path**: Retained the `shlx` logic for base 2 but streamlined the condition checks to minimize the instruction count in the hot path.\n5.  **Eliminating Redundant Multiplications**: The final iteration of the loop is handled outside to avoid one unnecessary `base *= base` calculation.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

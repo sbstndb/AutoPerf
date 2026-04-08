@@ -1,0 +1,9 @@
+{
+  "id": 120,
+  "score": 2.24,
+  "status": "regression",
+  "strategy": "imization**: Used `__builtin_ctzll` to skip all trailing zeros in the exponent. This reduces the number of iterations and allows us to initialize the result with a pre-squared base, effectively shortening the dependency chain.\n*   **Loop Unrolling and Dependency Breaking**: The bottom-up approach allows the compiler to better pipeline the `base *= base` operations. Since `base` and `res` updates are partially independent, the CPU's out-of-order execution engine can overlap these multiplications.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 88,
+  "score": 2.19,
+  "status": "regression",
+  "strategy": "is more friendly to the CPU's front-end and loop unrolling.\n*   **Pre-scaling the Base**: Handled trailing zeros in the exponent by squaring the base immediately. This reduces the total number of iterations in the main loop.\n*   **ILP (Instruction Level Parallelism)**: By separating the `side *= side` (the squaring chain) from the `res *= ...` (the accumulation), we allow the CPU to execute the squaring for the next iteration while the multiplication for the current iteration is still in flight.",
+  "parent_id": 27,
+  "depth": 3,
+  "retry_fix": false
+}

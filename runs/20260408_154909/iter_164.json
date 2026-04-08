@@ -1,0 +1,9 @@
+{
+  "id": 164,
+  "score": 4.42,
+  "status": "regression",
+  "strategy": "ling zeros in the exponent immediately, reducing the number of iterations in the main loop and ensuring the first multiplication into the result doesn't require a check against an identity value (1).\n*   **Loop Unrolling and Dependency Breaking**: By processing the exponent bits from right to left, the `res *= base` and `base *= base` operations can partially overlap in the CPU pipeline, as `base` squaring doesn't strictly depend on the completion of the `res` multiplication.\n\n### OPTIMIZED CODE",
+  "parent_id": 146,
+  "depth": 5,
+  "retry_fix": false
+}

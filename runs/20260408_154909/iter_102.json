@@ -1,0 +1,9 @@
+{
+  "id": 102,
+  "score": 5.76,
+  "status": "regression",
+  "strategy": "structure that encourages the compiler to use `imul` with a value that is either `base` or `1`.\n*   **Loop Unrolling & Early Exit**: The loop now terminates as soon as `exp` becomes zero. This significantly reduces the number of iterations for small exponents, which are common in many workloads.\n*   **Eliminating `lzcnt` / `clz`**: By using a `while(exp)` loop, we eliminate the need to calculate the leading zeros and the bit-length of the exponent, reducing the instruction count in the prologue.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}

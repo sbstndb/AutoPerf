@@ -1,0 +1,9 @@
+{
+  "id": 59,
+  "score": 2.85,
+  "status": "regression",
+  "strategy": "s us to determine the exact number of iterations required, eliminating the need for a loop exit check (`exp > 0`) inside the unrolled segments.\n*   **Special Case Handling**: Handled `base == 2` using bit shifts, which is a common case in many algorithms, providing a significant speedup for that specific input.\n*   **Compiler Hints**: Used `__builtin_expect` for the early exit conditions to ensure the compiler generates the most efficient layout for the common execution path.\n\n### OPTIMIZED CODE",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

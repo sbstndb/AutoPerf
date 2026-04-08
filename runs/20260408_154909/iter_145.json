@@ -1,0 +1,9 @@
+{
+  "id": 145,
+  "score": 2.45,
+  "status": "regression",
+  "strategy": "y unrolling the squaring and multiplication steps within the window, we allow the CPU to execute independent multiplications (squaring the accumulator vs. multiplying by the pre-calculated base) in parallel.\n*   **Eliminating Redundant Checks**: The initial checks for `base <= 1` and `exp == 0` are kept as they are extremely cheap, but the main loop is restructured to avoid the overhead of `targets[2]` arrays inside the loop, which previously caused spills to the stack in some compiler versions.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

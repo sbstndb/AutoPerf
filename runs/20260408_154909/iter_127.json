@@ -1,0 +1,9 @@
+{
+  "id": 127,
+  "score": 2.06,
+  "status": "regression",
+  "strategy": "low, standard `uint64_t` power functions often benefit from checking if `side` becomes 0 or if the exponent is small.\n*   **Optimized Bit Scanning:** Used `__builtin_ctzll` to skip trailing zeros at the start. This reduces the number of iterations for even exponents.\n*   **Eliminating Redundant `bit_pos` Calculation:** Instead of calculating `clzll` and comparing a counter, we use the `exp != 0` condition in a shifted loop, which is more idiomatic and often results in better assembly generation.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

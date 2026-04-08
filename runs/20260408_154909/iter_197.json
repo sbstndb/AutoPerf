@@ -1,0 +1,9 @@
+{
+  "id": 197,
+  "score": 3.41,
+  "status": "regression",
+  "strategy": "ent first.\n*   **Trailing Zeros Optimization:** Used `__builtin_ctzll` to skip all trailing zeros in the exponent at once. This shifts the initial `base` value significantly before entering the main loop, reducing the total number of iterations.\n*   **Early Exit for Overflow:** Since we are dealing with `uint64_t`, any `base >= 2` will overflow 64 bits very quickly. The loop is naturally short (max 64 iterations), but the Right-to-Left approach allows the compiler to better utilize the pipeline.",
+  "parent_id": 140,
+  "depth": 5,
+  "retry_fix": false
+}

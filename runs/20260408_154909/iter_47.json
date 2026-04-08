@@ -1,0 +1,9 @@
+{
+  "id": 47,
+  "score": 5.2,
+  "status": "regression",
+  "strategy": "trict dependency chain (`base *= base`). While we cannot fully vectorize this due to the nature of exponentiation, we can minimize the overhead of the control flow to let the execution ports handle the `imul` instructions as fast as the latency allows.\n*   **Handling the Final Bit**: By checking the loop condition at the start and handling the last bit outside or via a refined loop, we avoid one unnecessary `base *= base` calculation which is often the most expensive part of the final iteration.",
+  "parent_id": 2,
+  "depth": 2,
+  "retry_fix": false
+}

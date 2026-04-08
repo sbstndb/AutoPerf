@@ -1,0 +1,9 @@
+{
+  "id": 38,
+  "score": 2.94,
+  "status": "regression",
+  "strategy": "the compiler to unroll the loop, reducing the overhead of the loop counter and jump instructions.\n3.  **Instruction-Level Parallelism (ILP)**: By separating the `result` update and the `base` squaring, we allow the CPU to execute these two `imul` chains in parallel. The `base *= base` chain is independent of the `result *= ...` chain within a single iteration.\n4.  **Early Exit for Common Cases**: Handling `exp == 0` immediately avoids the overhead of the bit-scanning logic for the simplest case.",
+  "parent_id": 4,
+  "depth": 2,
+  "retry_fix": false
+}

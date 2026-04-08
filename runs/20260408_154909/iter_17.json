@@ -1,0 +1,9 @@
+{
+  "id": 17,
+  "score": 3.89,
+  "status": "regression",
+  "strategy": "d `exp == 1` immediately, we reduce the overhead for the most common cases.\n*   **Loop Unrolling:** Unrolling the loop once reduces the number of `shr` and `cmp` instructions per multiplication, which is critical when the total number of iterations is small (max 64 for `uint64_t`).\n*   **Bit Manipulation:** Using `__builtin_ctzll` (Count Trailing Zeros) allows us to skip all trailing zeros in the exponent at once, reducing the number of `base *= base` operations before the first `result` update.",
+  "parent_id": 5,
+  "depth": 2,
+  "retry_fix": false
+}

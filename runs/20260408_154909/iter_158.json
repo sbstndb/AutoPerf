@@ -1,0 +1,9 @@
+{
+  "id": 158,
+  "score": 3.39,
+  "status": "regression",
+  "strategy": "r the exponentiation) can be calculated somewhat independently of the `res *= base` updates.\n*   **Optimized Trailing Zeros**: Simplified the initial squaring phase. Instead of a loop for trailing zeros, we use the fact that `base^(2^tz)` is just repeated squaring, which is often faster than a branchy loop for small `tz`.\n*   **Special Case Pruning**: Kept only the most essential fast paths to reduce the prologue overhead, as modern CPUs handle the general case very quickly if the loop is tight.",
+  "parent_id": 127,
+  "depth": 5,
+  "retry_fix": false
+}

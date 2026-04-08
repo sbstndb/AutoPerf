@@ -1,0 +1,9 @@
+{
+  "id": 179,
+  "score": 5.28,
+  "status": "regression",
+  "strategy": "ictions.\n*   **Pre-squaring and Bit-Scanning:** We use `__builtin_clzll` to determine the exact number of iterations needed, avoiding the `while(exp > 0)` check which is often mispredicted.\n*   **Instruction Level Parallelism (ILP):** By unrolling the squaring process and the multiplication process separately where possible, we utilize the multiple execution ports of the Intel Ultra 7 (Meteor Lake) architecture, which can handle multiple integer multiplications per cycle if they are independent.",
+  "parent_id": 153,
+  "depth": 5,
+  "retry_fix": false
+}

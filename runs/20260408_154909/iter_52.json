@@ -1,0 +1,9 @@
+{
+  "id": 52,
+  "score": 5.47,
+  "status": "regression",
+  "strategy": "op control logic.\n*   **Instruction Level Parallelism (ILP)**: Binary exponentiation is inherently sequential (`base *= base`). However, by using a branchless approach, we allow the CPU's out-of-order execution engine to speculatively calculate `base * base` and the potential `result * base` in parallel, rather than waiting for the branch outcome.\n*   **Small Exponent Fast-Path**: We handle the most common small exponents (0, 1) with early returns to minimize the call overhead for trivial cases.",
+  "parent_id": 1,
+  "depth": 2,
+  "retry_fix": false
+}

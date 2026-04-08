@@ -1,0 +1,9 @@
+{
+  "id": 124,
+  "score": 4.2,
+  "status": "regression",
+  "strategy": "s the compiler to better schedule the squaring of the `base` and the accumulation into `res` as independent operations where possible.\n*   **Early Exit for Small Exponents**: Added a fast path for common small exponents (0, 1, 2) to bypass the loop overhead entirely.\n*   **Trailing Zero Optimization**: Using `__builtin_ctzll` to skip all trailing zeros of the exponent at once. This reduces the number of iterations and ensures the first multiplication into `res` doesn't require an identity check.",
+  "parent_id": 63,
+  "depth": 4,
+  "retry_fix": false
+}

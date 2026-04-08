@@ -1,0 +1,9 @@
+{
+  "id": 14,
+  "score": 4.03,
+  "status": "regression",
+  "strategy": "footprint small unless it's a frequent case.\n*   **Compiler Hinting:** Using `__builtin_expect` for the `base == 0` case tells the compiler this is a cold path, allowing the main logic to be laid out linearly for better instruction fetching.\n*   **Bit-Scan for Early Exit:** Using `63 - __builtin_clzll(exp)` allows us to determine exactly how many iterations are needed, but for `uint64_t` exponents, a simple `while(exp)` is often faster due to lower setup overhead on modern Intel cores (Ultra 7).",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

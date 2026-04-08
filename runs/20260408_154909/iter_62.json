@@ -1,0 +1,9 @@
+{
+  "id": 62,
+  "score": 2.5,
+  "status": "regression",
+  "strategy": "ntirely since `uint64_t` exponents have a maximum of 64 bits.\n*   **Lookup Table for Small Bases**: For `base == 2`, the result is a simple bit shift. While the current code handles `base <= 1`, adding a specific check for `base == 2` or powers of 2 can significantly speed up those cases.\n*   **Complete Loop Unrolling**: Since the maximum number of iterations is 64, we can unroll the squaring process. This removes loop overhead and allows the scheduler to reorder independent `imul` instructions.",
+  "parent_id": 29,
+  "depth": 3,
+  "retry_fix": false
+}

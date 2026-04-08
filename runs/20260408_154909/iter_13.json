@@ -1,0 +1,9 @@
+{
+  "id": 13,
+  "score": 3.22,
+  "status": "regression",
+  "strategy": "y.\n*   **Minimize Loop Overhead:** By shifting the exponent and squaring the base *before* entering the main loop (after handling the first set bit), we ensure the loop only runs for the necessary number of bits, and the final squaring of `base` (which is never used) is avoided in the last iteration.\n*   **Instruction Level Parallelism (ILP):** The logic is restructured to allow the compiler to use `imul` with registers more effectively, reducing the dependency chain between `result` and `base`.",
+  "parent_id": 3,
+  "depth": 2,
+  "retry_fix": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": 144,
+  "score": 4.0,
+  "status": "regression",
+  "strategy": "ted powers. Accessing this via the 2-bit window value is typically compiled into a conditional move or a simple indexed load, avoiding branch mispredictions.\n*   **Loop Unrolling and Bit Manipulation**: By using `__builtin_clzll` to find the starting point and processing bits in chunks, we minimize the overhead of the binary exponentiation algorithm.\n*   **Early Exit Optimization**: We keep the fast paths for common small exponents and bases to ensure minimal latency for the most frequent calls.",
+  "parent_id": 88,
+  "depth": 4,
+  "retry_fix": false
+}

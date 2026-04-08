@@ -1,0 +1,9 @@
+{
+  "id": 133,
+  "score": 5.66,
+  "status": "regression",
+  "strategy": "l` instructions to skip unnecessary iterations and process only the bits that are set, or use a fixed unroll for small exponents.\n*   **Special Case Optimization:** The `base == 2` case is optimized using the `SHLX` instruction (via `1ULL << exp`), and we handle the overflow condition (`exp >= 64`) using a conditional move to avoid branching.\n*   **Instruction-Level Parallelism (ILP):** By manually unrolling the first few steps of the exponentiation, we ensure the multiplier units are saturated.",
+  "parent_id": 86,
+  "depth": 4,
+  "retry_fix": false
+}

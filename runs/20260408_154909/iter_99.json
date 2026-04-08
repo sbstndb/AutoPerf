@@ -1,0 +1,9 @@
+{
+  "id": 99,
+  "score": 4.47,
+  "status": "regression",
+  "strategy": "y modern GCC versions into a `cmov`, which is ideal for unpredictable exponents.\n*   **Trailing Zero Skipping**: Used `__builtin_ctzll` to skip all trailing zeros of the exponent at the start. This reduces the number of `base *= base` operations and shifts the starting point of the loop.\n*   **Loop Termination Optimization**: By shifting the exponent `exp >>= 1` and checking `while (exp)`, we eliminate the need for a separate bit-counter (`clzll`), reducing the instruction count in the hot loop.",
+  "parent_id": 49,
+  "depth": 3,
+  "retry_fix": false
+}
